@@ -1,0 +1,18 @@
+{
+  "name": "yy",
+  "version": "0.0.0",
+  "authors": [
+    "benib <bbuess@astina.ch>",
+    "mzgajner <mzgajner@astina.ch>"
+  ],
+  "description": "yy is a collection of sass utilities",
+  "main": "yy.sass",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

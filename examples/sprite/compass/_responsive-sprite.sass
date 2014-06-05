@@ -3,3 +3,7 @@ $example-map: sprite-map("images/*.png")
 $example-hidpi-map: sprite-map("images-hidpi/*.png")
 
 $sprite-maps: (example: (low-dpi: $example-map, high-dpi: $example-hidpi-map))
+
+//usage
+#foo
+    +responsive-sprite($sprite-maps, image-filename)

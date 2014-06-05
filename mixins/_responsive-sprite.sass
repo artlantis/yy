@@ -1,6 +1,6 @@
-=yy-responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true)
-    $low-dpi-map: map-get(map-get($yy-sprite-maps, $map), low-dpi)
-    $high-dpi-map: map-get(map-get($yy-sprite-maps, $map), high-dpi)
+=responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true)
+    $low-dpi-map: map-get(map-get($sprite-maps, $map), low-dpi)
+    $high-dpi-map: map-get(map-get($sprite-maps, $map), high-dpi)
 
     background-image: sprite-url($low-dpi-map)
     background-position: sprite-position($low-dpi-map, $sprite)

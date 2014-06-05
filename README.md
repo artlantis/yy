@@ -3,11 +3,11 @@
 ### responsive-sprite
 Allows you to include two versions of a sprited image from two different sprite maps made for low and high resolution screens.
 
-The maps must include images with identical names. You are also required to provide a configuration object with references to different versions of maps. You can find an example of such configuration in `_yy-variables.sass`.
+The maps must include images with identical names. You are also required to provide a configuration object with references to different versions of maps. You can find an example of such configuration in `_variables.sass`.
 
 The mixin is called in the following format:
 ```sass
-+yy-responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true)
++responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true)
 ```
 Default values are provided for `$repeat`, `$width` and `$height` so they can be omitted in the most typical use case.
 

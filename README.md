@@ -25,4 +25,4 @@ The mixin is called in the following format:
     text-align: center
     ...
 ```
-To work, the mixin requires configuration in the form of a Sass map where keys are names for breakpoints/screen sizes you should provide yourself (e.g. `small`, `medium`, `large`) and values are predefined media queries. When using the mixin, `$breakpoint` parameter needs to match an existing key in this map. Check out an example of the configuration in `examples/sprite/_respond-to.sass`.
+To work, the mixin requires configuration in the form of a Sass map where keys are names for breakpoints/screen sizes you should provide yourself (this is the `$breakpoint` parameter you pass when calling the mixin) and values are maps of settings for the respectable breakpoint. One of these settings is `mq`, which should include a string with the media query and is used by the mixin to generate CSS. Check out an example of the configuration in `examples/sprite/_respond-to.sass`.

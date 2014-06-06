@@ -1,0 +1,29 @@
+$breakpoints: (
+    small:     (
+        mq: "(min-width:  400px) and (max-width:  767px)",
+    ),
+    small-up:  (
+        mq: "(min-width:  400px)",
+    ),
+    medium:    (
+        mq: "(min-width:  768px) and (max-width:  991px)",
+    ),
+    medium-up: (
+        mq: "(min-width:  768px)",
+    ),
+    large:     (
+        mq: "(min-width:  992px) and (max-width: 1299px)",
+    ),
+    large-up:  (
+        mq: "(min-width:  992px)",
+    ),
+    x-large:   (
+        mq: "(min-width: 1300px)"
+    )
+);
+
+//then something like this
+
+#some-selector
+    +respond-to(small)
+        background: green

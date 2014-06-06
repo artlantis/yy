@@ -1,0 +1,47 @@
+@mixin responsive-font($fontstyleName, $line-height: false, $color: false)
+    @each $media, $fontstyles in $fonts
+        $fontstyle: map-get($fontstyles,$fontstyleName)
+        +respond-to($media)
+            font-family: unquote(map-get(map-get($fontstyle, font-family-map), font-family))
+            font-size: map-get($fontstyle, font-size)
+            @if ($line-height == false)
+                line-height: map-get($fontstyle, line-height)
+            @else
+                line-height: $line-height
+                
+            @each $property, $value in map-get($fontstyle, properties)
+                #{$property}: $value
+
+
+@function getFontSize($fontstyle, $media)
+    @return map-get(map-get(map-get($fonts, $media), $fontstyle), font-size)
+
+@function getLineHeight($fontstyle, $media)
+    @return map-get(map-get(map-get($fonts, $media), $fontstyle), line-height)
+
+@function getFontFamilyMap($fontstyle, $media)
+    @return map-get(map-get(map-get($fonts, $media), $fontstyle), font-family-map)
+
+@function getFontLineHeightCorrectionFactorTop($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-top)
+
+@function getFontLineHeightCorrectionFactorBottom($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-bottom)
+
+@function getRemainingLineSpaceTop($fontstyle,$media)
+    $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
+    @return $remainingLineSpace * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
+
+@function getRemainingLineSpaceBottom($fontstyle,$media)
+    $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
+    @return $remainingLineSpace * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+
+@function getPaddingForHeight($fontstyle,$media,$desiredHeight)
+    $heightToAdd: $desiredHeight - getLineHeight($fontstyle,$media)
+    $totalCorrectionFactor: getFontLineHeightCorrectionFactorTop($fontstyle,$media) + getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+    $heightPart: $heightToAdd/$totalCorrectionFactor
+
+    $padding-top: $heightPart * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
+    $padding-bottom: $heightPart * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+
+    @return "#{$padding-top} #{$padding-bottom}"

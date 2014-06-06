@@ -22,3 +22,56 @@ $breakpoints: (
         mq: "(min-width: 1300px)"
     )
 );
+
+$font-families: (
+    Helvetica: (
+        font-family: "'Helvetica', sans-serif",
+        line-height-correction-factor-top: 1.5, //measure this
+        line-height-correction-factor-bottom: 1 //measure this
+    ),
+);
+
+$fonts: (
+    small: (
+        fontstyle-one: (
+            font-size: 30px,
+            line-height: 35px,
+            font-family-map: map-get($font-families, Helvetica),
+            attr: (
+                font-weight: normal,
+                color: black
+            ),
+        ),
+        fontstyle-two: (
+            font-size: 25px,
+            line-height: 30px,
+            font-family-map: map-get($font-families, Helvetica),
+            attr: (
+                font-weight: normal,
+                font-style: italic,
+                color: grey
+            ),
+        ),
+    ),
+    medium-up: (
+        fontstyle-one: (
+            font-size: 40px,
+            line-height: 48px,
+            font-family-map: map-get($font-families, Helvetica),
+            attr: (
+                font-weight: normal,
+                color: black
+            ),
+        ),
+        fontstyle-two: (
+            font-size: 30px,
+            line-height: 39px,
+            font-family-map: map-get($font-families, Helvetica),
+            attr: (
+                font-weight: normal,
+                font-style: italic,
+                color: grey
+            ),
+        ),
+    )
+);

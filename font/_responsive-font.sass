@@ -8,6 +8,9 @@
                 line-height: map-get($fontstyle, line-height)
             @else
                 line-height: $line-height
+                
+            @each $property, $value in map-get($fontstyle, properties)
+                #{$property}: $value
 
 
 @function getFontSize($fontstyle, $media)

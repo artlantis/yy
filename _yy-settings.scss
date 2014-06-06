@@ -37,7 +37,7 @@ $fonts: (
             font-size: 30px,
             line-height: 35px,
             font-family-map: map-get($font-families, Helvetica),
-            attr: (
+            properties: (
                 font-weight: normal,
                 color: black
             ),
@@ -46,7 +46,7 @@ $fonts: (
             font-size: 25px,
             line-height: 30px,
             font-family-map: map-get($font-families, Helvetica),
-            attr: (
+            properties: (
                 font-weight: normal,
                 font-style: italic,
                 color: grey
@@ -58,7 +58,7 @@ $fonts: (
             font-size: 40px,
             line-height: 48px,
             font-family-map: map-get($font-families, Helvetica),
-            attr: (
+            properties: (
                 font-weight: normal,
                 color: black
             ),
@@ -67,7 +67,7 @@ $fonts: (
             font-size: 30px,
             line-height: 39px,
             font-family-map: map-get($font-families, Helvetica),
-            attr: (
+            properties: (
                 font-weight: normal,
                 font-style: italic,
                 color: grey

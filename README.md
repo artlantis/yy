@@ -26,3 +26,12 @@ The mixin is called in the following format:
     ...
 ```
 To work, the mixin requires configuration in the form of a Sass map where keys are names for breakpoints/screen sizes you should provide yourself (this is the `$breakpoint` parameter you pass when calling the mixin) and values are maps of settings for the respectable breakpoint. One of these settings is `mq`, which should include a string with the media query and is used by the mixin to generate CSS. Check out an example of the configuration in `examples/sprite/_respond-to.sass`.
+
+### json
+Encodes information about your breakpoints from Sass and allows you to access it from JavaScript to use with libraries like [enquire.js](//wicky.nillia.ms/enquire.js/) without having to repeat your media queries in JS code.
+
+This presumes you are using the `respond-to` mixin described above and have  configured your breakpoints using the prescribed Sass map. To use, simply include it anywhere in your stylesheets.
+```sass
++json
+```
+It will generate a `::before` pseudo element on the document body and store information about breakpoints encoded in a JSON array inside its `content` property. To read it, you need a few lines of JavaScript, provided in `breakpoint/json.js`.

@@ -30,7 +30,7 @@ To work, the mixin requires configuration in the form of a Sass map where keys a
 ### json
 Encodes information about your breakpoints from Sass and allows you to access it from JavaScript to use with libraries like [enquire.js](//wicky.nillia.ms/enquire.js/) without having to repeat your media queries in JS code.
 
-This presumes you are using the `respond-to` mixin described above and have  configured your breakpoints using the prescribed Sass map. To use, simply include it anywhere in your stylesheets.
+This presumes you are using the `respond-to` mixin described above and have  configured your breakpoints using the prescribed Sass map. To use, simply include it anywhere in your stylesheets like so:
 ```sass
 +json
 ```

@@ -1,0 +1,11 @@
+=json
+    $breakpoint-json: null
+
+    @each $bp-name, $bp-value in $breakpoints 
+        $breakpoint-json: append($breakpoint-json, \"#{$bp-name}\" + ":" + \"#{map-get($bp-value, mq)}\", comma)
+
+    $breakpoint-json: "{" + $breakpoint-json + "}"
+
+    body::before
+        content: $breakpoint-json
+        display: none

@@ -35,3 +35,6 @@ This presumes you are using the `respond-to` mixin described above and have  con
 +json
 ```
 It will generate a `::before` pseudo element on the document body and store information about breakpoints encoded in a JSON array inside its `content` property. To read it, you need a few lines of JavaScript, provided in `breakpoint/json.js`.
+
+### remPxFallback
+`+remPxFallback(property,value)` sets the given property to the value in `rem` and in `px` as a fallback. You can pass the value as `rem` or `px`. The values are computed based on `$remBase` which defaults to 16. There are some mixins for convenience: `padding`, `margin`, `font-size` and `line-height`.

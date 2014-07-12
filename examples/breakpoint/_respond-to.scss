@@ -3,13 +3,16 @@ $breakpoints: (
         mq: "(min-width:  400px) and (max-width:  767px)",
     ),
     small-up:  (
-        mq: "(min-width:  400px)",
+        min-width: 400px
     ),
     medium:    (
-        mq: "(min-width:  768px) and (max-width:  991px)",
+        media: screen,
+        min-width: 768px,
+        max-width: 991px,
     ),
     medium-up: (
-        mq: "(min-width:  768px)",
+        media: screen,
+        min-width: 768px,
     ),
     large:     (
         mq: "(min-width:  992px) and (max-width: 1299px)",

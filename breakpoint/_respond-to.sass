@@ -1,3 +1,11 @@
+@import "helpers"
+
 =respond-to($breakpoint)
-    @media #{map-get(map-get($breakpoints, $breakpoint), mq)}
-        @content
+    $mediaQuery: getMediaQuery($breakpoint)
+    @if $mediaQuery == false
+        @debug "ERROR: unable to generate media query for breakpoint #{$breakpoint}"
+        //wait for sass 3.4
+        //@error "unable to generate media query for breakpoint #{$breakpoint}"
+    @else
+        @media #{$mediaQuery}
+            @content

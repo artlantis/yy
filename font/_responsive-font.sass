@@ -1,26 +1,46 @@
 @mixin responsive-font($fontstyleName, $line-height: false, $color: false)
-    @each $media, $fontstyles in $fonts
-        $fontstyle: map-get($fontstyles,$fontstyleName)
-        +respond-to($media)
-            font-family: unquote(map-get(map-get($fontstyle, font-family-map), font-family))
-            font-size: map-get($fontstyle, font-size)
-            @if ($line-height == false)
-                line-height: map-get($fontstyle, line-height)
-            @else
-                line-height: $line-height
-                
-            @each $property, $value in map-get($fontstyle, properties)
-                #{$property}: $value
+    $fontstyle: map-get($fonts,$fontstyleName)
 
+    //set everything that is outside of respond-to settings
+    +_setFontStyle($fontstyle, $line-height, $color)
+
+    //check for respond-to definition, then set these
+    @if map-get($fontstyle, respond-to) != null
+        @each $media, $respondToFontstyle in map-get($fontstyle, respond-to)
+            +respond-to($media)
+                +_setFontStyle($respondToFontstyle, $line-height, $color)
+
+            
+@mixin _setFontStyle($fontstyle, $line-height, $color)
+    @if map-get($fontstyle, font-family-map) != null
+        @if map-get(map-get($fontstyle, font-family-map), font-family) != null
+            font-family: unquote(map-get(map-get($fontstyle, font-family-map), font-family))
+    @if map-get($fontstyle, font-size) != null
+        font-size: map-get($fontstyle, font-size)
+    @if ($line-height == false)
+        @if map-get($fontstyle, line-height) != null
+            line-height: map-get($fontstyle, line-height)
+    @else
+        line-height: $line-height
+    @each $property, $value in map-get($fontstyle, properties)
+        #{$property}: $value
+
+@function getPropertyForMedia($fontstyle,$property,$media)
+    @if map-get(map-get($fonts, $fontstyle), respond-to) != null
+        @if map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media) != null
+            @if map-get(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property) != null
+                @return map-get(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property)
+    
+    @return map-get(map-get($fonts,$fontstyle), $property)
 
 @function getFontSize($fontstyle, $media)
-    @return map-get(map-get(map-get($fonts, $media), $fontstyle), font-size)
+    @return getPropertyForMedia($fontstyle, font-size, $media)
 
 @function getLineHeight($fontstyle, $media)
-    @return map-get(map-get(map-get($fonts, $media), $fontstyle), line-height)
+    @return getPropertyForMedia($fontstyle,line-height,$media)
 
 @function getFontFamilyMap($fontstyle, $media)
-    @return map-get(map-get(map-get($fonts, $media), $fontstyle), font-family-map)
+    @return getPropertyForMedia($fontstyle,font-family-map,$media)
 
 @function getFontLineHeightCorrectionFactorTop($fontstyle, $media)
     @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-top)

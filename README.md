@@ -38,3 +38,17 @@ It will generate a `::before` pseudo element on the document body and store info
 
 ### remPxFallback
 `+remPxFallback(property,value)` sets the given property to the value in `rem` and in `px` as a fallback. You can pass the value as `rem` or `px`. The values are computed based on `$remBase` which defaults to 16. There are some mixins for convenience: `padding`, `margin`, `font-size` and `line-height`.
+
+### responsive-font
+TODO
+
+### clearfix
+There is a `+clearfix` mixin. It adds this:
+```sass
+&:before,
+&:after
+    content: ""
+    display: table
+&:after
+    clear: both
+```

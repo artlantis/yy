@@ -4,13 +4,16 @@ $breakpoints: (
         mq: "(min-width:  400px) and (max-width:  767px)",
     ),
     small-up:  (
-        mq: "(min-width:  400px)",
+        min-width: 400px
     ),
     medium:    (
-        mq: "(min-width:  768px) and (max-width:  991px)",
+        media: screen,
+        min-width: 768px,
+        max-width: 991px,
     ),
     medium-up: (
-        mq: "(min-width:  768px)",
+        media: screen,
+        min-width: 768px,
     ),
     large:     (
         mq: "(min-width:  992px) and (max-width: 1299px)",
@@ -32,46 +35,31 @@ $font-families: (
 );
 
 $fonts: (
-    small: (
-        fontstyle-one: (
-            font-size: 30px,
-            line-height: 35px,
-            font-family-map: map-get($font-families, Helvetica),
-            properties: (
-                font-weight: normal,
-                color: black
-            ),
+    fontstyle-one: (
+        font-size: 30px,
+        line-height: 35px,
+        font-family-map: map-get($font-families, Helvetica),
+        properties: (
+            font-weight: normal,
+            color: black
         ),
-        fontstyle-two: (
-            font-size: 25px,
-            line-height: 30px,
-            font-family-map: map-get($font-families, Helvetica),
-            properties: (
-                font-weight: normal,
-                font-style: italic,
-                color: grey
-            ),
+        respond-to: (
+            medium-up: (
+                font-size: 32px,
+                properties: (
+                    color: red
+                )
+            )
+        )
+    ),
+    fontstyle-two: (
+        font-size: 25px,
+        line-height: 30px,
+        font-family-map: map-get($font-families, Helvetica),
+        properties: (
+            font-weight: normal,
+            font-style: italic,
+            color: grey
         ),
     ),
-    medium-up: (
-        fontstyle-one: (
-            font-size: 40px,
-            line-height: 48px,
-            font-family-map: map-get($font-families, Helvetica),
-            properties: (
-                font-weight: normal,
-                color: black
-            ),
-        ),
-        fontstyle-two: (
-            font-size: 30px,
-            line-height: 39px,
-            font-family-map: map-get($font-families, Helvetica),
-            properties: (
-                font-weight: normal,
-                font-style: italic,
-                color: grey
-            ),
-        ),
-    )
 );

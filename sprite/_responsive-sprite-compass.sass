@@ -1,4 +1,8 @@
 =responsive-sprite-compass($map, $sprite, $repeat: no-repeat, $width: true, $height: true)
+    @warn "+responsive-sprite-compass is deprected. Import _responsive-sprite-compass.sass and call +responsive-sprite(). This is to provide the same interface to different spriting methods in the future"
+    +responsive-sprite($map, $sprite, $repeat, $width, $height)
+
+=responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true)
     $low-dpi-map: map-get(map-get($sprite-maps, $map), low-dpi)
     $high-dpi-map: map-get(map-get($sprite-maps, $map), high-dpi)
 

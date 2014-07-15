@@ -40,7 +40,12 @@ It will generate a `::before` pseudo element on the document body and store info
 `+remPxFallback(property,value)` sets the given property to the value in `rem` and in `px` as a fallback. You can pass the value as `rem` or `px`. The values are computed based on `$remBase` which defaults to 16. There are some mixins for convenience: `padding`, `margin`, `font-size` and `line-height`.
 
 ### responsive-font
-TODO
+With the responsive-font system you can define your fonts (and their media query dependant variants) in one place (you can use map-merge if you want it in multiple places) and then assign these styles to different selectors by using the name of the font.
+The mixin uses @extend per default to not repeat the same properties over and over again. If you don't want this, set `$responsive-font-extend-fontstyles` to `false`.
+```sass
++responsive-font(font-name)
+```
+See `_yy-settings.scss` for an example of a font-definition map. The map has to be named `$fonts`.
 
 ### clearfix
 There is a `+clearfix` mixin. It adds this:

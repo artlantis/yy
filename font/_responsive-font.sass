@@ -1,47 +1,89 @@
-@mixin responsive-font($fontstyleName, $line-height: false, $color: false)
-    @each $media, $fontstyles in $fonts
-        $fontstyle: map-get($fontstyles,$fontstyleName)
-        +respond-to($media)
-            font-family: unquote(map-get(map-get($fontstyle, font-family-map), font-family))
-            font-size: map-get($fontstyle, font-size)
-            @if ($line-height == false)
-                line-height: map-get($fontstyle, line-height)
-            @else
-                line-height: $line-height
-                
-            @each $property, $value in map-get($fontstyle, properties)
-                #{$property}: $value
+@import "yy/breakpoint/respond-to"
 
+$responsive-font-extend-fontstyles: true !default
+
+$placeholder-fonts-list: ()
+
+@mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles)
+    $fontstyle: map-get($fonts,$fontstyleName)
+
+    @if $extendFontstyle
+        @if not index($placeholder-fonts-list, $fontstyleName)
+            @at-root
+                %font-#{$fontstyleName}
+                    +_setAllFontStyles($fontstyle, $line-height, $color)
+            $placeholder-fonts-list: append($placeholder-fonts-list, $fontstyleName) !global
+        @extend %font-#{$fontstyleName}
+    @else
+        +_setAllFontStyles($fontstyle, $line-height, $color)
+
+@mixin responsive-font-no-extend($fontstyleName, $line-height: false, $color: false)
+    +responsive-font($fontstyleName, $line-height, $color, false)
+
+@mixin _setFontStyle($fontstyle, $line-height, $color)
+    @if map-has-key($fontstyle, font-family-map)
+        @if map-has-key(map-get($fontstyle, font-family-map), font-family)
+            font-family: unquote(map-get(map-get($fontstyle, font-family-map), font-family))
+    @if map-has-key($fontstyle, font-size)
+        font-size: map-get($fontstyle, font-size)
+    @if ($line-height == false)
+        @if map-has-key($fontstyle, line-height)
+            line-height: map-get($fontstyle, line-height)
+    @else
+        line-height: $line-height
+    @each $property, $value in map-get($fontstyle, properties)
+        #{$property}: $value
+        
+@mixin _setAllFontStyles($fontstyle, $line-height, $color)
+    +_setFontStyle($fontstyle, $line-height, $color)
+    //check for respond-to definition, then set these
+    @if map-has-key($fontstyle, respond-to)
+        @each $media, $respondToFontstyle in map-get($fontstyle, respond-to)
+            +respond-to($media)
+                +_setFontStyle($respondToFontstyle, $line-height, $color)
+    
+
+@function getPropertyForMedia($fontstyle,$property,$media)
+    @if map-has-key(map-get($fonts, $fontstyle), respond-to)
+        @if map-has-key(map-get(map-get($fonts, $fontstyle), respond-to), $media)
+            @if map-has-key(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property)
+                @return map-get(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property)
+    
+    @return map-get(map-get($fonts,$fontstyle), $property)
 
 @function getFontSize($fontstyle, $media)
-    @return map-get(map-get(map-get($fonts, $media), $fontstyle), font-size)
+    @return getPropertyForMedia($fontstyle, font-size, $media)
 
 @function getLineHeight($fontstyle, $media)
-    @return map-get(map-get(map-get($fonts, $media), $fontstyle), line-height)
+    @return getPropertyForMedia($fontstyle,line-height,$media)
 
 @function getFontFamilyMap($fontstyle, $media)
-    @return map-get(map-get(map-get($fonts, $media), $fontstyle), font-family-map)
+    @return getPropertyForMedia($fontstyle,font-family-map,$media)
 
-@function getFontLineHeightCorrectionFactorTop($fontstyle, $media)
-    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-top)
+@function getLineHeightPartTop($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-part-top)
 
-@function getFontLineHeightCorrectionFactorBottom($fontstyle, $media)
-    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-bottom)
+@function getLineHeightPart($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-part-bottom)
 
-@function getRemainingLineSpaceTop($fontstyle,$media)
+@function getRemainingLineSpaceTop($fontstyle, $media)
     $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
-    @return $remainingLineSpace * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
+    @return $remainingLineSpace * getLineHeightPartTop($fontstyle,$media)
 
-@function getRemainingLineSpaceBottom($fontstyle,$media)
+@function getRemainingLineSpaceBottom($fontstyle, $media)
     $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
-    @return $remainingLineSpace * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+    @return $remainingLineSpace * getLineHeightPart($fontstyle,$media)
 
-@function getPaddingForHeight($fontstyle,$media,$desiredHeight)
+@function getPaddingForHeight($fontstyle, $media, $desiredHeight, $padding-left: 0, $padding-right: 0)
+    @if getLineHeightPartTop($fontstyle,$media) == null
+        @debug "No line-height-part-top defined"
+    @if getLineHeightPartBottom($fontstyle,$media) == null
+        @debug "No line-height-part-bottom defined"
     $heightToAdd: $desiredHeight - getLineHeight($fontstyle,$media)
-    $totalCorrectionFactor: getFontLineHeightCorrectionFactorTop($fontstyle,$media) + getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+    $totalCorrectionFactor: getLineHeightPartTop($fontstyle,$media) + getLineHeightPart($fontstyle,$media)
     $heightPart: $heightToAdd/$totalCorrectionFactor
 
-    $padding-top: $heightPart * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
-    $padding-bottom: $heightPart * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+    $padding-top: $heightPart * getLineHeightPartTop($fontstyle,$media)
+    $padding-bottom: $heightPart * getLineHeightPart($fontstyle,$media)
 
-    @return "#{$padding-top} #{$padding-bottom}"
+    @return "#{$padding-top} #{$padding-right} #{$padding-bottom} #{$padding-left}"

@@ -1,14 +1,24 @@
-@mixin responsive-font($fontstyleName, $line-height: false, $color: false)
+@import "yy/breakpoint/respond-to"
+
+$responsive-font-extend-fontstyles: true !default
+
+$placeholder-fonts-list: ()
+
+@mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles)
     $fontstyle: map-get($fonts,$fontstyleName)
 
-    //set everything that is outside of respond-to settings
-    +_setFontStyle($fontstyle, $line-height, $color)
+    @if $extendFontstyle
+        @if not index($placeholder-fonts-list, $fontstyleName)
+            @at-root
+                %font-#{$fontstyleName}
+                    +_setAllFontStyles($fontstyle, $line-height, $color)
+            $placeholder-fonts-list: append($placeholder-fonts-list, $fontstyleName) !global
+        @extend %font-#{$fontstyleName}
+    @else
+        +_setAllFontStyles($fontstyle, $line-height, $color)
 
-    //check for respond-to definition, then set these
-    @if map-has-key($fontstyle, respond-to)
-        @each $media, $respondToFontstyle in map-get($fontstyle, respond-to)
-            +respond-to($media)
-                +_setFontStyle($respondToFontstyle, $line-height, $color)
+@mixin responsive-font-no-extend($fontstyleName, $line-height: false, $color: false)
+    +responsive-font($fontstyleName, $line-height, $color, false)
 
 @mixin _setFontStyle($fontstyle, $line-height, $color)
     @if map-has-key($fontstyle, font-family-map)
@@ -23,6 +33,15 @@
         line-height: $line-height
     @each $property, $value in map-get($fontstyle, properties)
         #{$property}: $value
+        
+@mixin _setAllFontStyles($fontstyle, $line-height, $color)
+    +_setFontStyle($fontstyle, $line-height, $color)
+    //check for respond-to definition, then set these
+    @if map-has-key($fontstyle, respond-to)
+        @each $media, $respondToFontstyle in map-get($fontstyle, respond-to)
+            +respond-to($media)
+                +_setFontStyle($respondToFontstyle, $line-height, $color)
+    
 
 @function getPropertyForMedia($fontstyle,$property,$media)
     @if map-has-key(map-get($fonts, $fontstyle), respond-to)

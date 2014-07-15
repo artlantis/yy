@@ -41,26 +41,30 @@
 @function getFontFamilyMap($fontstyle, $media)
     @return getPropertyForMedia($fontstyle,font-family-map,$media)
 
-@function getFontLineHeightCorrectionFactorTop($fontstyle, $media)
-    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-top)
+@function getLineHeightPartTop($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-part-top)
 
-@function getFontLineHeightCorrectionFactorBottom($fontstyle, $media)
-    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-bottom)
+@function getLineHeightPart($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-part-bottom)
 
 @function getRemainingLineSpaceTop($fontstyle, $media)
     $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
-    @return $remainingLineSpace * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
+    @return $remainingLineSpace * getLineHeightPartTop($fontstyle,$media)
 
 @function getRemainingLineSpaceBottom($fontstyle, $media)
     $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
-    @return $remainingLineSpace * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+    @return $remainingLineSpace * getLineHeightPart($fontstyle,$media)
 
 @function getPaddingForHeight($fontstyle, $media, $desiredHeight, $padding-left: 0, $padding-right: 0)
+    @if getLineHeightPartTop($fontstyle,$media) == null
+        @debug "No line-height-part-top defined"
+    @if getLineHeightPartBottom($fontstyle,$media) == null
+        @debug "No line-height-part-bottom defined"
     $heightToAdd: $desiredHeight - getLineHeight($fontstyle,$media)
-    $totalCorrectionFactor: getFontLineHeightCorrectionFactorTop($fontstyle,$media) + getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+    $totalCorrectionFactor: getLineHeightPartTop($fontstyle,$media) + getLineHeightPart($fontstyle,$media)
     $heightPart: $heightToAdd/$totalCorrectionFactor
 
-    $padding-top: $heightPart * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
-    $padding-bottom: $heightPart * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
+    $padding-top: $heightPart * getLineHeightPartTop($fontstyle,$media)
+    $padding-bottom: $heightPart * getLineHeightPart($fontstyle,$media)
 
     @return "#{$padding-top} #{$padding-right} #{$padding-bottom} #{$padding-left}"

@@ -5,20 +5,19 @@
     +_setFontStyle($fontstyle, $line-height, $color)
 
     //check for respond-to definition, then set these
-    @if map-get($fontstyle, respond-to) != null
+    @if map-has-key($fontstyle, respond-to)
         @each $media, $respondToFontstyle in map-get($fontstyle, respond-to)
             +respond-to($media)
                 +_setFontStyle($respondToFontstyle, $line-height, $color)
 
-            
 @mixin _setFontStyle($fontstyle, $line-height, $color)
-    @if map-get($fontstyle, font-family-map) != null
-        @if map-get(map-get($fontstyle, font-family-map), font-family) != null
+    @if map-has-key($fontstyle, font-family-map)
+        @if map-has-key(map-get($fontstyle, font-family-map), font-family)
             font-family: unquote(map-get(map-get($fontstyle, font-family-map), font-family))
-    @if map-get($fontstyle, font-size) != null
+    @if map-has-key($fontstyle, font-size)
         font-size: map-get($fontstyle, font-size)
     @if ($line-height == false)
-        @if map-get($fontstyle, line-height) != null
+        @if map-has-key($fontstyle, line-height)
             line-height: map-get($fontstyle, line-height)
     @else
         line-height: $line-height
@@ -26,9 +25,9 @@
         #{$property}: $value
 
 @function getPropertyForMedia($fontstyle,$property,$media)
-    @if map-get(map-get($fonts, $fontstyle), respond-to) != null
-        @if map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media) != null
-            @if map-get(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property) != null
+    @if map-has-key(map-get($fonts, $fontstyle), respond-to)
+        @if map-has-key(map-get(map-get($fonts, $fontstyle), respond-to), $media)
+            @if map-has-key(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property)
                 @return map-get(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property)
     
     @return map-get(map-get($fonts,$fontstyle), $property)

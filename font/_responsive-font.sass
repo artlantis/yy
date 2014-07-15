@@ -48,15 +48,15 @@
 @function getFontLineHeightCorrectionFactorBottom($fontstyle, $media)
     @return map-get(getFontFamilyMap($fontstyle,$media), line-height-correction-factor-bottom)
 
-@function getRemainingLineSpaceTop($fontstyle,$media)
+@function getRemainingLineSpaceTop($fontstyle, $media)
     $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
     @return $remainingLineSpace * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
 
-@function getRemainingLineSpaceBottom($fontstyle,$media)
+@function getRemainingLineSpaceBottom($fontstyle, $media)
     $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
     @return $remainingLineSpace * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
 
-@function getPaddingForHeight($fontstyle,$media,$desiredHeight)
+@function getPaddingForHeight($fontstyle, $media, $desiredHeight, $padding-left: 0, $padding-right: 0)
     $heightToAdd: $desiredHeight - getLineHeight($fontstyle,$media)
     $totalCorrectionFactor: getFontLineHeightCorrectionFactorTop($fontstyle,$media) + getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
     $heightPart: $heightToAdd/$totalCorrectionFactor
@@ -64,4 +64,4 @@
     $padding-top: $heightPart * getFontLineHeightCorrectionFactorTop($fontstyle,$media)
     $padding-bottom: $heightPart * getFontLineHeightCorrectionFactorBottom($fontstyle,$media)
 
-    @return "#{$padding-top} #{$padding-bottom}"
+    @return "#{$padding-top} #{$padding-right} #{$padding-bottom} #{$padding-left}"

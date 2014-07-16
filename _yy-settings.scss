@@ -35,8 +35,8 @@ $responsive-font-extend-fontstyles: true
 $font-families: (
     Helvetica: (
         font-family: "'Helvetica', sans-serif",
-        line-height-correction-factor-top: 1.5, //measure this
-        line-height-correction-factor-bottom: 1 //measure this
+        line-height-part-top: 1.5, //measure this
+        line-height-part-bottom: 1 //measure this
     ),
 );
 

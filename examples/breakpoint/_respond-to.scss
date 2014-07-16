@@ -1,3 +1,4 @@
+//define your breakpoints like this:
 $breakpoints: (
     small:     (
         mq: "(min-width:  400px) and (max-width:  767px)",
@@ -23,10 +24,12 @@ $breakpoints: (
     x-large:   (
         mq: "(min-width: 1300px)"
     )
-);
+)
 
 //then something like this
 
-#some-selector
-    +respond-to(small)
-        background: green
+#some-selector {
+    @mixin respond-to(small) {
+        background: green;
+    }
+}

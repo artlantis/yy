@@ -24,7 +24,10 @@ $placeholder-fonts-list: ()
     @if map-has-key($fontstyle, font-family-map)
         @if map-has-key(map-get($fontstyle, font-family-map), font-family)
             font-family: unquote(map-get(map-get($fontstyle, font-family-map), font-family))
-    @if map-has-key($fontstyle, font-size)
+    @elseif map-has-key($fontstyle, font-family)
+        font-family: unquote(map-get($fontstyle, font-family))
+
+    @if map-has-key($fontstyle, font-size)s
         font-size: map-get($fontstyle, font-size)
     @if ($line-height == false)
         @if map-has-key($fontstyle, line-height)

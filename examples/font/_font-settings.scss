@@ -36,7 +36,7 @@ $fonts: (
     fontstyle-two: (
         font-size: 25px,
         line-height: 30px,
-        font-family-map: map-get($font-families, Helvetica),
+        font-family: "'Helvetica', sans-serif",              //you can define your font-family directly, you cannot use getPaddingForHeight() with this
         properties: (
             font-weight: normal,
             font-style: italic,

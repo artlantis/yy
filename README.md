@@ -1,5 +1,7 @@
 # yy - a collection of sass utilities
 
+Documentation: https://astina.github.io/yy
+
 ### responsive-sprite
 Allows you to include two versions of a sprited image from two different sprite maps made for low and high resolution screens.
 

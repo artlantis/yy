@@ -72,6 +72,7 @@ $placeholder-fonts-list: ();
 
 /**
  * Sets all the properties in `$fontstyle`, ignores keys `respond-to` and `inherit`
+ * If `line-height` or `$color` is given, this overwrites the key from the given map
  *
  * @author Beni Buess
  *
@@ -83,6 +84,15 @@ $placeholder-fonts-list: ();
 @mixin _setFontStyle($fontstyle, $line-height, $color) {
     $responsive-font-keywords: ("respond-to", "inherit");
 
+    @if $line-height != false {
+        $responsive-font-keywords: append($responsive-font-keywords, "line-height");
+        line-height: $line-height;
+    }
+    @if $color != false {
+        $responsive-font-keywords: append($responsive-font-keywords, "color");
+        color: $color;
+    }
+
     @each $property, $value in $fontstyle {
         @if not index($responsive-font-keywords, $property) {
             #{$property}: unquote($value);
@@ -92,6 +102,7 @@ $placeholder-fonts-list: ();
       
 /**
  * Sets all the properties in `$fontstyle` for all breakpoints by using `respond-to` mixin and calling `_setFontStyle`
+ * If `line-height` or `$color` is given, this overwrites the key from the given map for all breakpoints
  *
  * @author Beni Buess
  *

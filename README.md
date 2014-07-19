@@ -45,7 +45,7 @@ The mixin uses @extend per default to not repeat the same properties over and ov
 ```sass
 +responsive-font(font-name)
 ```
-See `_yy-settings.scss` for an example of a font-definition map. The map has to be named `$fonts`.
+See examples/font/_font-settings.scss for an example of a font-definition map. The map has to be named `$fonts`.
 
 ### clearfix
 There is a `+clearfix` mixin. It adds this:

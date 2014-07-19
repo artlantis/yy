@@ -1,5 +1,6 @@
 {
   "name": "yy",
+  "title": "yy",
   "version": "1.0.0-alpha5",
   "description": "a collection of sass utilities",
   "main": "Gruntfile.js",

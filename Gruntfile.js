@@ -8,10 +8,12 @@
                 dest: 'docs',
                 options: {
                     display: {
-                        access: ['public']
+                        access: ['public', 'private'],
+                        watermark: true,
                     },
                     package: './package.json',
-                    verbose: true
+                    verbose: true,
+
                 }
             }
         },

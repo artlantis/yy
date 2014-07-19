@@ -14,6 +14,48 @@
       
     
   
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+
+  
+    
+      
+      
+    
+  
 
   
     
@@ -30,13 +72,6 @@
       
       
     
-  
-    
-      
-      
-    
-  
-
   
     
       
@@ -50,7 +85,7 @@
   
   <meta charset="utf-8" />
 
-<title>SassDoc - v1.0.0-alpha5</title>
+<title>yy - v1.0.0-alpha5</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -72,7 +107,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      SassDoc
+      yy
     
   </h1>
 </div>
@@ -83,6 +118,101 @@
   
 
     
+    
+
+      
+      
+
+      
+      
+
+        <li class="sidebar__sub-heading"><a class="sidebar__link" href="#function">Functions</a></li>
+
+        
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getPropertyForMedia" data-type="function">
+            <a class="sidebar__link" href="#function-getPropertyForMedia">getPropertyForMedia
+            
+            
+            </a>
+          </li>
+
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getFontSize" data-type="function">
+            <a class="sidebar__link" href="#function-getFontSize">getFontSize
+            
+            
+            </a>
+          </li>
+
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getLineHeight" data-type="function">
+            <a class="sidebar__link" href="#function-getLineHeight">getLineHeight
+            
+            
+            </a>
+          </li>
+
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getFontFamilyMap" data-type="function">
+            <a class="sidebar__link" href="#function-getFontFamilyMap">getFontFamilyMap
+            
+            
+            </a>
+          </li>
+
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getLineHeightPartTop" data-type="function">
+            <a class="sidebar__link" href="#function-getLineHeightPartTop">getLineHeightPartTop
+            
+            
+            </a>
+          </li>
+
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getLineHeightPartBottom" data-type="function">
+            <a class="sidebar__link" href="#function-getLineHeightPartBottom">getLineHeightPartBottom
+            
+            
+            </a>
+          </li>
+
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getPaddingForHeight" data-type="function">
+            <a class="sidebar__link" href="#function-getPaddingForHeight">getPaddingForHeight
+            
+            
+            </a>
+          </li>
+
+        
+
+          
+          <li class="sidebar__item  js-sassdoc__item" data-name="getFontStyle" data-type="function">
+            <a class="sidebar__link" href="#function-getFontStyle">getFontStyle
+            
+            
+            </a>
+          </li>
+
+        
+
+      
+
     
 
       
@@ -165,31 +295,6 @@
 
     
 
-      
-      
-
-      
-      
-
-        <li class="sidebar__sub-heading"><a class="sidebar__link" href="#function">Functions</a></li>
-
-        
-        
-
-          
-          <li class="sidebar__item  js-sassdoc__item" data-name="getFontStyle" data-type="function">
-            <a class="sidebar__link" href="#function-getFontStyle">getFontStyle
-            
-            
-            </a>
-          </li>
-
-        
-
-      
-
-    
-
   
   </ul>
 </div>
@@ -226,6 +331,1356 @@
   
 
     
+    
+
+      
+      
+
+      
+      
+        <section class="main__section">
+          <h1 class="main__heading" id="function">Functions</h1>
+
+          
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getPropertyForMedia">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getPropertyForMedia">getPropertyForMedia</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getPropertyForMedia($fontstyleName, $property, $media) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Returns the value of <code>$property</code> key for the given <code>$fontstyleName</code> and <code>$media</code><br>If <code>$media</code> is not found in the <code>respond-to</code> map of the fontstyle, it returns the value that is defined at the 1st level of the fontstyle.</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, passed to <code>getFontStyle</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$property</code></th>
+          <td data-label="desc"><p>the property that should be returned</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$media</code></th>
+          <td data-label="desc"><p>the key in <code>respond-to</code> map of fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>The property value</p>
+  
+    String
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_paddingForHeight.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getFontSize">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getFontSize">getFontSize</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getFontSize($fontstyleName, $media) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Wraps around <code>getPropertyForMedia</code> and returns the <code>font-size</code> attribute</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, passed to <code>getPropertyForMedia</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$media</code></th>
+          <td data-label="desc"><p>the key in <code>respond-to</code> map of fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>The font-size value</p>
+  
+    String
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_paddingForHeight.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getLineHeight">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getLineHeight">getLineHeight</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getLineHeight($fontstyleName, $media) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Wraps around <code>getPropertyForMedia</code> and returns the <code>line-height</code> attribute</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, passed to <code>getPropertyForMedia</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$media</code></th>
+          <td data-label="desc"><p>the key in <code>respond-to</code> map of fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>The fline-height value</p>
+  
+    String
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_paddingForHeight.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getFontFamilyMap">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getFontFamilyMap">getFontFamilyMap</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getFontFamilyMap($fontstyleName, $media) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Returns the map defined in <code>$font-families</code> for the given <code>$fontstyleName</code><br>It looks for a key in <code>$font-families</code> named after the font-family attribute of the given <code>$fontstyleName</code></p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, passed to <code>getPropertyForMedia</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$media</code></th>
+          <td data-label="desc"><p>the key in <code>respond-to</code> map of fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>The font-family map</p>
+  
+    Map
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_paddingForHeight.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getLineHeightPartTop">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getLineHeightPartTop">getLineHeightPartTop</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getLineHeightPartTop($fontstyleName, $media) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Returns the value of <code>line-height-part-top</code> from the fontFamilyMap it gets from <code>getFontFamilyMap</code></p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, passed to <code>getFontFamilyMap</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$media</code></th>
+          <td data-label="desc"><p>the key in <code>respond-to</code> map of fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>line-height-part-top</p>
+  
+    Int
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_paddingForHeight.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getLineHeightPartBottom">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getLineHeightPartBottom">getLineHeightPartBottom</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getLineHeightPartBottom($fontstyleName, $media) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Returns the value of <code>line-height-part-bottom</code> from the fontFamilyMap it gets from <code>getFontFamilyMap</code></p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, passed to <code>getFontFamilyMap</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$media</code></th>
+          <td data-label="desc"><p>the key in <code>respond-to</code> map of fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>line-height-part-bottom</p>
+  
+    Int
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_paddingForHeight.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getPaddingForHeight">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getPaddingForHeight">getPaddingForHeight</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getPaddingForHeight($fontstyleName, $media, $padding-left: 0, $padding-right: 0) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Returns the padding to be applied to an element with the given <code>$fontstyleName</code> inside of a respond-to block with the given<br><code>$media</code> to have the <code>$desiredHeight</code>. This only works if the text doesn&#39;t wrap in two lines. It&#39;s useful to place the text<br>in the vertical center of the block (e.b. for buttons) if no flexbox support is available and the font is not renderd in the <br>vertical center of it&#39;s line-height.<br>pass <code>$padding-left</code> and <code>$padding-right</code> to be included in the resulting shortcut value for <code>padding</code></p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, passed to <code>getFontFamilyMap</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$media</code></th>
+          <td data-label="desc"><p>the key in <code>respond-to</code> map of fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$padding-left</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$padding-right</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>The shortcut value to be applied to <code>padding</code></p>
+  
+    String
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_paddingForHeight.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-getFontStyle">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getFontStyle">getFontStyle</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@function getFontStyle($fontstyleName) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Returns the fontstyle as a map by recursively resolving any inherited fontstyle</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description"><p>The fontstyle as a map of properties</p>
+  
+    Map
+  
+  </p>
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/font/_responsive-font.scss</code></p>
+
+
+
+
+            </section>
+
+          
+        </section>
+
+      
+
     
 
       
@@ -1072,157 +2527,6 @@
 
     
 
-      
-      
-
-      
-      
-        <section class="main__section">
-          <h1 class="main__heading" id="function">Functions</h1>
-
-          
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-getFontStyle">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-getFontStyle">getFontStyle</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@function getFontStyle($fontstyleName) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Returns the fontstyle as a map by recursively resolving any inherited fontstyle</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
-          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description"><p>The fontstyle as a map of properties</p>
-  
-    Map
-  
-  </p>
-
-
-  
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p></li>
-    
-  </ul>
-
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/font/_responsive-font.scss</code></p>
-
-
-
-
-            </section>
-
-          
-        </section>
-
-      
-
-    
-
   
 
 
@@ -1236,7 +2540,7 @@
         <div class="footer__project-info  project-info">
           <!-- Name and URL -->
           
-            <span class="project-info__name">SassDoc</span>
+            <span class="project-info__name">yy</span>
           
 
           <!-- Version -->
@@ -1253,6 +2557,8 @@
         </div>
       
 
+      
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
       
     </div>
   </footer>

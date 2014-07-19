@@ -1,0 +1,25 @@
+{
+  "name": "yy",
+  "version": "1.0.0-alpha5",
+  "description": "a collection of sass utilities",
+  "main": "Gruntfile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/astina/yy.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astina/yy/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-sassdoc": "^0.4.2",
+    "grunt-gh-pages": "^0.9.1"
+  }
+}

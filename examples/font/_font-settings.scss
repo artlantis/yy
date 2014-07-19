@@ -30,10 +30,9 @@ $fonts: (
         )
     ),
     fontstyle-two: (
+        inherit: fontstyle-one,                              //you can inherit other fontstyles
         font-size: 25px,
         line-height: 30px,
-        font-family: $font-family-helvetica,
-        font-weight: normal,
         font-style: italic,
         color: grey
     ),

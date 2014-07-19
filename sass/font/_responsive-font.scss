@@ -1,0 +1,113 @@
+@import "../breakpoint/respond-to";
+
+/**
+ * If true, `responsive-font` uses @extend by default
+ *
+ * @type Bool
+ */
+$responsive-font-extend-fontstyles: true !default;
+
+$placeholder-fonts-list: ();
+
+/**
+ * Sets all properties defined in the global map `$fonts` for the given `$fontstyleName`
+ *
+ * @author Beni Buess
+ *
+ * @param {String}    $fontstyleName - the name of the font, a 1st level key in `$fonts`
+ * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
+ * @param {*|Boolean} $color - if given, overwrites the color from the font settings
+ * @param {Boolean}   $extendFontstyle - if true @extend is used, otherwise properties are written to the selector that calls this mixin
+ *
+ */
+@mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles) {
+    $fontstyle: getFontStyle($fontstyleName);
+
+    @if $extendFontstyle {
+        @if not index($placeholder-fonts-list, $fontstyleName) {
+            @at-root {
+                %font-#{$fontstyleName} {
+                    @include _setAllFontStyles($fontstyle, $line-height, $color);
+                }
+            }
+            $placeholder-fonts-list: append($placeholder-fonts-list, $fontstyleName) !global;
+        }
+        @extend %font-#{$fontstyleName};
+    } @else {
+        @include _setAllFontStyles($fontstyle, $line-height, $color);
+    }
+}
+
+/**
+ * Just a wrapper around `responsive-font` that sets `$extendFontstye` no false
+ *
+ * @author Beni Buess
+ *
+ * @param {String}    $fontstyleName - the name of the font, a 1st level key in `$fonts`
+ * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
+ * @param {*|Boolean} $color - if given, overwrites the color from the font settings
+ *
+ */
+@mixin responsive-font-no-extend($fontstyleName, $line-height: false, $color: false) {
+    @include responsive-font($fontstyleName, $line-height, $color, false);
+}
+
+/**
+ * Returns the fontstyle as a map by recursively resolving any inherited fontstyle
+ *
+ * @author Beni Buess
+ *
+ * @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
+ *
+ * @returns {Map}  The fontstyle as a map of properties
+ *
+ */
+@function getFontStyle($fontstyleName) {
+    $fontstyle: map-get($fonts, $fontstyleName);
+    @if map-has-key($fontstyle, inherit) {
+        $fontstyle: map-merge(getFontStyle(map-get($fontstyle, inherit)), $fontstyle);
+    }
+    @return $fontstyle;
+}
+
+/**
+ * Sets all the properties in `$fontstyle`, ignores keys `respond-to` and `inherit`
+ *
+ * @author Beni Buess
+ *
+ * @param {String}    $fontstyle - a map of properties to apply
+ * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
+ * @param {*|Boolean} $color - if given, overwrites the color from the font settings
+ *
+ */
+@mixin _setFontStyle($fontstyle, $line-height, $color) {
+    $responsive-font-keywords: ("respond-to", "inherit");
+
+    @each $property, $value in $fontstyle {
+        @if not index($responsive-font-keywords, $property) {
+            #{$property}: unquote($value);
+        }
+    }
+}
+      
+/**
+ * Sets all the properties in `$fontstyle` for all breakpoints by using `respond-to` mixin and calling `_setFontStyle`
+ *
+ * @author Beni Buess
+ *
+ * @param {String}    $fontstyle - a map of properties to apply
+ * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
+ * @param {*|Boolean} $color - if given, overwrites the color from the font settings
+ *
+ */  
+@mixin _setAllFontStyles($fontstyle, $line-height, $color) {
+    @include _setFontStyle($fontstyle, $line-height, $color);
+    //check for respond-to definition, then set these
+    @if map-has-key($fontstyle, respond-to) {
+        @each $media, $respondToFontstyle in map-get($fontstyle, respond-to) {
+            @include respond-to($media) {
+                @include _setFontStyle($respondToFontstyle, $line-height, $color);
+            }
+        }
+    }
+}

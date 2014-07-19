@@ -7,10 +7,7 @@ $placeholder-fonts-list: ()
 $responsive-font-keywords: ("respond-to", "inherit")
 
 @mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles)
-    $fontstyle: map-get($fonts,$fontstyleName)
-
-    @if map-has-key($fontstyle, inherit)
-        $fontstyle: map-merge(map-get($fonts, map-get($fontstyle, inherit)), $fontstyle)
+    $fontstyle: getFontStyle($fontstyleName)
 
     @if $extendFontstyle
         @if not index($placeholder-fonts-list, $fontstyleName)
@@ -24,6 +21,12 @@ $responsive-font-keywords: ("respond-to", "inherit")
 
 @mixin responsive-font-no-extend($fontstyleName, $line-height: false, $color: false)
     +responsive-font($fontstyleName, $line-height, $color, false)
+
+@function getFontStyle($fontstyleName)
+    $fontstyle: map-get($fonts, $fontstyleName)
+    @if map-has-key($fontstyle, inherit)
+        $fontstyle: map-merge(getFontStyle(map-get($fontstyle, inherit)), $fontstyle)
+    @return $fontstyle
 
 @mixin _setFontStyle($fontstyle, $line-height, $color)
     @each $property, $value in $fontstyle

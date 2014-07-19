@@ -4,11 +4,11 @@
 
 */
 
+$font-family-helvetica: "'Helvetica', sans-serif";
+
+//the $font-families map is only needed if you want to use getPaddingForHeight() stuff
 $font-families: (
-    //define all the families here
-    //the line-height-part stuff is only needed, if you want to use getPaddingForHeight()
-    Helvetica: (
-        font-family: "'Helvetica', sans-serif",
+    $font-family-helvetica: (
         line-height-part-top: 1.5, //measure this
         line-height-part-bottom: 1 //measure this
     ),
@@ -17,30 +17,24 @@ $font-families: (
 $fonts: (
     // give your font names and define how they should look
     fontstyle-one: (
-        font-size: 30px,                                     //this is required
-        line-height: 35px,                                   //this is required
-        font-family-map: map-get($font-families, Helvetica), //get the map where you defined your font-family
-        properties: (                                        //add whatever additional css property you want here (optional)
-            font-weight: normal,
-            color: black
-        ),
+        font-size: 30px,                                     //this is required if you want to use getPaddingForHeight()
+        line-height: 35px,                                   //this is required if you want to use getPaddingForHeight()
+        font-family: $font-family-helvetica,
+        font-weight: normal,
+        color: black
         respond-to: (                                        //define how the font responds to different media queries
             medium-up: (                                     //use the named media queries from yy/breakpoint/respond-to
-                font-size: 32px,                             //here the same rules apply as for the default font map
-                properties: (
-                    color: red
-                )
+                font-size: 32px,                             //overwrite or add additional properties as you like
+                color: red
             )
         )
     ),
     fontstyle-two: (
         font-size: 25px,
         line-height: 30px,
-        font-family: "'Helvetica', sans-serif",              //you can define your font-family directly, you cannot use getPaddingForHeight() with this
-        properties: (
-            font-weight: normal,
-            font-style: italic,
-            color: grey
-        ),
+        font-family: $font-family-helvetica,
+        font-weight: normal,
+        font-style: italic,
+        color: grey
     ),
 );

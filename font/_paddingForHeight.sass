@@ -1,0 +1,45 @@
+@function getPropertyForMedia($fontstyle,$property,$media)
+    @if map-has-key(map-get($fonts, $fontstyle), respond-to)
+        @if map-has-key(map-get(map-get($fonts, $fontstyle), respond-to), $media)
+            @if map-has-key(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property)
+                @return map-get(map-get(map-get(map-get($fonts, $fontstyle), respond-to), $media), $property)
+            @else
+                @return map-get(map-get($fonts,$fontstyle), $property)
+    @return map-get(map-get($fonts,$fontstyle), $property)
+
+@function getFontSize($fontstyle, $media)
+    @return getPropertyForMedia($fontstyle, font-size, $media)
+
+@function getLineHeight($fontstyle, $media)
+    @return getPropertyForMedia($fontstyle,line-height,$media)
+
+@function getFontFamilyMap($fontstyle, $media)
+    @return map-get($font-families, getPropertyForMedia($fontstyle,font-family,$media))
+
+@function getLineHeightPartTop($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-part-top)
+
+@function getLineHeightPart($fontstyle, $media)
+    @return map-get(getFontFamilyMap($fontstyle,$media), line-height-part-bottom)
+
+@function getRemainingLineSpaceTop($fontstyle, $media)
+    $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
+    @return $remainingLineSpace * getLineHeightPartTop($fontstyle,$media)
+
+@function getRemainingLineSpaceBottom($fontstyle, $media)
+    $remainingLineSpace: (getLineHeight($fontstyle,$media) - getFontSize($fontstyle,$media))/2
+    @return $remainingLineSpace * getLineHeightPart($fontstyle,$media)
+
+@function getPaddingForHeight($fontstyle, $media, $desiredHeight, $padding-left: 0, $padding-right: 0)
+    @if getLineHeightPartTop($fontstyle,$media) == null
+        @debug "No line-height-part-top defined"
+    @if getLineHeightPartBottom($fontstyle,$media) == null
+        @debug "No line-height-part-bottom defined"
+    $heightToAdd: $desiredHeight - getLineHeight($fontstyle,$media)
+    $totalCorrectionFactor: getLineHeightPartTop($fontstyle,$media) + getLineHeightPart($fontstyle,$media)
+    $heightPart: $heightToAdd/$totalCorrectionFactor
+
+    $padding-top: $heightPart * getLineHeightPartTop($fontstyle,$media)
+    $padding-bottom: $heightPart * getLineHeightPart($fontstyle,$media)
+
+    @return "#{$padding-top} #{$padding-right} #{$padding-bottom} #{$padding-left}"

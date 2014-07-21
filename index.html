@@ -520,7 +520,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_paddingForHeight.scss</code></p>
+  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
 
 
 
@@ -680,7 +680,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_paddingForHeight.scss</code></p>
+  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
 
 
 
@@ -840,7 +840,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_paddingForHeight.scss</code></p>
+  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
 
 
 
@@ -1000,7 +1000,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_paddingForHeight.scss</code></p>
+  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
 
 
 
@@ -1160,7 +1160,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_paddingForHeight.scss</code></p>
+  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
 
 
 
@@ -1320,7 +1320,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_paddingForHeight.scss</code></p>
+  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
 
 
 
@@ -1534,7 +1534,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_paddingForHeight.scss</code></p>
+  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
 
 
 
@@ -1669,7 +1669,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_responsive-font.scss</code></p>
+  <p><code>sass/sass/font/_responsive-font.scss</code></p>
 
 
 
@@ -1760,7 +1760,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_responsive-font.scss</code></p>
+  <p><code>sass/sass/font/_responsive-font.scss</code></p>
 
 
 
@@ -1940,6 +1940,35 @@
   
 
   
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">$font-family-helvetica: &quot;Helvetica, sans-serif&quot;;
+$fonts: (
+  // give your fontstyle a name and define how they should look
+  fontstyle-one: (
+    font-size: 30px,       //this is required and must be in px if you want to use getPaddingForHeight()
+    line-height: 35px,     //this is required and must be in px if you want to use getPaddingForHeight()
+    font-family: $font-family-helvetica,
+    font-weight: normal,
+    color: black
+    respond-to: (          //define how the font responds to different media queries
+      medium-up: (         //use the named media queries from yy/breakpoint/respond-to
+        font-size: 32px,   //overwrite or add additional properties as you like
+        color: red
+      )
+    )
+  ),
+  fontstyle-two: (
+    inherit: fontstyle-one,    //you can inherit other fontstyles
+    font-size: 25px,
+    line-height: 30px,
+    font-style: italic,
+    color: grey
+  ),
+);</code></pre>
+  
+
 
   
 
@@ -1979,7 +2008,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_responsive-font.scss</code></p>
+  <p><code>sass/sass/font/_responsive-font.scss</code></p>
 
 
 
@@ -2157,7 +2186,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_responsive-font.scss</code></p>
+  <p><code>sass/sass/font/_responsive-font.scss</code></p>
 
 
 
@@ -2335,7 +2364,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_responsive-font.scss</code></p>
+  <p><code>sass/sass/font/_responsive-font.scss</code></p>
 
 
 
@@ -2513,7 +2542,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/font/_responsive-font.scss</code></p>
+  <p><code>sass/sass/font/_responsive-font.scss</code></p>
 
 
 

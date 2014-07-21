@@ -19,6 +19,32 @@ $placeholder-fonts-list: ();
  * @param {*|Boolean} $color - if given, overwrites the color from the font settings
  * @param {Boolean}   $extendFontstyle - if true @extend is used, otherwise properties are written to the selector that calls this mixin
  *
+ * @example scss
+ * $font-family-helvetica: "Helvetica, sans-serif";
+ * $fonts: (
+ *   // give your fontstyle a name and define how they should look
+ *   fontstyle-one: (
+ *     font-size: 30px,       //this is required and must be in px if you want to use getPaddingForHeight()
+ *     line-height: 35px,     //this is required and must be in px if you want to use getPaddingForHeight()
+ *     font-family: $font-family-helvetica,
+ *     font-weight: normal,
+ *     color: black
+ *     respond-to: (          //define how the font responds to different media queries
+ *       medium-up: (         //use the named media queries from yy/breakpoint/respond-to
+ *         font-size: 32px,   //overwrite or add additional properties as you like
+ *         color: red
+ *       )
+ *     )
+ *   ),
+ *   fontstyle-two: (
+ *     inherit: fontstyle-one,    //you can inherit other fontstyles
+ *     font-size: 25px,
+ *     line-height: 30px,
+ *     font-style: italic,
+ *     color: grey
+ *   ),
+ * );
+ *
  */
 @mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles) {
     $fontstyle: getFontStyle($fontstyleName);

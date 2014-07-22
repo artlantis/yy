@@ -1,9 +1,16 @@
 /**
+ * If true, `clearfix` uses @extend by default
+ *
+ * @type Bool
+ */
+$clearfix-use-extend: false !default;
+
+/**
  * Adds the micro-clearfix hack to the element that called this mixin
  *
  * @param {Boolean} $extend (true) - if true, uses `@extend %clearfix`
  */
-@mixin clearfix($extend: true) {
+@mixin clearfix($extend: $clearfix-use-extend) {
     @if $extend {
         & {
             @extend %clearfix;

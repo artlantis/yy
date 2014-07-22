@@ -6,3 +6,11 @@
 .another-row {
     @include clearfix();
 }
+
+.yet-another-row {
+    @include clearfix(true);
+}
+
+.and-yet-another-row {
+    @include clearfix(true);
+}

@@ -1,7 +1,23 @@
-.row:before, .another-row:before, .row:after, .another-row:after {
+.yet-another-row:before, .and-yet-another-row:before, .yet-another-row:after, .and-yet-another-row:after {
   content: " ";
   display: table;
 }
-.row:after, .another-row:after {
+.yet-another-row:after, .and-yet-another-row:after {
+  clear: both;
+}
+
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+.another-row:before, .another-row:after {
+  content: " ";
+  display: table;
+}
+.another-row:after {
   clear: both;
 }

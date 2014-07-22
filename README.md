@@ -34,7 +34,7 @@ You need npm, grunt, sass and compass.
 Tests are in `tests`. Run them with `grunt test`. If you add a new feature, please add a test for it.
 
 ### Documentation
-Documentation is generated using [SassDoc](https://github.com/SassDoc/sassdoc). To generate it, run 'grunt sassdoc' and see it in the docs folder.
+Documentation is generated using [SassDoc](https://github.com/SassDoc/sassdoc). To generate it, run `grunt sassdoc` and see it in the docs folder.
 To publish the docs, run `grunt publish-docs`, it will generate and commit them to the `gh-pages` branch and push it to github.
 
 ### New Features

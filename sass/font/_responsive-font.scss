@@ -13,9 +13,9 @@ $placeholder-fonts-list: ();
  * Sets all properties defined in the global map `$fonts` for the given `$fontstyleName`
  *
  * @param {String}    $fontstyleName - the name of the font, a 1st level key in `$fonts`
- * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
- * @param {*|Boolean} $color - if given, overwrites the color from the font settings
- * @param {Boolean}   $extendFontstyle - if true @extend is used, otherwise properties are written to the selector that calls this mixin
+ * @param {*|Boolean} $line-height (false) - if given, overwrites the line-height from the font settings
+ * @param {*|Boolean} $color (false) - if given, overwrites the color from the font settings
+ * @param {Boolean}   $extendFontstyle ($responsive-font-extend-fontstyles) - if true @extend is used, otherwise properties are written to the selector that calls this mixin
  *
  * @example scss
  * $font-family-helvetica: "Helvetica, sans-serif";

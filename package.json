@@ -3,6 +3,7 @@
   "title": "yy",
   "version": "1.0.0-alpha6",
   "description": "a collection of sass utilities",
+  "homepage": "https://github.com/astina/yy",
   "main": "Gruntfile.js",
   "directories": {
     "example": "examples"

@@ -8,7 +8,7 @@ $clearfix-use-extend: false !default;
 /**
  * Adds the micro-clearfix hack to the element that called this mixin
  *
- * @param {Boolean} $extend (true) - if true, uses `@extend %clearfix`
+ * @param {Boolean} $extend ($clearfix-use-extend) - if true, uses `@extend %clearfix`
  */
 @mixin clearfix($extend: $clearfix-use-extend) {
     @if $extend {

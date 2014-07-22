@@ -2,6 +2,8 @@
 
 Documentation: https://astina.github.io/yy
 
+master build status: [![Build Status](https://travis-ci.org/astina/yy.svg?branch=master)](https://travis-ci.org/astina/yy)
+
 ### responsive-sprite
 Allows you to include two versions of a sprited image from two different sprite maps made for low and high resolution screens.
 

@@ -1,4 +1,9 @@
-$remBase: 16 !default;
+/**
+ * Used as the base for rem/px calculations in `remPxFallback`
+ *
+ * @type Int
+ */
+ $remBase: 16 !default;
 
 @function parseInt($n) {
     @return $n / ($n * 0 + 1);

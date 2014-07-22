@@ -1,0 +1,13 @@
+@import "../../sass/sprite/responsive-sprite-compass";
+
+$logo-map: sprite-map("images/*.png");
+$logo-hidpi-map: sprite-map("images-hidpi/*.png");
+
+$sprite-maps: (logos: (low-dpi: $logo-map, high-dpi: $logo-hidpi-map));
+
+#astina-logo {
+    @include responsive-sprite(logos, astina);
+}
+#sass-logo {
+    @include responsive-sprite(logos, sass);
+}

@@ -73,6 +73,16 @@
                 }]
             },
         },
+        compass: {
+            tests: {
+                options: {
+                    sassDir: 'tests/compass',
+                    spriteLoadPath: 'tests/fixtures',
+                    imagesDir: 'tmp/images',
+                    cssDir: 'tmp',
+                }
+            }
+        },
 
         comments: {
             test_css: {
@@ -90,12 +100,13 @@
     });
     
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-stripcomments');
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-sassdoc');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('test', ['sass', 'comments', 'nodeunit']);
+    grunt.registerTask('test', ['sass', 'compass', 'comments', 'nodeunit']);
     grunt.registerTask('publish-docs', ['sassdoc', 'gh-pages']);
 
     grunt.registerTask('default', ['test']);

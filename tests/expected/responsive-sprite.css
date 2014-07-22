@@ -1,0 +1,35 @@
+#astina-logo {
+  background-image: url('/tmp/images/images-s7f42f434d4.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 11px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    #astina-logo {
+    background-image: url('/tmp/images/images-hidpi-s369fb37f4d.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 38px auto;
+    width: 37.5px;
+    height: 10.5px;
+  }
+}
+
+#sass-logo {
+  background-image: url('/tmp/images/images-s7f42f434d4.png');
+  background-position: 0 -11px;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    #sass-logo {
+    background-image: url('/tmp/images/images-hidpi-s369fb37f4d.png');
+    background-position: 0 -10.5px;
+    background-repeat: no-repeat;
+    background-size: 38px auto;
+    width: 26.5px;
+    height: 20px;
+  }
+}

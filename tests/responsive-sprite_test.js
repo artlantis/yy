@@ -2,13 +2,13 @@
 
 var grunt = require( "grunt" );
 
-exports.yy_font = {
+exports.yy_responsive_sprite = {
 
     setUp: function( done ) {
         done();
     },
 
-    responsive_font: function( test ) {
+    responsive_sprite_compass: function( test ) {
         test.expect( 1 );
 
         var actual = grunt.file.read( "tmp/responsive-sprite-compass.css" );

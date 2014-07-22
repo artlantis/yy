@@ -1,0 +1,10 @@
+@import "../../sass/remPxFallback/remPxFallback";
+h1 {
+    @include padding(20px);
+}
+h2 {
+    @include margin(2rem);
+}
+h3 {
+    @include margin(2rem 20px);
+}

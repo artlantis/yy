@@ -1,14 +1,25 @@
 /**
  * Adds the micro-clearfix hack to the element that called this mixin
  *
+ * @param {Boolean} $extend (true) - if true, uses `@extend %clearfix`
  */
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
+@mixin clearfix($extend: true) {
+    @if $extend {
+        & {
+            @extend %clearfix;
+        }
+    } @else {
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
     }
-    &:after {
-        clear: both;
-    }
+}
+
+%clearfix {
+    @include clearfix(false);
 }

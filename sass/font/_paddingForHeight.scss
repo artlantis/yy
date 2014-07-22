@@ -4,8 +4,6 @@
  * Returns the value of `$property` key for the given `$fontstyleName` and `$media`
  * If `$media` is not found in the `respond-to` map of the fontstyle, it returns the value that is defined at the 1st level of the fontstyle.
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyleName - the name of the font, passed to `getFontStyle`
  * @param {String}    $property - the property that should be returned
  * @param {String}    $media - the key in `respond-to` map of fontstyle

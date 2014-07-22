@@ -1,0 +1,50 @@
+@import "helpers";
+
+/**
+ * Adds all defined breakpoints in json format to `body::before` content
+ *
+ * @example scss
+ * $breakpoints: (
+ *    small:     (
+ *        mq: "(min-width:  400px) and (max-width:  767px)",
+ *    ),
+ *    small-up:  (
+ *        min-width: 400px
+ *    ),
+ *    medium:    (
+ *        media: screen,
+ *        min-width: 768px,
+ *        max-width: 991px,
+ *    ),
+ *    medium-up: (
+ *        media: screen,
+ *        min-width: 768px,
+ *    ),
+ *    large:     (
+ *        mq: "(min-width:  992px) and (max-width: 1299px)",
+ *    ),
+ *    large-up:  (
+ *        mq: "(min-width:  992px)",
+ *    ),
+ *    x-large:   (
+ *        mq: "(min-width: 1300px)"
+ *    )
+ * );
+ *
+ * @include json;
+ *
+ */
+@mixin json {
+    $breakpoint-json: null;
+
+    @each $bp-name, $bp-value in $breakpoints {
+        $breakpoint-json: append($breakpoint-json, \"#{$bp-name}\" + ":" + \"#{getMediaQuery($bp-name)}\", comma);
+    }
+
+    $breakpoint-json: "{" + $breakpoint-json + "}";
+
+    body::before {
+        content: $breakpoint-json;
+        display: none;
+    }
+}

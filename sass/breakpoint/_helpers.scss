@@ -1,0 +1,54 @@
+$memo-exists: function-exists(memo-get) and function-exists(memo-set);
+
+/**
+ * Returns a media query string by resolving the settings from `$breakpoints` map
+ * If you have imported Memo from SassyMaps, this is used to store the computed media queries.
+ * @link https://github.com/Team-Sass/Sassy-Maps#memo
+ *
+ * @param {String}    $breakpoint - the name of breakpoint from global `$breakpoints` map
+ *
+ */
+@function getMediaQuery($breakpoint) {
+    $mq: '';
+
+    @if $memo-exists {
+        $result: memo-get(yy-respond-to-media-query, $breakpoint);
+        @if $result != null {
+            @return $result;
+        }
+    }
+
+    //if mq is defined, return this
+    @if map-get(map-get($breakpoints, $breakpoint), mq) != null {
+        $mq: map-get(map-get($breakpoints, $breakpoint), mq);
+    } @else {
+        //otherwise we combine the media query with the given media, min-width and max-width settings
+        @if map-get(map-get($breakpoints, $breakpoint), media) != null {
+            $mq: $mq + map-get(map-get($breakpoints, $breakpoint), media);
+        }
+
+        @if map-get(map-get($breakpoints, $breakpoint), min-width) != null {
+            @if $mq != '' {
+                $mq: $mq + ' and ';
+            }
+            $mq: $mq + '(min-width:' + map-get(map-get($breakpoints, $breakpoint), min-width) + ')';
+        }
+
+        @if map-get(map-get($breakpoints, $breakpoint), max-width) != null {
+            @if $mq != '' {
+                $mq: $mq + ' and ';
+            }
+            $mq: $mq + '(max-width:' + map-get(map-get($breakpoints, $breakpoint), max-width) + ')';
+        }
+    }
+
+    @if $mq == '' {
+        $mq: false;
+    }
+
+    @if $memo-exists {
+        $holder: memo-set(yy-respond-to-media-query, $breakpoint, $mq);
+    }
+
+    @return $mq;
+}

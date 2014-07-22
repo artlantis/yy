@@ -1,0 +1,55 @@
+@import "helpers";
+
+/**
+ * This gets the media query by using `getMediaQuery` for the given named breakpoint
+ * and wraps everything that is within this mixin in `@media`
+ *
+ * @param {String}    $breakpoint - the name of breakpoint from global `$breakpoints` map
+ *
+ * @example scss
+ * $breakpoints: (
+ *    small:     (
+ *        mq: "(min-width:  400px) and (max-width:  767px)",
+ *    ),
+ *    small-up:  (
+ *        min-width: 400px
+ *    ),
+ *    medium:    (
+ *        media: screen,
+ *        min-width: 768px,
+ *        max-width: 991px,
+ *    ),
+ *    medium-up: (
+ *        media: screen,
+ *        min-width: 768px,
+ *    ),
+ *    large:     (
+ *        mq: "(min-width:  992px) and (max-width: 1299px)",
+ *    ),
+ *    large-up:  (
+ *        mq: "(min-width:  992px)",
+ *    ),
+ *    x-large:   (
+ *        mq: "(min-width: 1300px)"
+ *    )
+ * );
+ *
+ * #some-selector {
+ *    @include respond-to(small) {
+ *        background: green;
+ *    }
+ * }
+ *
+ */
+@mixin respond-to($breakpoint) {
+    $mediaQuery: getMediaQuery($breakpoint);
+    @if $mediaQuery == false {
+        @debug "ERROR: unable to generate media query for breakpoint #{$breakpoint}"
+        //wait for sass 3.4
+        //@error "unable to generate media query for breakpoint #{$breakpoint}"
+    } @else {
+        @media #{$mediaQuery} {
+            @content;
+        }
+    }
+}

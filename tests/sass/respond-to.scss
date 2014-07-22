@@ -1,15 +1,19 @@
 $breakpoints: (
-    small:     (
+    a:     (
         mq: "(min-width:  400px) and (max-width:  767px)",
     ),
-    small-up:  (
-        min-width: 400px
+    b:  (
+        max-width: 400px,
+        min-height: 200px,
+        orientation: portrait
     ),
-    medium-up: (
+    c: (
         media: screen,
         min-width: 768px,
+        max-height: 2000px,
+        orientation: landscape
     ),
-    large-up:  (
+    d:  (
         mq: "(min-width:  992px)",
     ),
 );
@@ -17,16 +21,16 @@ $breakpoints: (
 @import "../../sass/breakpoint/respond-to";
 h1 {
     color: black;
-    @include respond-to(small) {
+    @include respond-to(a) {
         color: white;
     };
-    @include respond-to(small-up) {
+    @include respond-to(b) {
         background: red;
     };
-    @include respond-to(medium-up) {
+    @include respond-to(c) {
         background: purple;
     };
-    @include respond-to(large-up) {
+    @include respond-to(d) {
         background: purple;
     };
 }

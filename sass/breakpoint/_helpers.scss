@@ -22,7 +22,7 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
     @if map-get(map-get($breakpoints, $breakpoint), mq) != null {
         $mq: map-get(map-get($breakpoints, $breakpoint), mq);
     } @else {
-        //otherwise we combine the media query with the given media, min-width and max-width settings
+        //otherwise we combine the media query with the given media, min-width, max-width, min-height, max-height and orientation settings
         @if map-get(map-get($breakpoints, $breakpoint), media) != null {
             $mq: $mq + map-get(map-get($breakpoints, $breakpoint), media);
         }
@@ -39,6 +39,27 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
                 $mq: $mq + ' and ';
             }
             $mq: $mq + '(max-width:' + map-get(map-get($breakpoints, $breakpoint), max-width) + ')';
+        }
+
+        @if map-get(map-get($breakpoints, $breakpoint), min-height) != null {
+            @if $mq != '' {
+                $mq: $mq + ' and ';
+            }
+            $mq: $mq + '(min-height:' + map-get(map-get($breakpoints, $breakpoint), min-height) + ')';
+        }
+
+        @if map-get(map-get($breakpoints, $breakpoint), max-height) != null {
+            @if $mq != '' {
+                $mq: $mq + ' and ';
+            }
+            $mq: $mq + '(max-height:' + map-get(map-get($breakpoints, $breakpoint), max-height) + ')';
+        }
+
+        @if map-get(map-get($breakpoints, $breakpoint), orientation) != null {
+            @if $mq != '' {
+                $mq: $mq + ' and ';
+            }
+            $mq: $mq + '(orientation:' + map-get(map-get($breakpoints, $breakpoint), orientation) + ')';
         }
     }
 

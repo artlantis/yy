@@ -1,0 +1,8 @@
+@import "../../sass/hacks/clearfix";
+.row {
+    @include clearfix();
+}
+
+.another-row {
+    @include clearfix();
+}

@@ -1,0 +1,7 @@
+.row:before, .another-row:before, .row:after, .another-row:after {
+  content: " ";
+  display: table;
+}
+.row:after, .another-row:after {
+  clear: both;
+}

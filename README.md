@@ -4,6 +4,9 @@ Documentation: https://astina.github.io/yy
 
 master build status: [![Build Status](https://travis-ci.org/astina/yy.svg?branch=master)](https://travis-ci.org/astina/yy)
 
+## Install
+`bower install yy`
+
 ## Whats in there?
 
 See [Documentation](https://astina.github.io/yy) for details on how to use the stuff. Or have a look at the examples in `examples` directory.

@@ -41,7 +41,7 @@
                 files: [{
                     expand: true,
                     cwd: 'tests/sass',
-                    src: ['responsive-font.scss'],
+                    src: 'responsive-font.scss',
                     dest: 'tmp',
                     ext: '.css'
                 }]
@@ -54,7 +54,20 @@
                 files: [{
                     expand: true,
                     cwd: 'tests/sass',
-                    src: ['respond-to.scss'],
+                    src: 'respond-to.scss',
+                    dest: 'tmp',
+                    ext: '.css'
+                }]
+            },
+            json: {
+                options: {
+                    bundleExec: true,
+                    style: 'expanded'
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'tests/sass',
+                    src: 'json.scss',
                     dest: 'tmp',
                     ext: '.css'
                 }]

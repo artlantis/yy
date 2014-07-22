@@ -1,0 +1,4 @@
+body::before {
+  content: '{\"small\":\"(min-width:  400px) and (max-width:  767px)\", \"small-up\":\"(min-width:400px)\", \"medium-up\":\"screen and (min-width:768px)\", \"large-up\":\"(min-width:  992px)\"}';
+  display: none;
+}

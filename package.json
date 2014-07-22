@@ -23,6 +23,7 @@
     "grunt-sassdoc": "^0.4.2",
     "grunt-gh-pages": "^0.9.1",
     "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt-contrib-sass": "^0.7.3"
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-stripcomments": "^0.3.0"
   }
 }

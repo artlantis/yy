@@ -1,2 +1,28 @@
-h1{font-size:30px;line-height:35px;font-family:'Helvetica', sans-serif;font-weight:normal;color:#000}@media screen and (min-width: 768px){h1{font-size:32px;color:red}}
-h2{font-size:25px;line-height:30px;font-family:'Helvetica', sans-serif;font-weight:normal;color:gray;font-style:italic}@media screen and (min-width: 768px){h2{font-size:32px;color:red}}
+h1 {
+  font-size: 30px;
+  line-height: 35px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 32px;
+    color: red;
+  }
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 30px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  color: gray;
+  font-style: italic;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+    color: red;
+  }
+}

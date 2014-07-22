@@ -36,7 +36,7 @@
             responsive_font: {
                 options: {
                     bundleExec: true,
-                    style: 'compressed'
+                    style: 'expanded'
                 },
                 files: [{
                     expand: true,
@@ -49,7 +49,7 @@
             respond_to: {
                 options: {
                     bundleExec: true,
-                    style: 'compressed'
+                    style: 'expanded'
                 },
                 files: [{
                     expand: true,
@@ -61,16 +61,29 @@
             },
         },
 
+        comments: {
+            test_css: {
+                options: {
+                    singleline: true,
+                    multiline: true
+                },
+                src: [ 'tmp/*.css'] // files to remove comments from
+            },
+        },
+
         nodeunit: {
             tests: [ "tests/*_test.js" ],
         }
     });
     
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-stripcomments');
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-sassdoc');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('default', ['sass', 'nodeunit']);
+    grunt.registerTask('test', ['sass', 'comments', 'nodeunit']);
     grunt.registerTask('publish-docs', ['sassdoc', 'gh-pages']);
+
+    grunt.registerTask('default', ['test']);
 };

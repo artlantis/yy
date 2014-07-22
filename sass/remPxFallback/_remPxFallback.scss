@@ -1,5 +1,9 @@
 $remBase: 16 !default;
 
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
 /**
  * Adds the passed property with the given value(s) in rem and in px as fallback.
  * This file also includes the following wrapper mixins around `remPxFallback()`:

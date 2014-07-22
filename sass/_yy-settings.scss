@@ -2,4 +2,7 @@
 // if you use responsive-font() within @media (what could generate not really useful media queries in your css) this will fail.
 // if you really have to use it within @media, call it with false as the 4th parameter
 // or use +responsive-font-no-extend()
-$responsive-font-extend-fontstyles: true
+$responsive-font-extend-fontstyles: true;
+
+// used as the base for rem/px calculations in `remPxFallback`
+$remBase: 16;

@@ -46,6 +46,19 @@
                     ext: '.css'
                 }]
             },
+            respond_to: {
+                options: {
+                    bundleExec: true,
+                    style: 'compressed'
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'tests/sass',
+                    src: ['respond-to.scss'],
+                    dest: 'tmp',
+                    ext: '.css'
+                }]
+            },
         },
 
         nodeunit: {

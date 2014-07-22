@@ -1,0 +1,23 @@
+h1 {
+  color: black;
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  h1 {
+    color: white;
+  }
+}
+@media (min-width: 400px) {
+  h1 {
+    background: red;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    background: purple;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    background: purple;
+  }
+}

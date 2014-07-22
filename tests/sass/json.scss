@@ -1,0 +1,18 @@
+$breakpoints: (
+    small:     (
+        mq: "(min-width:  400px) and (max-width:  767px)",
+    ),
+    small-up:  (
+        min-width: 400px
+    ),
+    medium-up: (
+        media: screen,
+        min-width: 768px,
+    ),
+    large-up:  (
+        mq: "(min-width:  992px)",
+    ),
+);
+
+@import "../../sass/breakpoint/json";
+@include json;

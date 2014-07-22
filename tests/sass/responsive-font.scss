@@ -1,0 +1,41 @@
+$font-family-helvetica: "'Helvetica', sans-serif";
+
+$fonts: (
+    fontstyle-one: (
+        font-size: 30px,
+        line-height: 35px,
+        font-family: $font-family-helvetica,
+        font-weight: normal,
+        color: black,
+        respond-to: (
+            medium-up: (
+                font-size: 32px,
+                color: red
+            )
+        )
+    ),
+    fontstyle-two: (
+        inherit: fontstyle-one,
+        font-size: 25px,
+        line-height: 30px,
+        font-style: italic,
+        color: grey
+    ),
+);
+
+$breakpoints: (
+    medium-up: (
+        media: screen,
+        min-width: 768px,
+    ),
+);
+
+@import "../../sass/font/responsive-font";
+
+h1 {
+    @include responsive-font(fontstyle-one);
+}
+
+h2 {
+    @include responsive-font(fontstyle-two);
+}

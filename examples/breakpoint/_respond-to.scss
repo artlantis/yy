@@ -24,12 +24,12 @@ $breakpoints: (
     x-large:   (
         mq: "(min-width: 1300px)"
     )
-)
+);
 
 //then something like this
 
 #some-selector {
-    @mixin respond-to(small) {
+    @include respond-to(small) {
         background: green;
     }
 }

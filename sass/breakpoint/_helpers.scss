@@ -88,10 +88,10 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  * Make sure to register your breakpoint before the first use in `respond-to` or in `responsive-font` calling a
  * named font that has definitions for this breakpoint.
  *
- * Any of the parameters are technically optional altought to do something you need to pass at least `$breakpointName`
+ * Any of the parameters are technically optional altought to do something you need to pass at least `$name`
  * and `$mq` or any of the other parameters.
  *
- * @param {String} $breakpointName (false) - the name of the new breakpoint
+ * @param {String} $name (false)           - the name of the new breakpoint
  * @param {String} $mq (false)             - a complete media query string
  * @param {String} $media (false)          - the `media` to use in the media query
  * @param {String} $min-width (false)      - min-width
@@ -104,7 +104,7 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  * $registered: registerBreakpoint(my-new-breakpoint, $media: screen, $min-width: 900px, $orientation: landscape);
  *
  */
-@function registerBreakpoint($breakpointName: false, $mq: false, $media: false, $min-width: false, $max-width: false, $min-height: false, $max-height: false, $orientation: false) {
+@function registerBreakpoint($name: false, $mq: false, $media: false, $min-width: false, $max-width: false, $min-height: false, $max-height: false, $orientation: false) {
     $new-bp: ();
     $valid: false;
     @if $mq {
@@ -136,8 +136,8 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
         $valid: true;
     }
     @if $valid {
-        @if $breakpointName {
-            $yy-breakpoint-map: map-merge($yy-breakpoint-map, ($breakpointName: $new-bp)) !global;
+        @if $name {
+            $yy-breakpoint-map: map-merge($yy-breakpoint-map, ($name: $new-bp)) !global;
         } @else {
             $valid: false;
         }
@@ -150,10 +150,10 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  * your breakpoint actually got registered.
  * This allows for shorter sass code as you need to assign the return value of the function to something.
  *
- * Any of the parameters are technically optional altought to do something you need to pass at least `$breakpointName`
+ * Any of the parameters are technically optional altought to do something you need to pass at least `$name`
  * and `$mq` or any of the other parameters.
  *
- * @param {String} $breakpointName (false) - the name of the new breakpoint
+ * @param {String} $name (false) - the name of the new breakpoint
  * @param {String} $mq (false)             - a complete media query string
  * @param {String} $media (false)          - the `media` to use in the media query
  * @param {String} $min-width (false)      - min-width
@@ -166,6 +166,6 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  *  @include registerBreakpoint(my-new-breakpoint, $media: screen, $min-width: 900px, $orientation: landscape);
  *
  */
-@mixin registerBreakpoint($breakpointName: false, $mq: false, $media: false, $min-width: false, $max-width: false, $min-height: false, $max-height: false, $orientation: false) {
-    $registered: registerBreakpoint($breakpointName, $mq, $media, $min-width, $max-width, $min-height, $max-height, $orientation); 
+@mixin registerBreakpoint($name: false, $mq: false, $media: false, $min-width: false, $max-width: false, $min-height: false, $max-height: false, $orientation: false) {
+    $registered: registerBreakpoint($name, $mq, $media, $min-width, $max-width, $min-height, $max-height, $orientation); 
 }

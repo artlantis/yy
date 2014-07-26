@@ -11,8 +11,8 @@ $yy-breakpoint-map: $bps;
 
 @import "../../sass/breakpoint/respond-to";
 
-@include registerBreakpoint($breakpointName: b, $max-width: 400px, $min-height: 200px, $orientation: portrait);
-$registered: registerBreakpoint($breakpointName: c, $media: screen, $min-width: 768px, $max-height: 2000px, $orientation: landscape);
+@include registerBreakpoint($name: b, $max-width: 400px, $min-height: 200px, $orientation: portrait);
+$registered: registerBreakpoint($name: c, $media: screen, $min-width: 768px, $max-height: 2000px, $orientation: landscape);
 
 h1 {
     color: black;

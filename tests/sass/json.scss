@@ -8,11 +8,11 @@ $breakpoints: (
     medium-up: (
         media: screen,
         min-width: 768px,
-    ),
-    large-up:  (
-        mq: "(min-width:  992px)",
-    ),
+    )
 );
 
 @import "../../sass/breakpoint/json";
+
+@include registerBreakpoint($name: large-up, $mq: "(min-width:  992px)");
+
 @include json;

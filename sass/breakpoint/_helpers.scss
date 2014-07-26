@@ -1,11 +1,19 @@
+/**
+ * The sass map holding the breakpoint information
+ * Defaults to `$breakpoints`
+ *
+ * @type Map
+ */
+$yy-breakpoint-map: $breakpoints !default;
+
 $memo-exists: function-exists(memo-get) and function-exists(memo-set);
 
 /**
- * Returns a media query string by resolving the settings from `$breakpoints` map
+ * Returns a media query string by resolving the settings from `$yy-breakpoint-map` map
  * If you have imported Memo from SassyMaps, this is used to store the computed media queries.
  * @link https://github.com/Team-Sass/Sassy-Maps#memo
  *
- * @param {String}    $breakpoint - the name of breakpoint from global `$breakpoints` map
+ * @param {String}    $breakpoint - the name of breakpoint from global `$yy-breakpoint-map` map
  *
  */
 @function getMediaQuery($breakpoint) {
@@ -19,47 +27,47 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
     }
 
     //if mq is defined, return this
-    @if map-get(map-get($breakpoints, $breakpoint), mq) != null {
-        $mq: map-get(map-get($breakpoints, $breakpoint), mq);
+    @if map-get(map-get($yy-breakpoint-map, $breakpoint), mq) != null {
+        $mq: map-get(map-get($yy-breakpoint-map, $breakpoint), mq);
     } @else {
         //otherwise we combine the media query with the given media, min-width, max-width, min-height, max-height and orientation settings
-        @if map-get(map-get($breakpoints, $breakpoint), media) != null {
-            $mq: $mq + map-get(map-get($breakpoints, $breakpoint), media);
+        @if map-get(map-get($yy-breakpoint-map, $breakpoint), media) != null {
+            $mq: $mq + map-get(map-get($yy-breakpoint-map, $breakpoint), media);
         }
 
-        @if map-get(map-get($breakpoints, $breakpoint), min-width) != null {
+        @if map-get(map-get($yy-breakpoint-map, $breakpoint), min-width) != null {
             @if $mq != '' {
                 $mq: $mq + ' and ';
             }
-            $mq: $mq + '(min-width:' + map-get(map-get($breakpoints, $breakpoint), min-width) + ')';
+            $mq: $mq + '(min-width:' + map-get(map-get($yy-breakpoint-map, $breakpoint), min-width) + ')';
         }
 
-        @if map-get(map-get($breakpoints, $breakpoint), max-width) != null {
+        @if map-get(map-get($yy-breakpoint-map, $breakpoint), max-width) != null {
             @if $mq != '' {
                 $mq: $mq + ' and ';
             }
-            $mq: $mq + '(max-width:' + map-get(map-get($breakpoints, $breakpoint), max-width) + ')';
+            $mq: $mq + '(max-width:' + map-get(map-get($yy-breakpoint-map, $breakpoint), max-width) + ')';
         }
 
-        @if map-get(map-get($breakpoints, $breakpoint), min-height) != null {
+        @if map-get(map-get($yy-breakpoint-map, $breakpoint), min-height) != null {
             @if $mq != '' {
                 $mq: $mq + ' and ';
             }
-            $mq: $mq + '(min-height:' + map-get(map-get($breakpoints, $breakpoint), min-height) + ')';
+            $mq: $mq + '(min-height:' + map-get(map-get($yy-breakpoint-map, $breakpoint), min-height) + ')';
         }
 
-        @if map-get(map-get($breakpoints, $breakpoint), max-height) != null {
+        @if map-get(map-get($yy-breakpoint-map, $breakpoint), max-height) != null {
             @if $mq != '' {
                 $mq: $mq + ' and ';
             }
-            $mq: $mq + '(max-height:' + map-get(map-get($breakpoints, $breakpoint), max-height) + ')';
+            $mq: $mq + '(max-height:' + map-get(map-get($yy-breakpoint-map, $breakpoint), max-height) + ')';
         }
 
-        @if map-get(map-get($breakpoints, $breakpoint), orientation) != null {
+        @if map-get(map-get($yy-breakpoint-map, $breakpoint), orientation) != null {
             @if $mq != '' {
                 $mq: $mq + ' and ';
             }
-            $mq: $mq + '(orientation:' + map-get(map-get($breakpoints, $breakpoint), orientation) + ')';
+            $mq: $mq + '(orientation:' + map-get(map-get($yy-breakpoint-map, $breakpoint), orientation) + ')';
         }
     }
 

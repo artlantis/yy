@@ -4,6 +4,9 @@
 // or use +responsive-font-no-extend()
 $responsive-font-extend-fontstyles: true;
 
+// the sass map holding the breakpoint information
+$yy-breakpoint-map: $breakpoints;
+
 // used as the base for rem/px calculations in `remPxFallback`
 $remBase: 16;
 

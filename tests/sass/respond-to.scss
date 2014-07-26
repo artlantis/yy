@@ -1,4 +1,4 @@
-$breakpoints: (
+$bps: (
     a:     (
         mq: "(min-width:  400px) and (max-width:  767px)",
     ),
@@ -17,6 +17,8 @@ $breakpoints: (
         mq: "(min-width:  992px)",
     ),
 );
+
+$yy-breakpoint-map: $bps;
 
 @import "../../sass/breakpoint/respond-to";
 h1 {

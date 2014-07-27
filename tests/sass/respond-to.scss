@@ -1,24 +1,19 @@
-$breakpoints: (
+$bps: (
     a:     (
         mq: "(min-width:  400px) and (max-width:  767px)",
-    ),
-    b:  (
-        max-width: 400px,
-        min-height: 200px,
-        orientation: portrait
-    ),
-    c: (
-        media: screen,
-        min-width: 768px,
-        max-height: 2000px,
-        orientation: landscape
     ),
     d:  (
         mq: "(min-width:  992px)",
     ),
 );
 
+$yy-breakpoint-map: $bps;
+
 @import "../../sass/breakpoint/respond-to";
+
+@include registerBreakpoint($name: b, $max-width: 400px, $min-height: 200px, $orientation: portrait);
+$registered: registerBreakpoint($name: c, $media: screen, $min-width: 768px, $max-height: 2000px, $orientation: landscape);
+
 h1 {
     color: black;
     @include respond-to(a) {

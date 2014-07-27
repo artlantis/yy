@@ -44,7 +44,7 @@
 @mixin json {
     $breakpoint-json: null;
 
-    @each $bp-name, $bp-value in $breakpoints {
+    @each $bp-name, $bp-value in $yy-breakpoint-map {
         $breakpoint-json: append($breakpoint-json, \"#{$bp-name}\" + ":" + \"#{getMediaQuery($bp-name)}\", comma);
     }
 

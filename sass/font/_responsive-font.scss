@@ -1,6 +1,14 @@
 @import "../breakpoint/respond-to";
 
 /**
+ * The sass map holding the font specs
+ * Defaults to `$fonts`
+ *
+ * @type Map
+ */
+$yy-fonts-map: $fonts !default;
+
+/**
  * If true, `responsive-font` uses @extend by default
  *
  * @type Bool
@@ -87,7 +95,7 @@ $placeholder-fonts-list: ();
  *
  */
 @function getFontStyle($fontstyleName) {
-    $fontstyle: map-get($fonts, $fontstyleName);
+    $fontstyle: map-get($yy-fonts-map, $fontstyleName);
     @if map-has-key($fontstyle, inherit) {
         $fontstyle: map-merge(getFontStyle(map-get($fontstyle, inherit)), $fontstyle);
     }

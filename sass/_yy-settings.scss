@@ -1,3 +1,8 @@
+//
+// This file holds all the variables that can be used to configure yy
+// The values here are the ones that are assigned by default if you don't include them in your sass code.
+//
+
 // if set to true (default), responsive-font() uses @extend instead of redefining everything
 // if you use responsive-font() within @media (what could generate not really useful media queries in your css) this will fail.
 // if you really have to use it within @media, call it with false as the 4th parameter
@@ -6,6 +11,9 @@ $responsive-font-extend-fontstyles: true;
 
 // the sass map holding the breakpoint information
 $yy-breakpoint-map: $breakpoints;
+
+// the sass map holding the breakpoint information
+$yy-fonts-map: $fonts;
 
 // used as the base for rem/px calculations in `remPxFallback`
 $remBase: 16;

@@ -1,12 +1,5 @@
+@import "helpers";
 @import "../breakpoint/respond-to";
-
-/**
- * The sass map holding the font specs
- * Defaults to `$fonts`
- *
- * @type Map
- */
-$yy-fonts-map: $fonts !default;
 
 /**
  * If true, `responsive-font` uses @extend by default
@@ -82,24 +75,6 @@ $placeholder-fonts-list: ();
  */
 @mixin responsive-font-no-extend($fontstyleName, $line-height: false, $color: false) {
     @include responsive-font($fontstyleName, $line-height, $color, false);
-}
-
-/**
- * Returns the fontstyle as a map by recursively resolving any inherited fontstyle
- *
- * @author Beni Buess
- *
- * @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
- *
- * @returns {Map}  The fontstyle as a map of properties
- *
- */
-@function getFontStyle($fontstyleName) {
-    $fontstyle: map-get($yy-fonts-map, $fontstyleName);
-    @if map-has-key($fontstyle, inherit) {
-        $fontstyle: map-merge(getFontStyle(map-get($fontstyle, inherit)), $fontstyle);
-    }
-    @return $fontstyle;
 }
 
 /**

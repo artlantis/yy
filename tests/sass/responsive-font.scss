@@ -13,14 +13,7 @@ $fonts: (
                 color: red
             )
         )
-    ),
-    fontstyle-two: (
-        inherit: fontstyle-one,
-        font-size: 25px,
-        line-height: 30px,
-        font-style: italic,
-        color: grey
-    ),
+    )
 );
 
 $breakpoints: (
@@ -31,6 +24,12 @@ $breakpoints: (
 );
 
 @import "../../sass/font/responsive-font";
+
+@include registerFontstyle(fontstyle-two,
+                           $inherit: fontstyle-one,
+                           $properties: ( font-size: 25px, line-height: 30px, font-style: italic, color: grey ),
+                           $respond-to: ( medium-up: ( font-size: 40px ) ) 
+                          );
 
 h1 {
     @include responsive-font(fontstyle-one);

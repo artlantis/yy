@@ -82,11 +82,7 @@ $yy-fonts-map: $fonts !default;
         $valid: true;
     }
     @if $respond-to {
-        $respond-to-map: ();
-        @each $breakpoint, $fontstyle in $respond-to {
-            $respond-to-map: map-merge($respond-to-map, ($breakpoint: $fontstyle));
-        }
-        $new-fontstyle: map-merge($new-fontstyle, (respond-to: $respond-to-map));
+        $new-fontstyle: map-merge($new-fontstyle, (respond-to: $respond-to));
         $valid: true;
     }
     @if $valid {

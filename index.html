@@ -232,8 +232,8 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix-use-extend" data-type="variable">
-            <a class="sidebar__link" href="#variable-clearfix-use-extend">clearfix-use-extend
+          <li class="sidebar__item  js-sassdoc__item" data-name="remBase" data-type="variable">
+            <a class="sidebar__link" href="#variable-remBase">remBase
             
             
             </a>
@@ -242,8 +242,8 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="remBase" data-type="variable">
-            <a class="sidebar__link" href="#variable-remBase">remBase
+          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix-use-extend" data-type="variable">
+            <a class="sidebar__link" href="#variable-clearfix-use-extend">clearfix-use-extend
             
             
             </a>
@@ -422,6 +422,16 @@
         
 
           
+          <li class="sidebar__item  js-sassdoc__item" data-name="responsive-sprite" data-type="mixin">
+            <a class="sidebar__link" href="#mixin-responsive-sprite">responsive-sprite
+            
+            
+            </a>
+          </li>
+
+        
+
+          
           <li class="sidebar__item  js-sassdoc__item" data-name="registerFontstyle" data-type="mixin">
             <a class="sidebar__link" href="#mixin-registerFontstyle">registerFontstyle
             
@@ -472,16 +482,6 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix" data-type="mixin">
-            <a class="sidebar__link" href="#mixin-clearfix">clearfix
-            
-            
-            </a>
-          </li>
-
-        
-
-          
           <li class="sidebar__item  js-sassdoc__item" data-name="remPxFallback" data-type="mixin">
             <a class="sidebar__link" href="#mixin-remPxFallback">remPxFallback
             
@@ -492,8 +492,8 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="responsive-sprite" data-type="mixin">
-            <a class="sidebar__link" href="#mixin-responsive-sprite">responsive-sprite
+          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix" data-type="mixin">
+            <a class="sidebar__link" href="#mixin-clearfix">clearfix
             
             
             </a>
@@ -782,81 +782,6 @@
             
             
             
-            <section class="main__item  item" id="variable-clearfix-use-extend">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#variable-clearfix-use-extend">clearfix-use-extend</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-<pre class="item__code  language-scss"><code>$clearfix-use-extend: false !default;</code></pre>
-
-  
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>If true, <code>clearfix</code> uses @extend by default</p></div>
-
-
-  
-  <h3 class="item__sub-heading">Type</h3>
-
-  <p>
-  
-    <code>Bool</code>
-  
-  </p>
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/hacks/_clearfix.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
             <section class="main__item  item" id="variable-remBase">
               <h3 class="item__heading">
   
@@ -921,6 +846,81 @@
   <h3 class="item__sub-heading">Found at</h3>
 
   <p><code>sass/sass/remPxFallback/_remPxFallback.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-clearfix-use-extend">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-clearfix-use-extend">clearfix-use-extend</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+<pre class="item__code  language-scss"><code>$clearfix-use-extend: false !default;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>If true, <code>clearfix</code> uses @extend by default</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Bool</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/sass/hacks/_clearfix.scss</code></p>
 
 
 
@@ -3512,6 +3512,294 @@
             
             
             
+            <section class="main__item  item" id="mixin-responsive-sprite">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-responsive-sprite">responsive-sprite</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true, $addVendorPrefixes: false) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Allows you to include two versions of a sprited image from two different sprite maps made for low and high resolution screens.</p><br><br><p>The maps must include images with identical names. You are also required to provide a configuration object (Sass map)<br>with references to different versions of maps. See the example below.</p><br><br><p>Default values are provided for <code>$repeat</code>, <code>$width</code> and <code>$height</code> so they can be omitted in the most typical use case.</p><br><br><p><code>$repeat</code> can be overridden with any valid value for <code>background-repeat</code> CSS property if you want to use the sprite as a repeating background image.<br>Make sure to <a href="http://beta.compass-style.org/help/tutorials/spriting/sprite-layouts/">configure the sprite layout</a> when generating map with Compass.</p><br><br><p><code>$width</code> and <code>$height</code> may be set to <code>false</code> to disable output of sprite dimensions as <code>width</code> and <code>height</code> properties in the generated CSS.</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$map</code></th>
+          <td data-label="desc"><p>the name of the map, this needs to be a 1st level key of <code>$sprite-maps</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$sprite</code></th>
+          <td data-label="desc"><p>the original filename without extension of the image you want as background</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$repeat</code></th>
+          <td data-label="desc"><p>the value of <code>background-repeat</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>no-repeat</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$width</code></th>
+          <td data-label="desc"><p>if true, the width gets set to the image-width</p></td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>true</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$height</code></th>
+          <td data-label="desc"><p>if true, the height gets set to the image-height</p></td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>true</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$addVendorPrefixes</code></th>
+          <td data-label="desc"><p>if true, background-size is added with -webkit-, -moz and -o- prefixes</p></td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">$logo-map: sprite-map(&quot;images/*.png&quot;);
+$logo-hidpi-map: sprite-map(&quot;images-hidpi/*.png&quot;);
+
+$sprite-maps: (logos: (low-dpi: $logo-map, high-dpi: $logo-hidpi-map));
+
+#astina-logo {
+    @include responsive-sprite(logos, astina);
+}
+#sass-logo {
+    @include responsive-sprite(logos, sass);
+}</code></pre>
+  
+
+
+  
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        
+          <code>compass/utilities/sprites</code>
+        
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>sass/sass/sprite/_responsive-sprite-compass.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
             <section class="main__item  item" id="mixin-registerFontstyle">
               <h3 class="item__heading">
   
@@ -4475,126 +4763,6 @@ $fonts: (
             
             
             
-            <section class="main__item  item" id="mixin-clearfix">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-clearfix">clearfix</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin clearfix($extend: $clearfix-use-extend) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Adds the micro-clearfix hack to the element that called this mixin</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$extend</code></th>
-          <td data-label="desc"><p>if true, uses <code>@extend %clearfix</code></p></td>
-          <td data-label="type">
-          
-            Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>$clearfix-use-extend</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/hacks/_clearfix.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
             <section class="main__item  item" id="mixin-remPxFallback">
               <h3 class="item__heading">
   
@@ -4738,11 +4906,11 @@ $fonts: (
             
             
             
-            <section class="main__item  item" id="mixin-responsive-sprite">
+            <section class="main__item  item" id="mixin-clearfix">
               <h3 class="item__heading">
   
 
-  <a class="item__name" href="#mixin-responsive-sprite">responsive-sprite</a>
+  <a class="item__name" href="#mixin-clearfix">clearfix</a>
 
   
 
@@ -4758,20 +4926,6 @@ $fonts: (
   
 
   
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
     
   
 
@@ -4781,56 +4935,14 @@ $fonts: (
     
   
 
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true, $addVendorPrefixes: false) { ... }</code></pre>
+<pre class="item__code  language-scss"><code>@mixin clearfix($extend: $clearfix-use-extend) { ... }</code></pre>
 
 
 
   
   <h3 class="item__sub-heading">Description</h3>
   
-  <div class="item__description"><p>Allows you to include two versions of a sprited image from two different sprite maps made for low and high resolution screens.</p><br><br><p>The maps must include images with identical names. You are also required to provide a configuration object (Sass map)<br>with references to different versions of maps. See the example below.</p><br><br><p>Default values are provided for <code>$repeat</code>, <code>$width</code> and <code>$height</code> so they can be omitted in the most typical use case.</p><br><br><p><code>$repeat</code> can be overridden with any valid value for <code>background-repeat</code> CSS property if you want to use the sprite as a repeating background image.<br>Make sure to <a href="http://beta.compass-style.org/help/tutorials/spriting/sprite-layouts/">configure the sprite layout</a> when generating map with Compass.</p><br><br><p><code>$width</code> and <code>$height</code> may be set to <code>false</code> to disable output of sprite dimensions as <code>width</code> and <code>height</code> properties in the generated CSS.</p></div>
+  <div class="item__description"><p>Adds the micro-clearfix hack to the element that called this mixin</p></div>
 
 
   <h3 class="item__sub-heading">Parameters</h3>
@@ -4849,53 +4961,8 @@ $fonts: (
     <tbody>
       
         <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$map</code></th>
-          <td data-label="desc"><p>the name of the map, this needs to be a 1st level key of <code>$sprite-maps</code></p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$sprite</code></th>
-          <td data-label="desc"><p>the original filename without extension of the image you want as background</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$repeat</code></th>
-          <td data-label="desc"><p>the value of <code>background-repeat</code></p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>no-repeat</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$width</code></th>
-          <td data-label="desc"><p>if true, the width gets set to the image-width</p></td>
+          <th scope="row" data-label="name"><code>$extend</code></th>
+          <td data-label="desc"><p>if true, uses <code>@extend %clearfix</code></p></td>
           <td data-label="type">
           
             Boolean
@@ -4903,37 +4970,7 @@ $fonts: (
           </td>
           <td data-label="default">
           
-            <code>true</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$height</code></th>
-          <td data-label="desc"><p>if true, the height gets set to the image-height</p></td>
-          <td data-label="type">
-          
-            Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>true</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$addVendorPrefixes</code></th>
-          <td data-label="desc"><p>if true, background-size is added with -webkit-, -moz and -o- prefixes</p></td>
-          <td data-label="type">
-          
-            Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
+            <code>$clearfix-use-extend</code>
           
           </td>
         </tr>
@@ -4946,46 +4983,12 @@ $fonts: (
   
 
   
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">$logo-map: sprite-map(&quot;images/*.png&quot;);
-$logo-hidpi-map: sprite-map(&quot;images-hidpi/*.png&quot;);
-
-$sprite-maps: (logos: (low-dpi: $logo-map, high-dpi: $logo-hidpi-map));
-
-#astina-logo {
-    @include responsive-sprite(logos, astina);
-}
-#sass-logo {
-    @include responsive-sprite(logos, sass);
-}</code></pre>
-  
-
 
   
 
   
 
 
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      
-        <li>compass/utilities/sprites <div class="item__requires-description"></div></li>
-      
-    
-  
-
-
-
-
-</ul>
 
 
 
@@ -5011,7 +5014,7 @@ $sprite-maps: (logos: (low-dpi: $logo-map, high-dpi: $logo-hidpi-map));
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/sprite/_responsive-sprite-compass.scss</code></p>
+  <p><code>sass/sass/hacks/_clearfix.scss</code></p>
 
 
 

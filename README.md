@@ -29,6 +29,9 @@ A mixin that helps you with providing px fallbacks to browsers that [don't under
 just a clearfix hack for now.
 
 
+## Changelog
+- 1.1.0 Add functions to register fonts and breakpoints
+
 ## Development
 
 You need npm, grunt, sass and compass.

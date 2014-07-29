@@ -27,7 +27,7 @@ $breakpoints: (
 
 @include registerFontstyle(fontstyle-two,
                            $inherit: fontstyle-one,
-                           $properties: ( font-size: 25px, line-height: 30px, font-style: italic, color: grey ),
+                           $properties: ( font-size: 25px, line-height: 30px, font-style: italic, color: gray ),
                            $respond-to: ( medium-up: ( font-size: 40px ) ) 
                           );
 

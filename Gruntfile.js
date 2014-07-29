@@ -36,7 +36,8 @@
             tests: {
                 options: {
                     bundleExec: true,
-                    style: 'expanded'
+                    style: 'expanded',
+                    "sourcemap=none": ''
                 },
                 files: [{
                     expand: true,

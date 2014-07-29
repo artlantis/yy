@@ -3,6 +3,5 @@ node_js:
   - "0.11"
   - "0.10"
 before_install:
-  - gem install sass
-  - gem install compass --pre
+  - bundle install
   - npm install -g grunt-cli

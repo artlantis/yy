@@ -1,0 +1,16 @@
+@import "../../sass/breakpoint/respond-to-block-width";
+@import "../../sass/breakpoint/set-block-width";
+
+body {
+    @include set-block-width(1200px);
+    
+    #container {
+        @include set-block-width(100%);
+        
+        div {
+            @include set-block-width(50%);
+        }
+    }
+}
+
+//@debug $yy-block-widths;

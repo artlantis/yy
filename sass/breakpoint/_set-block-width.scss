@@ -1,0 +1,41 @@
+@import "../utils/str-to-list";
+
+
+$yy-block-widths: ();
+
+@mixin set-block-width($width) {
+    & {
+        width: $width;
+    }
+    $selectorItems: str-to-list(#{&});
+
+    $yy-block-widths: map-merge-deep($yy-block-widths, getBlockWidthMapForSelector($selectorItems, $width)) !global;
+}
+
+@function getBlockWidthMapForSelector($selectorItems, $width, $index: 1) {
+    $map: ();
+    @if length($selectorItems) == $index {
+        $map: (nth($selectorItems,$index): (width: $width));
+    } @elseif length($selectorItems) > 1 {
+        $map: (nth($selectorItems, $index): (children: getBlockWidthMapForSelector($selectorItems, $width, $index + 1)));
+    } @else {
+        $map: ($selectorItems: ('width': $width));
+    }
+    @return $map;
+}
+
+@function map-merge-deep($map, $merge) {
+    $new: ();
+    @if length(map-keys($map)) >= 1 {
+        @each $key in map-keys($map) {
+            @if index(map-keys($merge), $key) {
+                $new: map-merge($new, ($key: map-merge-deep(map-get($map,$key), map-get($merge,$key))));
+            } @else {
+                $new: map-merge($map, $merge);
+            }
+        }
+    } @else {
+        $new: $merge;
+    }
+    @return $new;
+}

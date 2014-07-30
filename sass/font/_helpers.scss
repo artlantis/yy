@@ -23,7 +23,7 @@ $yy-fonts-map: $fonts !default;
 
         // merge respond-to first if both fontstyles have it
         $respondTo: false;
-        @if (map-has-key($fontstyleToInherit, respond-to) AND map-has-key($fontstyle, respond-to)) {
+        @if (map-has-key($fontstyleToInherit, respond-to) and map-has-key($fontstyle, respond-to)) {
             $respondTo: map-get($fontstyle, respond-to);
             @each $breakpoint, $inheritedProperties in map-get($fontstyleToInherit, respond-to) {
                 $newRespondToBreakpoint: ();

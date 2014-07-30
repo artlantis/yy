@@ -2,13 +2,52 @@
 @import "../../sass/breakpoint/set-block-width";
 
 body {
-    @include set-block-width(1200px);
+    @include set-block-width(100%);
     
     #container {
-        @include set-block-width(100%);
+        @include set-block-width(1200px);
         
-        div {
-            @include set-block-width(50%);
+        section {
+            @include set-block-width(60%);
+            
+            div {
+            
+                @include set-block-width(80%);
+                
+                .target {
+                    @include set-block-width(90%);
+                    @include respond-to-block-width(400px) {
+                        background: green;
+                    }
+                    @include respond-to-block-width(700px) {
+                        background: red;
+                    }
+                }
+            }
+        }
+    
+    }
+
+    #container2 {
+        @include set-block-width(80%);
+        section {
+            @include set-block-width(60%);
+            
+            div {
+            
+                @include set-block-width(80%);
+                
+                .target {
+                    @include set-block-width(90%);
+
+                    @include respond-to-block-width(100px) {
+                        background: green;
+                    }
+                    @include respond-to-block-width(500px) {
+                        background: red;
+                    }
+                }
+            }
         }
     }
 }

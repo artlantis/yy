@@ -1,0 +1,17 @@
+@function map-get-by-keylist($map, $keylist) {
+    @if length($keylist) > 1 {
+        @return map-get-by-keylist(map-get($map, nth($keylist, 1)), getListWithoutFirstElement($keylist));
+    }
+    @else {
+        @return map-get($map, nth($keylist,1));
+    }
+}
+
+
+@function getListWithoutFirstElement($list) {
+    $newList: ();
+    @for $i from 2 to length($list)+1 {
+        $newList: append($newList,nth($list,$i));
+    }
+    @return $newList;
+}

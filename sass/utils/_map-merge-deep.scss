@@ -1,0 +1,15 @@
+@function map-merge-deep($map, $merge) {
+    $new: ();
+    @if length(map-keys($map)) >= 1 {
+        @each $key in map-keys($map) {
+            @if index(map-keys($merge), $key) {
+                $new: map-merge($new, ($key: map-merge-deep(map-get($map,$key), map-get($merge,$key))));
+            } @else {
+                $new: map-merge($map, $merge);
+            }
+        }
+    } @else {
+        $new: $merge;
+    }
+    @return $new;
+}

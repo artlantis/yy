@@ -1,3 +1,95 @@
-@mixin respond-to-block-width($width) {
+@import "../utils/str-to-list";
+@import "../utils/map-get-by-keylist";
+
+@mixin respond-to-block-width($query) {
+
+    // get the width of this block
+    $selectorItems: str-to-list(#{&});
     
+    // travese the width-map to get some information out
+    $keylist: ();
+    $parentWidths: ();
+    $closestAbsoluteWidth: false;
+
+    @for $i from 1 to length($selectorItems)+1 {
+        $keylist: append($keylist, nth($selectorItems, $i));
+        
+        $parentWidth: map-get-by-keylist($yy-block-widths, append($keylist, width));
+
+        //the calling block should not end up in $parentWidths
+        @if ($i < length($selectorItems)) {
+            $parentWidths: append($parentWidths, $parentWidth);
+        }
+
+        @if $closestAbsoluteWidth == false {
+            @if unit($parentWidth) == 'px' {
+                $closestAbsoluteWidth: $parentWidth;
+                // parentWidths should only contain the widths up to the closest absolute
+                // so we reset it here where we have a closest absolute
+                $parentWidths: ();
+            }
+        }
+        
+        // insert children selector in between
+        @if $i < length($selectorItems) {
+            $keylist: append($keylist,children);
+        }
+    }
+
+    $keylist: append($keylist,width);
+    $blockWidth: map-get-by-keylist($yy-block-widths, $keylist);
+    
+    /*
+    @debug "closestAbsolute: "$closestAbsoluteWidth;
+    @debug "parentWidths: "$parentWidths;
+    @debug "blockWidth: "$blockWidth;
+    */
+    // if we have a closest absolute at this point
+    // we can just compute if we are within this and then include the content
+    @if $closestAbsoluteWidth != false {
+        $containerWidth: $closestAbsoluteWidth;
+        @for $i from 1 to length($parentWidths)+1 {
+            $value: nth($parentWidths, $i);
+            @if unit($value) == '%' {
+                $value: $value / 100%;
+            }
+            $containerWidth: $containerWidth * $value;
+        }
+        $value: $blockWidth;
+        @if unit($value) == '%' {
+            $value: $value / 100%;
+        }
+        $resultingBlockWidth: $containerWidth * $value;
+        //@debug $resultingBlockWidth;
+
+        @if $resultingBlockWidth > $query {
+            @content;
+        }
+    }
+    //otherwise we have to build a media query here
+    @else {
+        // we want to compute from the bottom up
+        $parentWidths: getReversedList($parentWidths);
+        $targetWidth: $query * (100% / $blockWidth);
+
+        @for $i from 1 to length($parentWidths)+1 {
+            
+            $targetWidth: $targetWidth * (100% / nth($parentWidths,$i));
+        }
+        //@debug "targetWidth: "$targetWidth;
+        
+        @media (min-width: #{$targetWidth}) {
+            @content;
+        }
+    }
+    //@debug "--------------------------------";
+}
+
+@function getReversedList($list) {
+    $length: length($list);
+    $newList: ();
+    @for $i from $length to 0 {
+        $newList: append($newList,nth($list,$i));
+    }
+    @return $newList;
 }

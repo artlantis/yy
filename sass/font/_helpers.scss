@@ -35,7 +35,7 @@ $yy-fonts-map: $fonts !default;
                     $newRespondToBreakpoint: map-merge($inheritedProperties, $newRespondToBreakpoint);
                 } @else {
                     // nope, so we just use the ones from the inherited breakpoint
-                    $newRespondToBreakpoint: $properties;
+                    $newRespondToBreakpoint: $inheritedProperties;
                 }
 
                 // then we overwrite the old with the new breakpoint definitions

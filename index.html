@@ -155,7 +155,7 @@
   
   <meta charset="utf-8" />
 
-<title>yy - v1.1.0</title>
+<title>yy - v1.1.2</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -177,7 +177,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      <a href="https://github.com/astina/yy">yy - v1.1.0</a>
+      <a href="https://github.com/astina/yy">yy - v1.1.2</a>
     
   </h1>
 </div>
@@ -232,8 +232,8 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="remBase" data-type="variable">
-            <a class="sidebar__link" href="#variable-remBase">remBase
+          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix-use-extend" data-type="variable">
+            <a class="sidebar__link" href="#variable-clearfix-use-extend">clearfix-use-extend
             
             
             </a>
@@ -242,8 +242,8 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix-use-extend" data-type="variable">
-            <a class="sidebar__link" href="#variable-clearfix-use-extend">clearfix-use-extend
+          <li class="sidebar__item  js-sassdoc__item" data-name="remBase" data-type="variable">
+            <a class="sidebar__link" href="#variable-remBase">remBase
             
             
             </a>
@@ -422,16 +422,6 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="responsive-sprite" data-type="mixin">
-            <a class="sidebar__link" href="#mixin-responsive-sprite">responsive-sprite
-            
-            
-            </a>
-          </li>
-
-        
-
-          
           <li class="sidebar__item  js-sassdoc__item" data-name="registerFontstyle" data-type="mixin">
             <a class="sidebar__link" href="#mixin-registerFontstyle">registerFontstyle
             
@@ -482,6 +472,16 @@
         
 
           
+          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix" data-type="mixin">
+            <a class="sidebar__link" href="#mixin-clearfix">clearfix
+            
+            
+            </a>
+          </li>
+
+        
+
+          
           <li class="sidebar__item  js-sassdoc__item" data-name="remPxFallback" data-type="mixin">
             <a class="sidebar__link" href="#mixin-remPxFallback">remPxFallback
             
@@ -492,8 +492,8 @@
         
 
           
-          <li class="sidebar__item  js-sassdoc__item" data-name="clearfix" data-type="mixin">
-            <a class="sidebar__link" href="#mixin-clearfix">clearfix
+          <li class="sidebar__item  js-sassdoc__item" data-name="responsive-sprite" data-type="mixin">
+            <a class="sidebar__link" href="#mixin-responsive-sprite">responsive-sprite
             
             
             </a>
@@ -600,6 +600,8 @@
 
   
 
+  
+
 
 
 
@@ -620,7 +622,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/breakpoint/_helpers.scss</code></p>
+  <p><code>breakpoint/_helpers.scss</code></p>
 
 
 
@@ -675,6 +677,8 @@
 
   
 
+  
+
 
 
 
@@ -695,7 +699,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_helpers.scss</code></p>
+  <p><code>font/_helpers.scss</code></p>
 
 
 
@@ -750,79 +754,6 @@
 
   
 
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/font/_responsive-font.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="variable-remBase">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#variable-remBase">remBase</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-<pre class="item__code  language-scss"><code>$remBase: 16 !default;</code></pre>
-
-  
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Used as the base for rem/px calculations in <code>remPxFallback</code></p></div>
-
-
-  
-  <h3 class="item__sub-heading">Type</h3>
-
-  <p>
-  
-    <code>Int</code>
-  
-  </p>
-
-
-  
-
-
-
-
-
   
 
 
@@ -845,7 +776,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/remPxFallback/_remPxFallback.scss</code></p>
+  <p><code>font/_responsive-font.scss</code></p>
 
 
 
@@ -900,6 +831,8 @@
 
   
 
+  
+
 
 
 
@@ -920,7 +853,84 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/hacks/_clearfix.scss</code></p>
+  <p><code>hacks/_clearfix.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-remBase">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-remBase">remBase</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+<pre class="item__code  language-scss"><code>$remBase: 16 !default;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Used as the base for rem/px calculations in <code>remPxFallback</code></p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Int</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>remPxFallback/_remPxFallback.scss</code></p>
 
 
 
@@ -1068,7 +1078,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/breakpoint/_helpers.scss</code></p>
+  <p><code>breakpoint/_helpers.scss</code></p>
 
 
 
@@ -1383,7 +1393,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/breakpoint/_helpers.scss</code></p>
+  <p><code>breakpoint/_helpers.scss</code></p>
 
 
 
@@ -1516,7 +1526,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_helpers.scss</code></p>
+  <p><code>font/_helpers.scss</code></p>
 
 
 
@@ -1723,7 +1733,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_helpers.scss</code></p>
+  <p><code>font/_helpers.scss</code></p>
 
 
 
@@ -1898,7 +1908,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
+  <p><code>font/_paddingForHeight.scss</code></p>
 
 
 
@@ -2056,7 +2066,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
+  <p><code>font/_paddingForHeight.scss</code></p>
 
 
 
@@ -2214,7 +2224,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
+  <p><code>font/_paddingForHeight.scss</code></p>
 
 
 
@@ -2372,7 +2382,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
+  <p><code>font/_paddingForHeight.scss</code></p>
 
 
 
@@ -2530,7 +2540,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
+  <p><code>font/_paddingForHeight.scss</code></p>
 
 
 
@@ -2688,7 +2698,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
+  <p><code>font/_paddingForHeight.scss</code></p>
 
 
 
@@ -2900,7 +2910,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/font/_paddingForHeight.scss</code></p>
+  <p><code>font/_paddingForHeight.scss</code></p>
 
 
 
@@ -3231,7 +3241,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/breakpoint/_helpers.scss</code></p>
+  <p><code>breakpoint/_helpers.scss</code></p>
 
 
 
@@ -3345,7 +3355,7 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/breakpoint/_json.scss</code></p>
+  <p><code>breakpoint/_json.scss</code></p>
 
 
 
@@ -3500,7 +3510,1233 @@
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/breakpoint/_respond-to.scss</code></p>
+  <p><code>breakpoint/_respond-to.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-registerFontstyle">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-registerFontstyle">registerFontstyle</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>This is just a mixin wrapper around <code>@function registerBreakpoint</code> for your convenience if you don&#39;t care to check if<br>your breakpoint actually got registered.<br>This allows for shorter sass code as you need to assign the return value of the function to something.</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$name</code></th>
+          <td data-label="desc"><p>the name of the new fontstyle</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$inherit</code></th>
+          <td data-label="desc"><p>the name of the fontstyle to inherit</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$properties</code></th>
+          <td data-label="desc"><p>a map of CSS properties</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$respond-to</code></th>
+          <td data-label="desc"><p>a map of breakpoint names containing a map of css properties</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">$registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>font/_helpers.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-responsive-font">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-responsive-font">responsive-font</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Sets all properties defined in the global map <code>$fonts</code> for the given <code>$fontstyleName</code></p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$line-height</code></th>
+          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$extendFontstyle</code></th>
+          <td data-label="desc"><p>if true @extend is used, otherwise properties are written to the selector that calls this mixin</p></td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$responsive-font-extend-fontstyles</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">$font-family-helvetica: &quot;Helvetica, sans-serif&quot;;
+$fonts: (
+  // give your fontstyle a name and define how they should look
+  fontstyle-one: (
+    font-size: 30px,       //this is required and must be in px if you want to use getPaddingForHeight()
+    line-height: 35px,     //this is required and must be in px if you want to use getPaddingForHeight()
+    font-family: $font-family-helvetica,
+    font-weight: normal,
+    color: black
+    respond-to: (          //define how the font responds to different media queries
+      medium-up: (         //use the named media queries from yy/breakpoint/respond-to
+        font-size: 32px,   //overwrite or add additional properties as you like
+        color: red
+      )
+    )
+  ),
+  fontstyle-two: (
+    inherit: fontstyle-one,    //you can inherit other fontstyles
+    font-size: 25px,
+    line-height: 30px,
+    font-style: italic,
+    color: grey
+  ),
+);</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>font/_responsive-font.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-responsive-font-no-extend">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-responsive-font-no-extend">responsive-font-no-extend</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin responsive-font-no-extend($fontstyleName, $line-height, $color) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Just a wrapper around <code>responsive-font</code> that sets <code>$extendFontstye</code> no false</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$line-height</code></th>
+          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>font/_responsive-font.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-_setFontStyle">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-_setFontStyle">_setFontStyle</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin _setFontStyle($fontstyle, $line-height, $color) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Sets all the properties in <code>$fontstyle</code>, ignores keys <code>respond-to</code> and <code>inherit</code><br>If <code>line-height</code> or <code>$color</code> is given, this overwrites the key from the given map</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyle</code></th>
+          <td data-label="desc"><p>a map of properties to apply</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$line-height</code></th>
+          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>font/_responsive-font.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-_setAllFontStyles">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-_setAllFontStyles">_setAllFontStyles</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin _setAllFontStyles($fontstyle, $line-height, $color) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Sets all the properties in <code>$fontstyle</code> for all breakpoints by using <code>respond-to</code> mixin and calling <code>_setFontStyle</code><br>If <code>line-height</code> or <code>$color</code> is given, this overwrites the key from the given map for all breakpoints</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyle</code></th>
+          <td data-label="desc"><p>a map of properties to apply</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$line-height</code></th>
+          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
+          <td data-label="type">
+          
+            *, Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p></li>
+    
+  </ul>
+
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>font/_responsive-font.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-clearfix">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-clearfix">clearfix</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin clearfix($extend: $clearfix-use-extend) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Adds the micro-clearfix hack to the element that called this mixin</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$extend</code></th>
+          <td data-label="desc"><p>if true, uses <code>@extend %clearfix</code></p></td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$clearfix-use-extend</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>hacks/_clearfix.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-remPxFallback">
+              <h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-remPxFallback">remPxFallback</a>
+
+  
+
+  
+
+  
+</h3>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code  language-scss"><code>@mixin remPxFallback($property, $values) { ... }</code></pre>
+
+
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Adds the passed property with the given value(s) in rem and in px as fallback.<br>This file also includes the following wrapper mixins around <code>remPxFallback()</code>:<br>- font-size<br>- line-height<br>- margin<br>- margin-top<br>- margin-right<br>- margin-bottom<br>- margin-left<br>- padding<br>- padding-top<br>- padding-right<br>- padding-bottom<br>- padding-left</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$property</code></th>
+          <td data-label="desc"><p>the css property</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$values</code></th>
+          <td data-label="desc"><p>the value(s) with px or rem unit</p></td>
+          <td data-label="type">
+          
+            String, List
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>remPxFallback/_remPxFallback.scss</code></p>
 
 
 
@@ -3788,1233 +5024,7 @@ $sprite-maps: (logos: (low-dpi: $logo-map, high-dpi: $logo-hidpi-map));
   
   <h3 class="item__sub-heading">Found at</h3>
 
-  <p><code>sass/sass/sprite/_responsive-sprite-compass.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-registerFontstyle">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-registerFontstyle">registerFontstyle</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>This is just a mixin wrapper around <code>@function registerBreakpoint</code> for your convenience if you don&#39;t care to check if<br>your breakpoint actually got registered.<br>This allows for shorter sass code as you need to assign the return value of the function to something.</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$name</code></th>
-          <td data-label="desc"><p>the name of the new fontstyle</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$inherit</code></th>
-          <td data-label="desc"><p>the name of the fontstyle to inherit</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$properties</code></th>
-          <td data-label="desc"><p>a map of CSS properties</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$respond-to</code></th>
-          <td data-label="desc"><p>a map of breakpoint names containing a map of css properties</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">$registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );</code></pre>
-  
-
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/font/_helpers.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-responsive-font">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-responsive-font">responsive-font</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Sets all properties defined in the global map <code>$fonts</code> for the given <code>$fontstyleName</code></p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
-          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$line-height</code></th>
-          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$color</code></th>
-          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$extendFontstyle</code></th>
-          <td data-label="desc"><p>if true @extend is used, otherwise properties are written to the selector that calls this mixin</p></td>
-          <td data-label="type">
-          
-            Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>$responsive-font-extend-fontstyles</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">$font-family-helvetica: &quot;Helvetica, sans-serif&quot;;
-$fonts: (
-  // give your fontstyle a name and define how they should look
-  fontstyle-one: (
-    font-size: 30px,       //this is required and must be in px if you want to use getPaddingForHeight()
-    line-height: 35px,     //this is required and must be in px if you want to use getPaddingForHeight()
-    font-family: $font-family-helvetica,
-    font-weight: normal,
-    color: black
-    respond-to: (          //define how the font responds to different media queries
-      medium-up: (         //use the named media queries from yy/breakpoint/respond-to
-        font-size: 32px,   //overwrite or add additional properties as you like
-        color: red
-      )
-    )
-  ),
-  fontstyle-two: (
-    inherit: fontstyle-one,    //you can inherit other fontstyles
-    font-size: 25px,
-    line-height: 30px,
-    font-style: italic,
-    color: grey
-  ),
-);</code></pre>
-  
-
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/font/_responsive-font.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-responsive-font-no-extend">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-responsive-font-no-extend">responsive-font-no-extend</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin responsive-font-no-extend($fontstyleName, $line-height, $color) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Just a wrapper around <code>responsive-font</code> that sets <code>$extendFontstye</code> no false</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
-          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$line-height</code></th>
-          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$color</code></th>
-          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p></li>
-    
-  </ul>
-
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/font/_responsive-font.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-_setFontStyle">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-_setFontStyle">_setFontStyle</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin _setFontStyle($fontstyle, $line-height, $color) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Sets all the properties in <code>$fontstyle</code>, ignores keys <code>respond-to</code> and <code>inherit</code><br>If <code>line-height</code> or <code>$color</code> is given, this overwrites the key from the given map</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fontstyle</code></th>
-          <td data-label="desc"><p>a map of properties to apply</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$line-height</code></th>
-          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$color</code></th>
-          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p></li>
-    
-  </ul>
-
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/font/_responsive-font.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-_setAllFontStyles">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-_setAllFontStyles">_setAllFontStyles</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin _setAllFontStyles($fontstyle, $line-height, $color) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Sets all the properties in <code>$fontstyle</code> for all breakpoints by using <code>respond-to</code> mixin and calling <code>_setFontStyle</code><br>If <code>line-height</code> or <code>$color</code> is given, this overwrites the key from the given map for all breakpoints</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fontstyle</code></th>
-          <td data-label="desc"><p>a map of properties to apply</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$line-height</code></th>
-          <td data-label="desc"><p>if given, overwrites the line-height from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$color</code></th>
-          <td data-label="desc"><p>if given, overwrites the color from the font settings</p></td>
-          <td data-label="type">
-          
-            *, Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p></li>
-    
-  </ul>
-
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/font/_responsive-font.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-remPxFallback">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-remPxFallback">remPxFallback</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin remPxFallback($property, $values) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Adds the passed property with the given value(s) in rem and in px as fallback.<br>This file also includes the following wrapper mixins around <code>remPxFallback()</code>:<br>- font-size<br>- line-height<br>- margin<br>- margin-top<br>- margin-right<br>- margin-bottom<br>- margin-left<br>- padding<br>- padding-top<br>- padding-right<br>- padding-bottom<br>- padding-left</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$property</code></th>
-          <td data-label="desc"><p>the css property</p></td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$values</code></th>
-          <td data-label="desc"><p>the value(s) with px or rem unit</p></td>
-          <td data-label="type">
-          
-            String, List
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/remPxFallback/_remPxFallback.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="mixin-clearfix">
-              <h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-clearfix">clearfix</a>
-
-  
-
-  
-
-  
-</h3>
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code  language-scss"><code>@mixin clearfix($extend: $clearfix-use-extend) { ... }</code></pre>
-
-
-
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Adds the micro-clearfix hack to the element that called this mixin</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$extend</code></th>
-          <td data-label="desc"><p>if true, uses <code>@extend %clearfix</code></p></td>
-          <td data-label="type">
-          
-            Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>$clearfix-use-extend</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>sass/sass/hacks/_clearfix.scss</code></p>
+  <p><code>sprite/_responsive-sprite-compass.scss</code></p>
 
 
 
@@ -5045,7 +5055,7 @@ $fonts: (
           
 
           <!-- Version -->
-          <span class="project-info__version"> - v1.1.0</span>
+          <span class="project-info__version"> - v1.1.2</span>
 
           <!-- License -->
           

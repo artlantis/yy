@@ -1,0 +1,37 @@
+$yy-breakpoint-map: (
+    a:     (
+        mq: "(min-width:  50px) and (max-width:  99px)",
+    ),
+    b:  (
+        mq: "(min-width: 100px) and (max-width: 299px)",
+    ),
+    c:     (
+        mq: "(min-width: 300px) and (max-width: 399px)",
+    ),
+    d:  (
+        mq: "(min-width: 400px)",
+    )
+);
+
+@import "../../sass/breakpoint/visibility";
+
+.a {
+    @include block-for(d);
+    @include show-for(b c, flex);
+}
+
+.b {
+    @include inline-for(a c d);
+}
+
+.c {
+    @include inline-block-for(a b d);
+}
+
+.d {
+    @include hide-for(a b c);
+}
+
+@include add-visibility-classes(a b);
+@include add-visibility-classes(c, show-for inline-for hide-for);
+@include add-visibility-classes(d, show-for hide-for);

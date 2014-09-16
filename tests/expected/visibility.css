@@ -1,0 +1,142 @@
+.a {
+  display: none;
+  display: none;
+}
+@media (min-width: 400px) {
+  .a {
+    display: block;
+  }
+}
+@media (min-width: 100px) and (max-width: 299px) {
+  .a {
+    display: flex;
+  }
+}
+@media (min-width: 300px) and (max-width: 399px) {
+  .a {
+    display: flex;
+  }
+}
+
+.b {
+  display: none;
+}
+@media (min-width: 50px) and (max-width: 99px) {
+  .b {
+    display: inline;
+  }
+}
+@media (min-width: 300px) and (max-width: 399px) {
+  .b {
+    display: inline;
+  }
+}
+@media (min-width: 400px) {
+  .b {
+    display: inline;
+  }
+}
+
+.c {
+  display: none;
+}
+@media (min-width: 50px) and (max-width: 99px) {
+  .c {
+    display: inline-block;
+  }
+}
+@media (min-width: 100px) and (max-width: 299px) {
+  .c {
+    display: inline-block;
+  }
+}
+@media (min-width: 400px) {
+  .c {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 50px) and (max-width: 99px) {
+  .d {
+    display: none;
+  }
+}
+@media (min-width: 100px) and (max-width: 299px) {
+  .d {
+    display: none;
+  }
+}
+@media (min-width: 300px) and (max-width: 399px) {
+  .d {
+    display: none;
+  }
+}
+
+.show-for-a {
+  display: none;
+}
+@media (min-width: 50px) and (max-width: 99px) {
+  .show-for-a {
+    display: block;
+  }
+}
+
+@media (min-width: 50px) and (max-width: 99px) {
+  .hide-for-a {
+    display: none;
+  }
+}
+
+.show-for-b {
+  display: none;
+}
+@media (min-width: 100px) and (max-width: 299px) {
+  .show-for-b {
+    display: block;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 299px) {
+  .hide-for-b {
+    display: none;
+  }
+}
+
+.show-for-c {
+  display: none;
+}
+@media (min-width: 300px) and (max-width: 399px) {
+  .show-for-c {
+    display: block;
+  }
+}
+
+.inline-for-c {
+  display: none;
+}
+@media (min-width: 300px) and (max-width: 399px) {
+  .inline-for-c {
+    display: inline;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+  .hide-for-c {
+    display: none;
+  }
+}
+
+.show-for-d {
+  display: none;
+}
+@media (min-width: 400px) {
+  .show-for-d {
+    display: block;
+  }
+}
+
+@media (min-width: 400px) {
+  .hide-for-d {
+    display: none;
+  }
+}

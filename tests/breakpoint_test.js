@@ -30,4 +30,15 @@ exports.yy_breakpoint = {
         test.done();
     },
 
+    visibility: function( test ) {
+        test.expect( 1 );
+
+        var actual = grunt.file.read( "tmp/visibility.css" );
+        var expected = grunt.file.read( "tests/expected/visibility.css" );
+
+        test.equal( actual, expected, "visibility.css should be equal." );
+
+        test.done();
+    },
+
 };

@@ -227,8 +227,8 @@
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="responsive-font-extend-fontstyles" data-type="variable">
-              <a href="#variable-responsive-font-extend-fontstyles">responsive-font-extend-fontstyles
+            <li class="sidebar__item  sassdoc__item" data-name="yy-fonts-map" data-type="variable">
+              <a href="#variable-yy-fonts-map">yy-fonts-map
               
               
               </a>
@@ -236,8 +236,8 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="yy-fonts-map" data-type="variable">
-              <a href="#variable-yy-fonts-map">yy-fonts-map
+            <li class="sidebar__item  sassdoc__item" data-name="responsive-font-extend-fontstyles" data-type="variable">
+              <a href="#variable-responsive-font-extend-fontstyles">responsive-font-extend-fontstyles
               
               
               </a>
@@ -268,6 +268,24 @@
           
           
             <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="getFontStyle" data-type="function">
+              <a href="#function-getFontStyle">getFontStyle
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="registerFontstyle" data-type="function">
+              <a href="#function-registerFontstyle">registerFontstyle
+              
+              
+              </a>
+            </li>
+            
+          
+            
             <li class="sidebar__item  sassdoc__item" data-name="getPropertyForMedia" data-type="function">
               <a href="#function-getPropertyForMedia">getPropertyForMedia
               
@@ -328,24 +346,6 @@
               
               </a>
             </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="getFontStyle" data-type="function">
-              <a href="#function-getFontStyle">getFontStyle
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="registerFontstyle" data-type="function">
-              <a href="#function-registerFontstyle">registerFontstyle
-              
-              
-              </a>
-            </li>
             </ul>
           
         
@@ -363,6 +363,15 @@
           
           
             <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="registerFontstyle" data-type="mixin">
+              <a href="#mixin-registerFontstyle">registerFontstyle
+              
+              
+              </a>
+            </li>
+            
+          
+            
             <li class="sidebar__item  sassdoc__item" data-name="responsive-font" data-type="mixin">
               <a href="#mixin-responsive-font">responsive-font
               
@@ -392,15 +401,6 @@
             
             <li class="sidebar__item  sassdoc__item" data-name="_setAllFontStyles" data-type="mixin">
               <a href="#mixin-_setAllFontStyles">_setAllFontStyles
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="registerFontstyle" data-type="mixin">
-              <a href="#mixin-registerFontstyle">registerFontstyle
               
               
               </a>
@@ -3443,12 +3443,12 @@ results in  <code>display: block</code>.</p>
 
               
               
-                <section class="main__item  item" id="variable-responsive-font-extend-fontstyles">
+                <section class="main__item  item" id="variable-yy-fonts-map">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-responsive-font-extend-fontstyles">responsive-font-extend-fontstyles</a>
+  <a class="item__name" href="#variable-yy-fonts-map">yy-fonts-map</a>
 
   
 
@@ -3464,7 +3464,7 @@ results in  <code>display: block</code>.</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$responsive-font-extend-fontstyles: true !default;</code></pre>
+  <pre class="item__code  language-scss"><code>$yy-fonts-map: $fonts !default;</code></pre>
 
   
 </div>
@@ -3480,7 +3480,8 @@ results in  <code>display: block</code>.</p>
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>If true, <code>responsive-font</code> uses @extend by default</p>
+  <div class="item__description"><p>The sass map holding the font specs
+Defaults to <code>$fonts</code></p>
 </div>
 
 
@@ -3491,7 +3492,7 @@ results in  <code>display: block</code>.</p>
 
   <p>
   
-    <code>Bool</code>
+    <code>Map</code>
   
   </p>
 
@@ -3546,12 +3547,12 @@ results in  <code>display: block</code>.</p>
 
 </section>
               
-                <section class="main__item  item" id="variable-yy-fonts-map">
+                <section class="main__item  item" id="variable-responsive-font-extend-fontstyles">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-yy-fonts-map">yy-fonts-map</a>
+  <a class="item__name" href="#variable-responsive-font-extend-fontstyles">responsive-font-extend-fontstyles</a>
 
   
 
@@ -3567,7 +3568,7 @@ results in  <code>display: block</code>.</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$yy-fonts-map: $fonts !default;</code></pre>
+  <pre class="item__code  language-scss"><code>$responsive-font-extend-fontstyles: true !default;</code></pre>
 
   
 </div>
@@ -3583,8 +3584,7 @@ results in  <code>display: block</code>.</p>
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>The sass map holding the font specs
-Defaults to <code>$fonts</code></p>
+  <div class="item__description"><p>If true, <code>responsive-font</code> uses @extend by default</p>
 </div>
 
 
@@ -3595,7 +3595,7 @@ Defaults to <code>$fonts</code></p>
 
   <p>
   
-    <code>Map</code>
+    <code>Bool</code>
   
   </p>
 
@@ -3766,6 +3766,479 @@ Defaults to <code>$fonts</code></p>
               <h2 class="main__heading--secondary">functions</h2>
 
               
+              
+                <section class="main__item  item" id="function-getFontStyle">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-getFontStyle">getFontStyle</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function getFontStyle($fontstyleName) { 
+    $fontstyle: map-get($yy-fonts-map, $fontstyleName);
+    @if map-has-key($fontstyle, inherit) {
+        $fontstyleToInherit: getFontStyle(map-get($fontstyle, inherit));
+
+        // merge respond-to first if both fontstyles have it
+        $respondTo: false;
+        @if (map-has-key($fontstyleToInherit, respond-to) and map-has-key($fontstyle, respond-to)) {
+            $respondTo: map-get($fontstyle, respond-to);
+            @each $breakpoint, $inheritedProperties in map-get($fontstyleToInherit, respond-to) {
+                $newRespondToBreakpoint: ();
+
+                // check if the fontstyle has definitions for the same breakpoint as the inherited one
+                @if (map-has-key($respondTo, $breakpoint)) {
+                    // it has, so we merge them together
+                    $newRespondToBreakpoint: map-get($respondTo, $breakpoint);
+                    $newRespondToBreakpoint: map-merge($inheritedProperties, $newRespondToBreakpoint);
+                } @else {
+                    // nope, so we just use the ones from the inherited breakpoint
+                    $newRespondToBreakpoint: $inheritedProperties;
+                }
+
+                // then we overwrite the old with the new breakpoint definitions
+                $respondTo: map-merge($respondTo, ($breakpoint: $newRespondToBreakpoint));
+            }
+        }
+
+        $fontstyle: map-merge($fontstyleToInherit, $fontstyle);
+
+        @if $respondTo != false {
+            // overwrite the old with the merged respond-to definitions
+            $fontstyle: map-merge($fontstyle, (respond-to: ($respondTo)));
+        }
+    }
+    @return $fontstyle;
+ }"
+    data-collapsed="@function getFontStyle($fontstyleName) { ... }"><code>@function getFontStyle($fontstyleName) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Returns the fontstyle as a map by recursively resolving any inherited fontstyle</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
+          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description"><p>The fontstyle as a map of properties</p>
+
+  
+    Map
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Beni Buess</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-registerFontstyle">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-registerFontstyle">registerFontstyle</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { 
+    $new-fontstyle: ();
+    $valid: false;
+    @if $inherit {
+        $new-fontstyle: map-merge($new-fontstyle, (inherit: $inherit));
+        $valid: true;
+    }
+    @if $properties {
+        @each $property, $value in $properties {
+            $new-fontstyle: map-merge($new-fontstyle, ($property: $value));
+        }
+        $valid: true;
+    }
+    @if $respond-to {
+        $new-fontstyle: map-merge($new-fontstyle, (respond-to: $respond-to));
+        $valid: true;
+    }
+    @if $valid {
+        @if $name {
+            $yy-fonts-map: map-merge($yy-fonts-map, ($name: $new-fontstyle)) !global;
+        } @else {
+            $valid: false;
+        }
+    }
+    @return $valid;
+ }"
+    data-collapsed="@function registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }"><code>@function registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Registers a new fontstyle in the global <code>$yy-fonts-map</code></p>
+<p>Any of the parameters are technically optional altought to do something you need to pass at least <code>$name</code>
+and either <code>inherit</code> (makes not a lot of sense alone), a map of <code>properties</code> and any adaption rules for breakpoints in <code>respond-to</code>.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$name</code></th>
+          <td data-label="desc"><p>the name of the new fontstyle</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$inherit</code></th>
+          <td data-label="desc"><p>the name of the fontstyle to inherit</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$properties</code></th>
+          <td data-label="desc"><p>a map of CSS properties</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$respond-to</code></th>
+          <td data-label="desc"><p>a map of breakpoint names containing a map of css properties</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">$registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
               
                 <section class="main__item  item" id="function-getPropertyForMedia">
 
@@ -5232,214 +5705,26 @@ pass <code>$padding-left</code> and <code>$padding-right</code> to be included i
 
 </section>
               
-                <section class="main__item  item" id="function-getFontStyle">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#function-getFontStyle">getFontStyle</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@function getFontStyle($fontstyleName) { 
-    $fontstyle: map-get($yy-fonts-map, $fontstyleName);
-    @if map-has-key($fontstyle, inherit) {
-        $fontstyleToInherit: getFontStyle(map-get($fontstyle, inherit));
-
-        // merge respond-to first if both fontstyles have it
-        $respondTo: false;
-        @if (map-has-key($fontstyleToInherit, respond-to) and map-has-key($fontstyle, respond-to)) {
-            $respondTo: map-get($fontstyle, respond-to);
-            @each $breakpoint, $inheritedProperties in map-get($fontstyleToInherit, respond-to) {
-                $newRespondToBreakpoint: ();
-
-                // check if the fontstyle has definitions for the same breakpoint as the inherited one
-                @if (map-has-key($respondTo, $breakpoint)) {
-                    // it has, so we merge them together
-                    $newRespondToBreakpoint: map-get($respondTo, $breakpoint);
-                    $newRespondToBreakpoint: map-merge($inheritedProperties, $newRespondToBreakpoint);
-                } @else {
-                    // nope, so we just use the ones from the inherited breakpoint
-                    $newRespondToBreakpoint: $inheritedProperties;
-                }
-
-                // then we overwrite the old with the new breakpoint definitions
-                $respondTo: map-merge($respondTo, ($breakpoint: $newRespondToBreakpoint));
-            }
-        }
-
-        $fontstyle: map-merge($fontstyleToInherit, $fontstyle);
-
-        @if $respondTo != false {
-            // overwrite the old with the merged respond-to definitions
-            $fontstyle: map-merge($fontstyle, (respond-to: ($respondTo)));
-        }
-    }
-    @return $fontstyle;
- }"
-    data-collapsed="@function getFontStyle($fontstyleName) { ... }"><code>@function getFontStyle($fontstyleName) { ... }</code></pre>
-
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Returns the fontstyle as a map by recursively resolving any inherited fontstyle</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$fontstyleName</code></th>
-          <td data-label="desc"><p>the name of the font, a 1st level key in <code>$fonts</code></p>
-</td>
-          <td data-label="type">
+            </section>
           
-            String
+        
+
           
-          </td>
-          <td data-label="default">
           
-            &mdash;<span class="visually-hidden"> none</span>
+
           
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
+          
+            <section class="main__sub-section" id="font-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
 
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Returns</h3>
-
-  <p class="sassdoc__item-description"><p>The fontstyle as a map of properties</p>
-
-  
-    Map
-  
-  </p>
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
               
-                <section class="main__item  item" id="function-registerFontstyle">
+              
+                <section class="main__item  item" id="mixin-registerFontstyle">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#function-registerFontstyle">registerFontstyle</a>
+  <a class="item__name" href="#mixin-registerFontstyle">registerFontstyle</a>
 
   
 
@@ -5508,33 +5793,10 @@ pass <code>$padding-left</code> and <code>$padding-right</code> to be included i
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@function registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { 
-    $new-fontstyle: ();
-    $valid: false;
-    @if $inherit {
-        $new-fontstyle: map-merge($new-fontstyle, (inherit: $inherit));
-        $valid: true;
-    }
-    @if $properties {
-        @each $property, $value in $properties {
-            $new-fontstyle: map-merge($new-fontstyle, ($property: $value));
-        }
-        $valid: true;
-    }
-    @if $respond-to {
-        $new-fontstyle: map-merge($new-fontstyle, (respond-to: $respond-to));
-        $valid: true;
-    }
-    @if $valid {
-        @if $name {
-            $yy-fonts-map: map-merge($yy-fonts-map, ($name: $new-fontstyle)) !global;
-        } @else {
-            $valid: false;
-        }
-    }
-    @return $valid;
+    data-expanded="@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { 
+    $registered: registerFontstyle($name, $inherit, $properties, $respond-to); 
  }"
-    data-collapsed="@function registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }"><code>@function registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }</code></pre>
+    data-collapsed="@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }"><code>@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }</code></pre>
 
   
 </div>
@@ -5549,9 +5811,9 @@ pass <code>$padding-left</code> and <code>$padding-right</code> to be included i
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Registers a new fontstyle in the global <code>$yy-fonts-map</code></p>
-<p>Any of the parameters are technically optional altought to do something you need to pass at least <code>$name</code>
-and either <code>inherit</code> (makes not a lot of sense alone), a map of <code>properties</code> and any adaption rules for breakpoints in <code>respond-to</code>.</p>
+  <div class="item__description"><p>This is just a mixin wrapper around <code>@function registerBreakpoint</code> for your convenience if you don&#39;t care to check if
+your breakpoint actually got registered.
+This allows for shorter sass code as you need to assign the return value of the function to something.</p>
 </div>
 
 
@@ -5704,20 +5966,6 @@ and either <code>inherit</code> (makes not a lot of sense alone), a map of <code
 
 
 </section>
-              
-            </section>
-          
-        
-
-          
-          
-
-          
-          
-            <section class="main__sub-section" id="font-mixin">
-              <h2 class="main__heading--secondary">mixins</h2>
-
-              
               
                 <section class="main__item  item" id="mixin-responsive-font">
 
@@ -6654,254 +6902,6 @@ If <code>line-height</code> or <code>$color</code> is given, this overwrites the
     
   </ul>
 
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-registerFontstyle">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-registerFontstyle">registerFontstyle</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { 
-    $registered: registerFontstyle($name, $inherit, $properties, $respond-to); 
- }"
-    data-collapsed="@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }"><code>@mixin registerFontstyle($name: false, $inherit: false, $properties: false, $respond-to: false) { ... }</code></pre>
-
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>This is just a mixin wrapper around <code>@function registerBreakpoint</code> for your convenience if you don&#39;t care to check if
-your breakpoint actually got registered.
-This allows for shorter sass code as you need to assign the return value of the function to something.</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$name</code></th>
-          <td data-label="desc"><p>the name of the new fontstyle</p>
-</td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$inherit</code></th>
-          <td data-label="desc"><p>the name of the fontstyle to inherit</p>
-</td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$properties</code></th>
-          <td data-label="desc"><p>a map of CSS properties</p>
-</td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$respond-to</code></th>
-          <td data-label="desc"><p>a map of breakpoint names containing a map of css properties</p>
-</td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-  <div class="item__example  example">
-    
-    <pre class="example__code"><code class="language-scss">$registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );</code></pre>
-  </div>
-  
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
 
   
 

@@ -30,6 +30,7 @@ just a clearfix hack for now.
 
 
 ## Changelog
+- 1.2.0 Adds visiblity mixins `show-for`, `hide-for` and generator for visibility classes
 - 1.1.0 Add functions to register fonts and breakpoints
 
 ## Development

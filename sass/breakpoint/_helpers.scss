@@ -3,6 +3,8 @@
  * Defaults to `$breakpoints`
  *
  * @type Map
+ *
+ * @group breakpoint
  */
 $yy-breakpoint-map: $breakpoints !default;
 
@@ -15,6 +17,7 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  *
  * @param {String}    $breakpoint - the name of breakpoint from global `$yy-breakpoint-map` map
  *
+ * @group breakpoint
  */
 @function getMediaQuery($breakpoint) {
     $mq: '';
@@ -103,6 +106,7 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  * @example scss
  * $registered: registerBreakpoint(my-new-breakpoint, $media: screen, $min-width: 900px, $orientation: landscape);
  *
+ * @group breakpoint
  */
 @function registerBreakpoint($name: false, $mq: false, $media: false, $min-width: false, $max-width: false, $min-height: false, $max-height: false, $orientation: false) {
     $new-bp: ();
@@ -165,6 +169,7 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  * @example scss
  *  @include registerBreakpoint(my-new-breakpoint, $media: screen, $min-width: 900px, $orientation: landscape);
  *
+ * @group breakpoint
  */
 @mixin registerBreakpoint($name: false, $mq: false, $media: false, $min-width: false, $max-width: false, $min-height: false, $max-height: false, $orientation: false) {
     $registered: registerBreakpoint($name, $mq, $media, $min-width, $max-width, $min-height, $max-height, $orientation); 

@@ -3,6 +3,8 @@
  * Defaults to `$fonts`
  *
  * @type Map
+ * 
+ * @group font
  */
 $yy-fonts-map: $fonts !default;
 
@@ -15,6 +17,7 @@ $yy-fonts-map: $fonts !default;
  *
  * @returns {Map}  The fontstyle as a map of properties
  *
+ * @group font
  */
 @function getFontStyle($fontstyleName) {
     $fontstyle: map-get($yy-fonts-map, $fontstyleName);
@@ -67,6 +70,7 @@ $yy-fonts-map: $fonts !default;
  * @example scss
  * $registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );
  *
+ * @group font
  */
 @function registerFontstyle($name: false, $inherit: false, $properties: (), $respond-to: false) {
     $new-fontstyle: ();
@@ -108,6 +112,7 @@ $yy-fonts-map: $fonts !default;
  * @example scss
  * $registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );
  *
+ * @group font
  */
 @mixin registerFontstyle($name: false, $inherit: false, $properties: (), $respond-to: false) {
     $registered: registerFontstyle($name, $inherit, $properties, $respond-to); 

@@ -39,7 +39,7 @@
  *   );
  *   @include json;
  * 
- *
+ * @group breakpoint
  */
 @mixin json {
     $breakpoint-json: null;

@@ -5,6 +5,8 @@
  * If true, `responsive-font` uses @extend by default
  *
  * @type Bool
+ *
+ * @group font
  */
 $responsive-font-extend-fontstyles: true !default;
 
@@ -44,6 +46,7 @@ $placeholder-fonts-list: ();
  *   ),
  * );
  *
+ * @group font
  */
 @mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles) {
     $fontstyle: getFontStyle($fontstyleName);
@@ -72,6 +75,7 @@ $placeholder-fonts-list: ();
  * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
  * @param {*|Boolean} $color - if given, overwrites the color from the font settings
  *
+ * @group font
  */
 @mixin responsive-font-no-extend($fontstyleName, $line-height: false, $color: false) {
     @include responsive-font($fontstyleName, $line-height, $color, false);
@@ -87,6 +91,7 @@ $placeholder-fonts-list: ();
  * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
  * @param {*|Boolean} $color - if given, overwrites the color from the font settings
  *
+ * @group font
  */
 @mixin _setFontStyle($fontstyle, $line-height, $color) {
     $responsive-font-keywords: ("respond-to", "inherit");
@@ -117,6 +122,7 @@ $placeholder-fonts-list: ();
  * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
  * @param {*|Boolean} $color - if given, overwrites the color from the font settings
  *
+ * @group font
  */  
 @mixin _setAllFontStyles($fontstyle, $line-height, $color) {
     @include _setFontStyle($fontstyle, $line-height, $color);

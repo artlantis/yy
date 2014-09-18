@@ -34,6 +34,7 @@
  *     @include responsive-sprite(logos, sass);
  * }
  *
+ * @group sprite
  */
 @mixin responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true, $addVendorPrefixes: false) {
     $low-dpi-map: map-get(map-get($sprite-maps, $map), low-dpi);

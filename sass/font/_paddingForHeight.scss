@@ -10,6 +10,7 @@
  *
  * @return {String} The property value
  *
+ * @group font
  */
 @function getPropertyForMedia($fontstyleName,$property,$media) {
     $fontstyle: getFontStyle($fontstyleName);
@@ -35,6 +36,7 @@
  *
  * @return {String} The font-size value
  *
+ * @group font
  */
 @function getFontSize($fontstyleName, $media) {
     @return getPropertyForMedia($fontstyleName, font-size, $media);
@@ -50,6 +52,7 @@
  *
  * @return {String} The fline-height value
  *
+ * @group font
  */
 @function getLineHeight($fontstyleName, $media) {
     @return getPropertyForMedia($fontstyleName,line-height,$media);
@@ -66,6 +69,7 @@
  *
  * @return {Map} The font-family map
  *
+ * @group font
  */
 @function getFontFamilyMap($fontstyleName, $media) {
     @return map-get($font-families, getPropertyForMedia($fontstyleName,font-family,$media));
@@ -81,6 +85,7 @@
  *
  * @return {Int} line-height-part-top
  *
+ * @group font
  */
 @function getLineHeightPartTop($fontstyleName, $media) {
     @return map-get(getFontFamilyMap($fontstyleName,$media), line-height-part-top);
@@ -96,6 +101,7 @@
  *
  * @return {Int} line-height-part-bottom
  *
+ * @group font
  */
 @function getLineHeightPartBottom($fontstyleName, $media) {
     @return map-get(getFontFamilyMap($fontstyleName, $media), line-height-part-bottom);
@@ -117,6 +123,7 @@
  *
  * @return {String} The shortcut value to be applied to `padding`
  *
+ * @group font
  */
 @function getPaddingForHeight($fontstyleName, $media, $desiredHeight, $padding-left: 0, $padding-right: 0) {
     @if getLineHeightPartTop($fontstyleName,$media) == null {

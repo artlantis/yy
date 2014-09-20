@@ -21,3 +21,12 @@ h1 {
     background: purple;
   }
 }
+
+h2 {
+  color: yellow;
+}
+@media (min-width: 400px) and (max-width: 767px), (max-width: 400px) and (min-height: 200px) and (orientation: portrait) {
+  h2 {
+    color: purple;
+  }
+}

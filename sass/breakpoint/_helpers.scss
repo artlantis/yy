@@ -86,6 +86,27 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
 }
 
 /**
+ * Returns a combined media query for the passed `$breakpoints` by calling `getMediaQuery` for
+ * for every breakpoint in the list and comma separating the return values.
+ *
+ * @param {String|List}    $breakpoints - A single breakpoint name or a list of multiple breakpoint names
+ *
+ * @group breakpoint
+ */
+@function getCombinedMediaQuery($breakpoints) {
+    $mq: '';
+    @each $bp in $breakpoints {
+        $bpMq: getMediaQuery($bp);
+        @if $bpMq == false {
+            @return false;
+        } @else {
+            $mq: $mq + getMediaQuery($bp) + ',';
+        }
+    }
+    @return str-slice($mq, 1, -2);
+}
+
+/**
  * Registers a new breakpoint in the global `$yy-breakpoint-map`
  * After you registered a new breakpoint, you can use it in `respond-to` as well as in font-definitions.
  * Make sure to register your breakpoint before the first use in `respond-to` or in `responsive-font` calling a

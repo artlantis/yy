@@ -34,6 +34,7 @@
 <div class="sidebar__body">
   
   
+    <button type="button" class="btn-toggle  js-btn-toggle" data-alt="Open all">Close all</button>
 
     
     
@@ -242,15 +243,6 @@
               
               </a>
             </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="clearfix-use-extend" data-type="variable">
-              <a href="#variable-clearfix-use-extend">clearfix-use-extend
-              
-              
-              </a>
-            </li>
             </ul>
           
         
@@ -405,9 +397,52 @@
               
               </a>
             </li>
-            
+            </ul>
           
-            
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="hacks"><a href="#hacks">hacks</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="hacks-variable"><a href="#hacks-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="clearfix-use-extend" data-type="variable">
+              <a href="#variable-clearfix-use-extend">clearfix-use-extend
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="hacks-mixin"><a href="#hacks-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
             <li class="sidebar__item  sassdoc__item" data-name="clearfix" data-type="mixin">
               <a href="#mixin-clearfix">clearfix
               
@@ -3650,109 +3685,6 @@ Defaults to <code>$fonts</code></p>
 
 </section>
               
-                <section class="main__item  item" id="variable-clearfix-use-extend">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#variable-clearfix-use-extend">clearfix-use-extend</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$clearfix-use-extend: false !default;</code></pre>
-
-  
-</div>
-
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>If true, <code>clearfix</code> uses @extend by default</p>
-</div>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Type</h3>
-
-  <p>
-  
-    <code>Bool</code>
-  
-  </p>
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-
-  
-
-
-
-</section>
-              
             </section>
           
         
@@ -4642,15 +4574,6 @@ If <code>$media</code> is not found in the <code>respond-to</code> map of the fo
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -4837,15 +4760,6 @@ If <code>$media</code> is not found in the <code>respond-to</code> map of the fo
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -5033,15 +4947,6 @@ It looks for a key in <code>$font-families</code> named after the font-family at
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -5228,15 +5133,6 @@ It looks for a key in <code>$font-families</code> named after the font-family at
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -5423,15 +5319,6 @@ It looks for a key in <code>$font-families</code> named after the font-family at
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -5689,15 +5576,6 @@ pass <code>$padding-left</code> and <code>$padding-right</code> to be included i
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -6444,15 +6322,6 @@ $fonts: (
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -6672,15 +6541,6 @@ If <code>line-height</code> or <code>$color</code> is given, this overwrites the
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
@@ -6893,21 +6753,151 @@ If <code>line-height</code> or <code>$color</code> is given, this overwrites the
   
     
     
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Beni Buess</p>
-</li>
-    
-  </ul>
-
 
   
 
 
 
 </section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="hacks">hacks</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="hacks-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-clearfix-use-extend">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-clearfix-use-extend">clearfix-use-extend</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$clearfix-use-extend: false !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>If true, <code>clearfix</code> uses @extend by default</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Bool</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="hacks-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
               
                 <section class="main__item  item" id="mixin-clearfix">
 

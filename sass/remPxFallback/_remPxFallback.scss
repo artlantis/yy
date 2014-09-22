@@ -1,9 +1,11 @@
 /**
+ * @group remPxFallback
+ **/
+
+/**
  * Used as the base for rem/px calculations in `remPxFallback`
  *
  * @type Int
- *
- * @group remPxFallback
  */
  $remBase: 16 !default;
 
@@ -30,7 +32,6 @@
  * @param {String}      $property - the css property
  * @param {String|List} $values   - the value(s) with px or rem unit
  *
- * @group remPxFallback
  */
 @mixin remPxFallback($property, $values) {
     $px: ();

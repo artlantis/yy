@@ -1,10 +1,15 @@
 /**
+ *
+ * @group breakpoint
+ *
+ **/
+
+/**
  * The sass map holding the breakpoint information
  * Defaults to `$breakpoints`
  *
  * @type Map
  *
- * @group breakpoint
  */
 $yy-breakpoint-map: $breakpoints !default;
 
@@ -17,7 +22,6 @@ $memo-exists: function-exists(memo-get) and function-exists(memo-set);
  *
  * @param {String}    $breakpoint - the name of breakpoint from global `$yy-breakpoint-map` map
  *
- * @group breakpoint
  */
 @function getMediaQuery($breakpoint) {
     $mq: '';

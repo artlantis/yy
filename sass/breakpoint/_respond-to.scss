@@ -1,3 +1,7 @@
+/**
+ * @group breakpoint
+ **/
+
 @import "helpers";
 
 /**
@@ -47,8 +51,6 @@
  *        background: green;
  *    }
  * }
- *
- * @group breakpoint
  */
 @mixin respond-to($breakpoint) {
     $mediaQuery: getMediaQuery($breakpoint);

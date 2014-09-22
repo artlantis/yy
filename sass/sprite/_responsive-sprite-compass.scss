@@ -1,3 +1,7 @@
+/**
+ * @group sprite
+ **/
+
 @import "compass/utilities/sprites";
 /**
  * Allows you to include two versions of a sprited image from two different sprite maps made for low and high resolution screens.
@@ -34,7 +38,6 @@
  *     @include responsive-sprite(logos, sass);
  * }
  *
- * @group sprite
  */
 @mixin responsive-sprite($map, $sprite, $repeat: no-repeat, $width: true, $height: true, $addVendorPrefixes: false) {
     $low-dpi-map: map-get(map-get($sprite-maps, $map), low-dpi);

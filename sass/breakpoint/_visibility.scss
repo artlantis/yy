@@ -1,3 +1,7 @@
+/**
+ * @group breakpoint
+ **/
+
 @import "respond-to";
 
 /**
@@ -5,7 +9,6 @@
  * This list is taken from https://developer.mozilla.org/en-US/docs/Web/CSS/display
  *
  * @type List
- * @group breakpoint
  */
 $yy-valid-display-values: inline block list-item inline-block inline-table table table-cell table-column table-column-group table-footer-group table-header-group table-row table-row-group flex inline-flex grid inline-grid run-in ruby ruby-base ruby-text ruby-base-container ruby-text-container !default;
 
@@ -32,7 +35,6 @@ $yy-valid-display-values: inline block list-item inline-block inline-table table
  *   );
  *   @include show-for(medium large-up, flex);
  *
- * @group breakpoint
  */
 @mixin show-for($breakpoints, $display: block) {
     @if (index($yy-valid-display-values, $display) == null) {
@@ -68,7 +70,6 @@ $yy-valid-display-values: inline block list-item inline-block inline-table table
  *   );
  *   @include block-for(medium large-up);
  *
- * @group breakpoint
  */
 @mixin block-for($breakpoints) {
     @include show-for($breakpoints,block);
@@ -95,7 +96,6 @@ $yy-valid-display-values: inline block list-item inline-block inline-table table
  *   );
  *   @include inline-for(medium large-up);
  *
- * @group breakpoint
  */
 @mixin inline-for($breakpoints) {
     @include show-for($breakpoints,inline);
@@ -122,7 +122,6 @@ $yy-valid-display-values: inline block list-item inline-block inline-table table
  *   );
  *   @include inline-for(medium large-up);
  *
- * @group breakpoint
  */
 @mixin inline-block-for($breakpoints) {
     @include show-for($breakpoints,inline-block);
@@ -149,7 +148,6 @@ $yy-valid-display-values: inline block list-item inline-block inline-table table
  *   );
  *   @include hide-for(large-up);
  *
- * @group breakpoint
  */
 @mixin hide-for($breakpoints) {
     @each $breakpoint in $breakpoints {
@@ -166,7 +164,6 @@ $yy-valid-display-values: inline block list-item inline-block inline-table table
  *
  * @type List
  *
- * @group breakpoint
  */
 $yy-visibility-classes: show-for, hide-for !default;
 
@@ -210,7 +207,6 @@ $yy-visibility-classes: show-for, hide-for !default;
  *   @include add-visibility-classes();
  *   // then use it like ".show-for-large-up" e.g.
  *
- * @group breakpoint
  */
 @mixin add-visibility-classes($breakpoints: $yy-breakpoint-map, $classes: $yy-visibility-classes) {
     @each $breakpoint in $breakpoints {

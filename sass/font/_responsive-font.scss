@@ -1,3 +1,7 @@
+/**
+ * @group font
+ **/
+
 @import "helpers";
 @import "../breakpoint/respond-to";
 
@@ -6,7 +10,6 @@
  *
  * @type Bool
  *
- * @group font
  */
 $responsive-font-extend-fontstyles: true !default;
 
@@ -46,7 +49,6 @@ $placeholder-fonts-list: ();
  *   ),
  * );
  *
- * @group font
  */
 @mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles) {
     $fontstyle: getFontStyle($fontstyleName);
@@ -69,13 +71,10 @@ $placeholder-fonts-list: ();
 /**
  * Just a wrapper around `responsive-font` that sets `$extendFontstye` no false
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyleName - the name of the font, a 1st level key in `$fonts`
  * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
  * @param {*|Boolean} $color - if given, overwrites the color from the font settings
  *
- * @group font
  */
 @mixin responsive-font-no-extend($fontstyleName, $line-height: false, $color: false) {
     @include responsive-font($fontstyleName, $line-height, $color, false);
@@ -85,13 +84,10 @@ $placeholder-fonts-list: ();
  * Sets all the properties in `$fontstyle`, ignores keys `respond-to` and `inherit`
  * If `line-height` or `$color` is given, this overwrites the key from the given map
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyle - a map of properties to apply
  * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
  * @param {*|Boolean} $color - if given, overwrites the color from the font settings
  *
- * @group font
  */
 @mixin _setFontStyle($fontstyle, $line-height, $color) {
     $responsive-font-keywords: ("respond-to", "inherit");
@@ -116,13 +112,10 @@ $placeholder-fonts-list: ();
  * Sets all the properties in `$fontstyle` for all breakpoints by using `respond-to` mixin and calling `_setFontStyle`
  * If `line-height` or `$color` is given, this overwrites the key from the given map for all breakpoints
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyle - a map of properties to apply
  * @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
  * @param {*|Boolean} $color - if given, overwrites the color from the font settings
  *
- * @group font
  */  
 @mixin _setAllFontStyles($fontstyle, $line-height, $color) {
     @include _setFontStyle($fontstyle, $line-height, $color);

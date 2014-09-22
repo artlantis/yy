@@ -1,3 +1,7 @@
+/**
+ * @group font
+ **/
+
 @import "helpers";
 
 /**
@@ -10,7 +14,6 @@
  *
  * @return {String} The property value
  *
- * @group font
  */
 @function getPropertyForMedia($fontstyleName,$property,$media) {
     $fontstyle: getFontStyle($fontstyleName);
@@ -29,14 +32,12 @@
 /**
  * Wraps around `getPropertyForMedia` and returns the `font-size` attribute
  *
- * @author Beni Buess
  *
  * @param {String}    $fontstyleName - the name of the font, passed to `getPropertyForMedia`
  * @param {String}    $media - the key in `respond-to` map of fontstyle
  *
  * @return {String} The font-size value
  *
- * @group font
  */
 @function getFontSize($fontstyleName, $media) {
     @return getPropertyForMedia($fontstyleName, font-size, $media);
@@ -45,14 +46,11 @@
 /**
  * Wraps around `getPropertyForMedia` and returns the `line-height` attribute
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyleName - the name of the font, passed to `getPropertyForMedia`
  * @param {String}    $media - the key in `respond-to` map of fontstyle
  *
  * @return {String} The fline-height value
  *
- * @group font
  */
 @function getLineHeight($fontstyleName, $media) {
     @return getPropertyForMedia($fontstyleName,line-height,$media);
@@ -62,14 +60,11 @@
  * Returns the map defined in `$font-families` for the given `$fontstyleName`
  * It looks for a key in `$font-families` named after the font-family attribute of the given `$fontstyleName`
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyleName - the name of the font, passed to `getPropertyForMedia`
  * @param {String}    $media - the key in `respond-to` map of fontstyle
  *
  * @return {Map} The font-family map
  *
- * @group font
  */
 @function getFontFamilyMap($fontstyleName, $media) {
     @return map-get($font-families, getPropertyForMedia($fontstyleName,font-family,$media));
@@ -78,14 +73,11 @@
 /**
  * Returns the value of `line-height-part-top` from the fontFamilyMap it gets from `getFontFamilyMap`
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyleName - the name of the font, passed to `getFontFamilyMap`
  * @param {String}    $media - the key in `respond-to` map of fontstyle
  *
  * @return {Int} line-height-part-top
  *
- * @group font
  */
 @function getLineHeightPartTop($fontstyleName, $media) {
     @return map-get(getFontFamilyMap($fontstyleName,$media), line-height-part-top);
@@ -94,14 +86,11 @@
 /**
  * Returns the value of `line-height-part-bottom` from the fontFamilyMap it gets from `getFontFamilyMap`
  *
- * @author Beni Buess
- *
  * @param {String}    $fontstyleName - the name of the font, passed to `getFontFamilyMap`
  * @param {String}    $media - the key in `respond-to` map of fontstyle
  *
  * @return {Int} line-height-part-bottom
  *
- * @group font
  */
 @function getLineHeightPartBottom($fontstyleName, $media) {
     @return map-get(getFontFamilyMap($fontstyleName, $media), line-height-part-bottom);
@@ -114,8 +103,6 @@
  * vertical center of it's line-height.
  * pass `$padding-left` and `$padding-right` to be included in the resulting shortcut value for `padding`
  *
- * @author Beni Buess
- *
  * @param {String} $fontstyleName - the name of the font, passed to `getFontFamilyMap`
  * @param {String} $media - the key in `respond-to` map of fontstyle
  * @param {String} $padding-left (0)
@@ -123,7 +110,6 @@
  *
  * @return {String} The shortcut value to be applied to `padding`
  *
- * @group font
  */
 @function getPaddingForHeight($fontstyleName, $media, $desiredHeight, $padding-left: 0, $padding-right: 0) {
     @if getLineHeightPartTop($fontstyleName,$media) == null {

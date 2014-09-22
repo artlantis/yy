@@ -1,9 +1,12 @@
 /**
+ * @group hacks
+ **/
+
+/**
  * If true, `clearfix` uses @extend by default
  *
  * @type Bool
  *
- * @group font
  */
 $clearfix-use-extend: false !default;
 
@@ -12,7 +15,6 @@ $clearfix-use-extend: false !default;
  *
  * @param {Boolean} $extend ($clearfix-use-extend) - if true, uses `@extend %clearfix`
  *
- * @group font
  */
 @mixin clearfix($extend: $clearfix-use-extend) {
     @if $extend {

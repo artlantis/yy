@@ -29,3 +29,10 @@ h1 {
         background: purple;
     };
 }
+
+h2 {
+    color: yellow;
+    @include respond-to(a b) {
+        color: purple;
+    }
+}

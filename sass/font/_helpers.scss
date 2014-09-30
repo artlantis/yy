@@ -7,15 +7,11 @@
  * Defaults to `$fonts`
  *
  * @type Map
- * 
- * @group font
  */
 $yy-fonts-map: $fonts !default;
 
 /**
  * Returns the fontstyle as a map by recursively resolving any inherited fontstyle
- *
- * @author Beni Buess
  *
  * @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
  *
@@ -57,6 +53,19 @@ $yy-fonts-map: $fonts !default;
         }
     }
     @return $fontstyle;
+}
+
+/**
+ * Returns the value of a specific property of a fontstyle.
+ *
+ * @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
+ * @param {String} $property - the property you want to get the value for
+ *
+ * @returns {*}  The value of the property or null if it's not available
+ *
+ */
+@function getFontStyleProperty($fontstyleName, $property) {
+    @return map-get(getFontStyle($fontstyleName), $property);
 }
 
 /**

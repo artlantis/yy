@@ -1,7 +1,7 @@
 {
   "name": "yy",
   "title": "yy",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "a collection of sass utilities",
   "homepage": "https://github.com/astina/yy",
   "main": "Gruntfile.js",

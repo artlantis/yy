@@ -42,3 +42,7 @@ h2 {
 h3 {
     color: getFontStyleProperty(fontstyle-one, color);
 }
+
+h4 {
+    @include responsive-font(fontstyle-one, $color: red);
+}

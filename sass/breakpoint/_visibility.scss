@@ -38,7 +38,7 @@ $yy-valid-display-values: inline block list-item inline-block inline-table table
  */
 @mixin show-for($breakpoints, $display: block) {
     @if (index($yy-valid-display-values, $display) == null) {
-        @debug "ERROR: #{$display} is not a valid value for display";
+        @warn "#{$display} is not a valid value for display";
     } @else {
         display: none;
         @each $breakpoint in $breakpoints {

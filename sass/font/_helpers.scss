@@ -19,6 +19,9 @@ $yy-fonts-map: $fonts !default;
  *
  */
 @function getFontStyle($fontstyleName) {
+    @if map-has-key($yy-fonts-map, $fontstyleName) == false {
+        @error "The fontstyle '" + $fontstyleName + "' is not defined in $yy-fonts-map";
+    }
     $fontstyle: map-get($yy-fonts-map, $fontstyleName);
     @if map-has-key($fontstyle, inherit) {
         $fontstyleToInherit: getFontStyle(map-get($fontstyle, inherit));
@@ -65,7 +68,11 @@ $yy-fonts-map: $fonts !default;
  *
  */
 @function getFontStyleProperty($fontstyleName, $property) {
-    @return map-get(getFontStyle($fontstyleName), $property);
+    $fontstyle: getFontStyle($fontstyleName);
+    @if map-has-key($fontstyle, $property) == false {
+        @warn "The fontstyle '" + $fontstyleName + "' doesn't have the property '" + $property;
+    }
+    @return map-get($fontstyle, $property);
 }
 
 /**

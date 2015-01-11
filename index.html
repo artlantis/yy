@@ -8,7 +8,7 @@
   
   <meta charset="utf-8" />
 
-<title>yy - v1.3.0</title>
+<title>yy - v1.3.3</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -26,7 +26,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      <a href="https://github.com/astina/yy">yy - v1.3.0</a>
+      <a href="https://github.com/astina/yy">yy - v1.3.3</a>
     
   </h1>
 </div>
@@ -785,6 +785,25 @@ If you have imported Memo from SassyMaps, this is used to store the computed med
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-yy-breakpoint-map"><code>yy-breakpoint-map</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -793,6 +812,39 @@ If you have imported Memo from SassyMaps, this is used to store the computed med
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getCombinedMediaQuery"><code>getCombinedMediaQuery</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getCombinedMediaQuery"><code>getCombinedMediaQuery</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-json"><code>json</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -960,6 +1012,38 @@ for every breakpoint in the list and comma separating the return values.</p>
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getMediaQuery"><code>getMediaQuery</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getMediaQuery"><code>getMediaQuery</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -968,6 +1052,21 @@ for every breakpoint in the list and comma separating the return values.</p>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-respond-to"><code>respond-to</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -1360,6 +1459,25 @@ and <code>$mq</code> or any of the other parameters.</p>
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-yy-breakpoint-map"><code>yy-breakpoint-map</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -1368,6 +1486,21 @@ and <code>$mq</code> or any of the other parameters.</p>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-registerBreakpoint"><code>registerBreakpoint</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -1736,6 +1869,25 @@ and <code>$mq</code> or any of the other parameters.</p>
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-registerBreakpoint"><code>registerBreakpoint</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -1900,6 +2052,38 @@ JSON array inside its <code>content</code> property. To read it, you need a few 
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getMediaQuery"><code>getMediaQuery</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-yy-breakpoint-map"><code>yy-breakpoint-map</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -2103,6 +2287,41 @@ If you need other media features in your media query, provide it in the <code>mq
   
     
     
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Unable to generate media query for breakpoint(s) #{$breakpoint}</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getCombinedMediaQuery"><code>getCombinedMediaQuery</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
 
   
     
@@ -2110,13 +2329,39 @@ If you need other media features in your media query, provide it in the <code>mq
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-show-for"><code>show-for</code></a></li>
+  
+
+
 
   
+
     
+
+    <li><a href="#mixin-hide-for"><code>hide-for</code></a></li>
+  
+
+
+
+  
+
     
 
+    <li><a href="#mixin-_setAllFontStyles"><code>_setAllFontStyles</code></a></li>
+  
 
 
+
+
+</ul>
 
 
   
@@ -2197,7 +2442,7 @@ If you need other media features in your media query, provide it in the <code>mq
     data-current-state="collapsed"
     data-expanded="@mixin show-for($breakpoints, $display: block) { 
     @if (index($yy-valid-display-values, $display) == null) {
-        @debug &quot;ERROR: #{$display} is not a valid value for display&quot;;
+        @warn &quot;#{$display} is not a valid value for display&quot;;
     } @else {
         display: none;
         @each $breakpoint in $breakpoints {
@@ -2320,6 +2565,38 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-respond-to"><code>respond-to</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-yy-valid-display-values"><code>yy-valid-display-values</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -2328,6 +2605,48 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-block-for"><code>block-for</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-inline-for"><code>inline-for</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-inline-block-for"><code>inline-block-for</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-add-visibility-classes"><code>add-visibility-classes</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -2493,6 +2812,25 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-show-for"><code>show-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -2501,6 +2839,30 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-add-visibility-classes"><code>add-visibility-classes</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-add-visibility-classes"><code>add-visibility-classes</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -2666,6 +3028,25 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-show-for"><code>show-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -2674,6 +3055,21 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-add-visibility-classes"><code>add-visibility-classes</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -2839,6 +3235,25 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-show-for"><code>show-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -2847,6 +3262,21 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-add-visibility-classes"><code>add-visibility-classes</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -3016,6 +3446,25 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-respond-to"><code>respond-to</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -3024,6 +3473,30 @@ as long as it&#39;s a valid value according to the formal syntax described at <a
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-add-visibility-classes"><code>add-visibility-classes</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-add-visibility-classes"><code>add-visibility-classes</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -3272,6 +3745,103 @@ results in  <code>display: block</code>.</p>
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-show-for"><code>show-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-block-for"><code>block-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-block-for"><code>block-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-inline-for"><code>inline-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-inline-block-for"><code>inline-block-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-hide-for"><code>hide-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-hide-for"><code>hide-for</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -3398,6 +3968,39 @@ Defaults to <code>$breakpoints</code></p>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getMediaQuery"><code>getMediaQuery</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-registerBreakpoint"><code>registerBreakpoint</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-json"><code>json</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -3502,6 +4105,21 @@ This list is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/CS
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-show-for"><code>show-for</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -3696,6 +4314,9 @@ Defaults to <code>show-for, block-for, inline-for, inline-block-for, hide-for</c
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function getFontStyle($fontstyleName) { 
+    @if map-has-key($yy-fonts-map, $fontstyleName) == false {
+        @error &quot;The fontstyle &#39;&quot; + $fontstyleName + &quot;&#39; is not defined in $yy-fonts-map&quot;;
+    }
     $fontstyle: map-get($yy-fonts-map, $fontstyleName);
     @if map-has-key($fontstyle, inherit) {
         $fontstyleToInherit: getFontStyle(map-get($fontstyle, inherit));
@@ -3808,6 +4429,54 @@ Defaults to <code>show-for, block-for, inline-for, inline-block-for, hide-for</c
   
     
     
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>The fontstyle </p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getFontStyle"><code>getFontStyle</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-yy-fonts-map"><code>yy-fonts-map</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
 
   
     
@@ -3815,13 +4484,48 @@ Defaults to <code>show-for, block-for, inline-for, inline-block-for, hide-for</c
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getFontStyle"><code>getFontStyle</code></a></li>
+  
+
+
 
   
+
     
+
+    <li><a href="#function-getFontStyleProperty"><code>getFontStyleProperty</code></a></li>
+  
+
+
+
+  
+
     
 
+    <li><a href="#function-getPropertyForMedia"><code>getPropertyForMedia</code></a></li>
+  
 
 
+
+  
+
+    
+
+    <li><a href="#mixin-responsive-font"><code>responsive-font</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -3899,7 +4603,11 @@ Defaults to <code>show-for, block-for, inline-for, inline-block-for, hide-for</c
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function getFontStyleProperty($fontstyleName, $property) { 
-    @return map-get(getFontStyle($fontstyleName), $property);
+    $fontstyle: getFontStyle($fontstyleName);
+    @if map-has-key($fontstyle, $property) == false {
+        @warn &quot;The fontstyle &#39;&quot; + $fontstyleName + &quot;&#39; doesn&#39;t have the property &#39;&quot; + $property;
+    }
+    @return map-get($fontstyle, $property);
  }"
     data-collapsed="@function getFontStyleProperty($fontstyleName, $property) { ... }"><code>@function getFontStyleProperty($fontstyleName, $property) { ... }</code></pre>
 
@@ -4000,6 +4708,25 @@ Defaults to <code>show-for, block-for, inline-for, inline-block-for, hide-for</c
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getFontStyle"><code>getFontStyle</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -4271,6 +4998,25 @@ and either <code>inherit</code> (makes not a lot of sense alone), a map of <code
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-yy-fonts-map"><code>yy-fonts-map</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -4279,6 +5025,21 @@ and either <code>inherit</code> (makes not a lot of sense alone), a map of <code
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-registerFontstyle"><code>registerFontstyle</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -4494,6 +5255,25 @@ If <code>$media</code> is not found in the <code>respond-to</code> map of the fo
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getFontStyle"><code>getFontStyle</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -4502,6 +5282,39 @@ If <code>$media</code> is not found in the <code>respond-to</code> map of the fo
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getFontSize"><code>getFontSize</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getLineHeight"><code>getLineHeight</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getFontFamilyMap"><code>getFontFamilyMap</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -4680,6 +5493,25 @@ If <code>$media</code> is not found in the <code>respond-to</code> map of the fo
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getPropertyForMedia"><code>getPropertyForMedia</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -4866,6 +5698,25 @@ If <code>$media</code> is not found in the <code>respond-to</code> map of the fo
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getPropertyForMedia"><code>getPropertyForMedia</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -4874,6 +5725,21 @@ If <code>$media</code> is not found in the <code>respond-to</code> map of the fo
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getPaddingForHeight"><code>getPaddingForHeight</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -5053,6 +5919,25 @@ It looks for a key in <code>$font-families</code> named after the font-family at
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getPropertyForMedia"><code>getPropertyForMedia</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -5061,6 +5946,30 @@ It looks for a key in <code>$font-families</code> named after the font-family at
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getLineHeightPartTop"><code>getLineHeightPartTop</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getLineHeightPartBottom"><code>getLineHeightPartBottom</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -5239,6 +6148,25 @@ It looks for a key in <code>$font-families</code> named after the font-family at
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getFontFamilyMap"><code>getFontFamilyMap</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -5247,6 +6175,39 @@ It looks for a key in <code>$font-families</code> named after the font-family at
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getPaddingForHeight"><code>getPaddingForHeight</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getPaddingForHeight"><code>getPaddingForHeight</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getPaddingForHeight"><code>getPaddingForHeight</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -5425,6 +6386,25 @@ It looks for a key in <code>$font-families</code> named after the font-family at
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getFontFamilyMap"><code>getFontFamilyMap</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -5433,6 +6413,39 @@ It looks for a key in <code>$font-families</code> named after the font-family at
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getPaddingForHeight"><code>getPaddingForHeight</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getPaddingForHeight"><code>getPaddingForHeight</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-getPaddingForHeight"><code>getPaddingForHeight</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -5682,6 +6695,103 @@ pass <code>$padding-left</code> and <code>$padding-right</code> to be included i
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-getLineHeightPartTop"><code>getLineHeightPartTop</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getLineHeightPartBottom"><code>getLineHeightPartBottom</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getLineHeight"><code>getLineHeight</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getLineHeightPartTop"><code>getLineHeightPartTop</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getLineHeightPartBottom"><code>getLineHeightPartBottom</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getLineHeightPartTop"><code>getLineHeightPartTop</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getLineHeightPartBottom"><code>getLineHeightPartBottom</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -5944,6 +7054,25 @@ This allows for shorter sass code as you need to assign the return value of the 
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-registerFontstyle"><code>registerFontstyle</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -6057,7 +7186,11 @@ This allows for shorter sass code as you need to assign the return value of the 
     data-expanded="@mixin responsive-font($fontstyleName, $line-height: false, $color: false, $extendFontstyle: $responsive-font-extend-fontstyles) { 
     $fontstyle: getFontStyle($fontstyleName);
 
-    @if $extendFontstyle {
+    @if $line-height != false or $color != false {
+        $extendFontstyle: false;
+    }
+
+    @if $extendFontstyle == true {
         @if not index($placeholder-fonts-list, $fontstyleName) {
             @at-root {
                 %font-#{$fontstyleName} {
@@ -6225,6 +7358,51 @@ $fonts: (
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-_setAllFontStyles"><code>_setAllFontStyles</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-_setAllFontStyles"><code>_setAllFontStyles</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-getFontStyle"><code>getFontStyle</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -6233,6 +7411,21 @@ $fonts: (
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-responsive-font-no-extend"><code>responsive-font-no-extend</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -6428,6 +7621,25 @@ $fonts: (
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-responsive-font"><code>responsive-font</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -6655,6 +7867,30 @@ If <code>line-height</code> or <code>$color</code> is given, this overwrites the
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-_setAllFontStyles"><code>_setAllFontStyles</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-_setAllFontStyles"><code>_setAllFontStyles</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -6859,6 +8095,51 @@ If <code>line-height</code> or <code>$color</code> is given, this overwrites the
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-_setFontStyle"><code>_setFontStyle</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-respond-to"><code>respond-to</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-_setFontStyle"><code>_setFontStyle</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -6867,6 +8148,30 @@ If <code>line-height</code> or <code>$color</code> is given, this overwrites the
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-responsive-font"><code>responsive-font</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-responsive-font"><code>responsive-font</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -6985,6 +8290,30 @@ Defaults to <code>$fonts</code></p>
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-getFontStyle"><code>getFontStyle</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-registerFontstyle"><code>registerFontstyle</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -7625,6 +8954,25 @@ This file also includes the following wrapper mixins around <code>remPxFallback(
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-remBase"><code>remBase</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -7750,6 +9098,21 @@ This file also includes the following wrapper mixins around <code>remPxFallback(
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-remPxFallback"><code>remPxFallback</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -8196,7 +9559,7 @@ $sprite-maps: (logos: (low-dpi: $logo-map, high-dpi: $logo-hidpi-map));
           
 
           <!-- Version -->
-          <span class="project-info__version"> - v1.3.0</span>
+          <span class="project-info__version"> - v1.3.3</span>
 
           <!-- License -->
           

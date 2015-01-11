@@ -30,6 +30,9 @@ just a clearfix hack for now.
 
 
 ## Changelog
+- 1.3.3 Fix json mixin if breakpoints use multiple conditions
+- 1.3.2 Better error messages for responsive-font
+- 1.3.1 Bugfix for responsive-font (extending could lead to wrong result if property overwriting is used in mixin call)
 - 1.3.0 Allows multiple breakpoints to be passed to `respond-to`, adds a helper to get one property of a fontstyle.
 - 1.2.0 Adds visiblity mixins `show-for`, `hide-for` and generator for visibility classes
 - 1.1.0 Add functions to register fonts and breakpoints

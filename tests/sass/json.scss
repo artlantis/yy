@@ -5,6 +5,11 @@ $breakpoints: (
     small-up:  (
         min-width: 400px
     ),
+    medium: (
+        media: screen,
+        min-width: 768px,
+        max-width: 991px,
+    ),
     medium-up: (
         media: screen,
         min-width: 768px,

@@ -59,21 +59,11 @@
             }
         },
 
-        comments: {
-            test_css: {
-                options: {
-                    singleline: true,
-                    multiline: true
-                },
-                src: [ 'tmp/*.css'] // files to remove comments from
-            },
-        },
-
         nodeunit: {
             tests: [ "tests/*_test.js" ],
         }
     });
-    
+
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-stripcomments');
@@ -81,7 +71,7 @@
     grunt.loadNpmTasks('grunt-sassdoc');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('test', ['sass', 'compass', 'comments', 'nodeunit']);
+    grunt.registerTask('test', ['sass', 'compass', 'nodeunit']);
     grunt.registerTask('publish-docs', ['sassdoc', 'gh-pages']);
 
     grunt.registerTask('default', ['test']);

@@ -66,7 +66,6 @@
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-stripcomments');
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-sassdoc');
     grunt.loadNpmTasks('grunt-gh-pages');

@@ -55,7 +55,7 @@
                     spriteLoadPath: 'tests/fixtures',
                     imagesDir: 'tmp/images',
                     cssDir: 'tmp',
-                    outputStyle: 'compact',
+                    noLineComments: true,
                 }
             }
         },

@@ -30,6 +30,7 @@ just a clearfix hack for now.
 
 
 ## Changelog
+- 1.3.4 Stops polluting css output with comments by using inline comments for SassDoc
 - 1.3.3 Fix json mixin if breakpoints use multiple conditions
 - 1.3.2 Better error messages for responsive-font
 - 1.3.1 Bugfix for responsive-font (extending could lead to wrong result if property overwriting is used in mixin call)

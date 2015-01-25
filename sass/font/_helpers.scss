@@ -1,23 +1,23 @@
-/**
- * @group font
- **/
+////
+/// @group font
+////
 
-/**
- * The sass map holding the font specs
- * Defaults to `$fonts`
- *
- * @type Map
- */
+///
+/// The sass map holding the font specs
+/// Defaults to `$fonts`
+///
+/// @type Map
+///
 $yy-fonts-map: $fonts !default;
 
-/**
- * Returns the fontstyle as a map by recursively resolving any inherited fontstyle
- *
- * @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
- *
- * @returns {Map}  The fontstyle as a map of properties
- *
- */
+///
+/// Returns the fontstyle as a map by recursively resolving any inherited fontstyle
+///
+/// @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
+///
+/// @returns {Map}  The fontstyle as a map of properties
+///
+///
 @function getFontStyle($fontstyleName) {
     @if map-has-key($yy-fonts-map, $fontstyleName) == false {
         @error "The fontstyle '" + $fontstyleName + "' is not defined in $yy-fonts-map";
@@ -58,15 +58,15 @@ $yy-fonts-map: $fonts !default;
     @return $fontstyle;
 }
 
-/**
- * Returns the value of a specific property of a fontstyle.
- *
- * @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
- * @param {String} $property - the property you want to get the value for
- *
- * @returns {*}  The value of the property or null if it's not available
- *
- */
+///
+/// Returns the value of a specific property of a fontstyle.
+///
+/// @param {String} $fontstyleName - the name of the font, a 1st level key in `$fonts`
+/// @param {String} $property - the property you want to get the value for
+///
+/// @returns {*}  The value of the property or null if it's not available
+///
+///
 @function getFontStyleProperty($fontstyleName, $property) {
     $fontstyle: getFontStyle($fontstyleName);
     @if map-has-key($fontstyle, $property) == false {
@@ -75,21 +75,21 @@ $yy-fonts-map: $fonts !default;
     @return map-get($fontstyle, $property);
 }
 
-/**
- * Registers a new fontstyle in the global `$yy-fonts-map`
- *
- * Any of the parameters are technically optional altought to do something you need to pass at least `$name`
- * and either `inherit` (makes not a lot of sense alone), a map of `properties` and any adaption rules for breakpoints in `respond-to`.
- *
- * @param {String} $name (false)           - the name of the new fontstyle
- * @param {String} $inherit (false)        - the name of the fontstyle to inherit
- * @param {String} $properties (false)     - a map of CSS properties
- * @param {String} $respond-to (false)     - a map of breakpoint names containing a map of css properties
- *
- * @example scss
- * $registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );
- *
- */
+///
+/// Registers a new fontstyle in the global `$yy-fonts-map`
+///
+/// Any of the parameters are technically optional altought to do something you need to pass at least `$name`
+/// and either `inherit` (makes not a lot of sense alone), a map of `properties` and any adaption rules for breakpoints in `respond-to`.
+///
+/// @param {String} $name (false)           - the name of the new fontstyle
+/// @param {String} $inherit (false)        - the name of the fontstyle to inherit
+/// @param {String} $properties (false)     - a map of CSS properties
+/// @param {String} $respond-to (false)     - a map of breakpoint names containing a map of css properties
+///
+/// @example scss
+/// $registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );
+///
+///
 @function registerFontstyle($name: false, $inherit: false, $properties: (), $respond-to: false) {
     $new-fontstyle: ();
     $valid: false;
@@ -117,20 +117,20 @@ $yy-fonts-map: $fonts !default;
     @return $valid;
 }
 
-/**
- * This is just a mixin wrapper around `@function registerBreakpoint` for your convenience if you don't care to check if
- * your breakpoint actually got registered.
- * This allows for shorter sass code as you need to assign the return value of the function to something.
- *
- * @param {String} $name (false)           - the name of the new fontstyle
- * @param {String} $inherit (false)        - the name of the fontstyle to inherit
- * @param {String} $properties (false)     - a map of CSS properties
- * @param {String} $respond-to (false)     - a map of breakpoint names containing a map of css properties
- *
- * @example scss
- * $registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );
- *
- */
+///
+/// This is just a mixin wrapper around `@function registerBreakpoint` for your convenience if you don't care to check if
+/// your breakpoint actually got registered.
+/// This allows for shorter sass code as you need to assign the return value of the function to something.
+///
+/// @param {String} $name (false)           - the name of the new fontstyle
+/// @param {String} $inherit (false)        - the name of the fontstyle to inherit
+/// @param {String} $properties (false)     - a map of CSS properties
+/// @param {String} $respond-to (false)     - a map of breakpoint names containing a map of css properties
+///
+/// @example scss
+/// $registered: registerFontstyle($name: my-new-fontstyle, $inhert: an-existing-fontstyle, ( font-size: 20px, line-height: 1.2em ), ( medium-up: ( font-size: 23px ) );
+///
+///
 @mixin registerFontstyle($name: false, $inherit: false, $properties: (), $respond-to: false) {
     $registered: registerFontstyle($name, $inherit, $properties, $respond-to); 
 }

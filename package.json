@@ -21,11 +21,10 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-sassdoc": "^1.0.3",
-    "grunt-gh-pages": "^0.9.1",
+    "grunt-contrib-compass": "^1.0.1",
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-contrib-sass": "^0.8.1",
-    "grunt-stripcomments": "https://github.com/kkemple/grunt-stripcomments/archive/f873e53c88b8d8e0783016ce7e99690998b4b845.tar.gz",
-    "grunt-contrib-compass": "^1.0.1"
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-sassdoc": "^1.2.1"
   }
 }

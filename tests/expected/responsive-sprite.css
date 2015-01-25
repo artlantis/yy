@@ -6,7 +6,7 @@
   height: 11px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-    #astina-logo {
+  #astina-logo {
     background-image: url('/tmp/images/images-hidpi-s369fb37f4d.png');
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
   height: 20px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-    #sass-logo {
+  #sass-logo {
     background-image: url('/tmp/images/images-hidpi-s369fb37f4d.png');
     background-position: 0 -10.5px;
     background-repeat: no-repeat;

@@ -1,38 +1,38 @@
-/**
- * @group remPxFallback
- **/
+////
+/// @group remPxFallback
+////
 
-/**
- * Used as the base for rem/px calculations in `remPxFallback`
- *
- * @type Int
- */
+///
+/// Used as the base for rem/px calculations in `remPxFallback`
+///
+/// @type Int
+///
  $remBase: 16 !default;
 
 @function parseInt($n) {
     @return $n / ($n * 0 + 1);
 }
 
-/**
- * Adds the passed property with the given value(s) in rem and in px as fallback.
- * This file also includes the following wrapper mixins around `remPxFallback()`:
- * - font-size
- * - line-height
- * - margin
- * - margin-top
- * - margin-right
- * - margin-bottom
- * - margin-left
- * - padding
- * - padding-top
- * - padding-right
- * - padding-bottom
- * - padding-left
- *
- * @param {String}      $property - the css property
- * @param {String|List} $values   - the value(s) with px or rem unit
- *
- */
+///
+/// Adds the passed property with the given value(s) in rem and in px as fallback.
+/// This file also includes the following wrapper mixins around `remPxFallback()`:
+/// - font-size
+/// - line-height
+/// - margin
+/// - margin-top
+/// - margin-right
+/// - margin-bottom
+/// - margin-left
+/// - padding
+/// - padding-top
+/// - padding-right
+/// - padding-bottom
+/// - padding-left
+///
+/// @param {String}      $property - the css property
+/// @param {String|List} $values   - the value(s) with px or rem unit
+///
+///
 @mixin remPxFallback($property, $values) {
     $px: ();
     $rem: ();

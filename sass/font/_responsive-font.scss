@@ -107,11 +107,15 @@ $placeholder-fonts-list: ();
 
     @each $property, $value in $fontstyle {
         @if not index($responsive-font-keywords, $property) {
-            #{$property}: unquote($value);
+            @if type_of($value) == "string" {
+                #{$property}: unquote($value);
+            } @else {
+                #{$property}: $value;
+            }
         }
     }
 }
-      
+
 ///
 /// Sets all the properties in `$fontstyle` for all breakpoints by using `respond-to` mixin and calling `_setFontStyle`
 /// If `line-height` or `$color` is given, this overwrites the key from the given map for all breakpoints
@@ -120,7 +124,7 @@ $placeholder-fonts-list: ();
 /// @param {*|Boolean} $line-height - if given, overwrites the line-height from the font settings
 /// @param {*|Boolean} $color - if given, overwrites the color from the font settings
 ///
-///  
+///
 @mixin _setAllFontStyles($fontstyle, $line-height, $color) {
     @include _setFontStyle($fontstyle, $line-height, $color);
     //check for respond-to definition, then set these

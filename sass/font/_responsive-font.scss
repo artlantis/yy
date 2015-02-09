@@ -107,7 +107,7 @@ $placeholder-fonts-list: ();
 
     @each $property, $value in $fontstyle {
         @if not index($responsive-font-keywords, $property) {
-            @if type_of($value) == 'string' {
+            @if type_of($value) == "string" {
                 #{$property}: unquote($value);
             } @else {
                 #{$property}: $value;

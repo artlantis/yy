@@ -8,7 +8,7 @@
   
   <meta charset="utf-8" />
 
-<title>yy - v1.3.4</title>
+<title>yy - v1.3.5</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -26,7 +26,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      <a href="https://github.com/astina/yy">yy - v1.3.4</a>
+      <a href="https://github.com/astina/yy">yy - v1.3.5</a>
     
   </h1>
 </div>
@@ -820,7 +820,7 @@ If you have imported Memo from SassyMaps, this is used to store the computed med
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#function-getCombinedMediaQuery"><code>getCombinedMediaQuery</code></a></li>
+    <li><a href="#mixin-json"><code>json</code></a></li>
   
 
 
@@ -829,7 +829,7 @@ If you have imported Memo from SassyMaps, this is used to store the computed med
 
     
 
-    <li><a href="#mixin-json"><code>json</code></a></li>
+    <li><a href="#function-getCombinedMediaQuery"><code>getCombinedMediaQuery</code></a></li>
   
 
 
@@ -1934,10 +1934,10 @@ and <code>$mq</code> or any of the other parameters.</p>
     $breakpoint-json: null;
 
     @each $bp-name, $bp-value in $yy-breakpoint-map {
-        $breakpoint-json: append($breakpoint-json, \&quot;#{$bp-name}\&quot; + &quot;:&quot; + \&quot;#{getMediaQuery($bp-name)}\&quot;, comma);
+        $breakpoint-json: append($breakpoint-json, &quot;\&quot;#{$bp-name}\&quot;:\&quot;#{getMediaQuery($bp-name)}\&quot;&quot;, comma);
     }
 
-    $breakpoint-json: &quot;{&quot; + $breakpoint-json + &quot;}&quot;;
+    $breakpoint-json: &quot;{#{$breakpoint-json}}&quot;;
 
     body::before {
         content: $breakpoint-json;
@@ -1959,7 +1959,7 @@ and <code>$mq</code> or any of the other parameters.</p>
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Encodes information about your breakpoints from Sass and allows you to access it from JavaScript to use with 
+  <div class="item__description"><p>Encodes information about your breakpoints from Sass and allows you to access it from JavaScript to use with
 libraries like <a href="//wicky.nillia.ms/enquire.js/">enquire.js</a> without having to repeat your media queries in JS code.</p>
 <p>This presumes you are using the yy&#39;s <code>respond-to</code> mixin. Or at least include the <code>breakpoint/helpers</code> and define your
 breakpoints in the prescribed Sass map. To use, simply include it anywhere in your stylesheets like in the example.</p>
@@ -3910,6 +3910,15 @@ Defaults to <code>$breakpoints</code></p>
       <ul class="list-unstyled  list-inline">
     
 
+    <li><a href="#mixin-json"><code>json</code></a></li>
+  
+
+
+
+  
+
+    
+
     <li><a href="#function-getMediaQuery"><code>getMediaQuery</code></a></li>
   
 
@@ -3920,15 +3929,6 @@ Defaults to <code>$breakpoints</code></p>
     
 
     <li><a href="#function-registerBreakpoint"><code>registerBreakpoint</code></a></li>
-  
-
-
-
-  
-
-    
-
-    <li><a href="#mixin-json"><code>json</code></a></li>
   
 
 
@@ -4426,6 +4426,15 @@ Defaults to <code>show-for, block-for, inline-for, inline-block-for, hide-for</c
       <ul class="list-unstyled  list-inline">
     
 
+    <li><a href="#mixin-responsive-font"><code>responsive-font</code></a></li>
+  
+
+
+
+  
+
+    
+
     <li><a href="#function-getFontStyle"><code>getFontStyle</code></a></li>
   
 
@@ -4445,15 +4454,6 @@ Defaults to <code>show-for, block-for, inline-for, inline-block-for, hide-for</c
     
 
     <li><a href="#function-getPropertyForMedia"><code>getPropertyForMedia</code></a></li>
-  
-
-
-
-  
-
-    
-
-    <li><a href="#mixin-responsive-font"><code>responsive-font</code></a></li>
   
 
 
@@ -7581,7 +7581,11 @@ $fonts: (
 
     @each $property, $value in $fontstyle {
         @if not index($responsive-font-keywords, $property) {
-            #{$property}: unquote($value);
+            @if type_of($value) == &quot;string&quot; {
+                #{$property}: unquote($value);
+            } @else {
+                #{$property}: $value;
+            }
         }
     }
  }"
@@ -9144,7 +9148,7 @@ This file also includes the following wrapper mixins around <code>remPxFallback(
           
 
           <!-- Version -->
-          <span class="project-info__version"> - v1.3.4</span>
+          <span class="project-info__version"> - v1.3.5</span>
 
           <!-- License -->
           

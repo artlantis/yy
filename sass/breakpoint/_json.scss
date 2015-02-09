@@ -5,7 +5,7 @@
 @import "helpers";
 
 ///
-/// Encodes information about your breakpoints from Sass and allows you to access it from JavaScript to use with 
+/// Encodes information about your breakpoints from Sass and allows you to access it from JavaScript to use with
 /// libraries like [enquire.js](//wicky.nillia.ms/enquire.js/) without having to repeat your media queries in JS code.
 ///
 /// This presumes you are using the yy's `respond-to` mixin. Or at least include the `breakpoint/helpers` and define your
@@ -48,10 +48,10 @@
     $breakpoint-json: null;
 
     @each $bp-name, $bp-value in $yy-breakpoint-map {
-        $breakpoint-json: append($breakpoint-json, \"#{$bp-name}\" + ":" + \"#{getMediaQuery($bp-name)}\", comma);
+        $breakpoint-json: append($breakpoint-json, "\"#{$bp-name}\":\"#{getMediaQuery($bp-name)}\"", comma);
     }
 
-    $breakpoint-json: "{" + $breakpoint-json + "}";
+    $breakpoint-json: "{#{$breakpoint-json}}";
 
     body::before {
         content: $breakpoint-json;
